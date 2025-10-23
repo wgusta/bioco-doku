@@ -2,36 +2,37 @@
 site_name: Bioco Web-Projekt Doku
 site_url: https://docs.bioco.ch/
 site_author: Bioco-Team
-
-# Copyright
 copyright: Copyright &copy; 2025 Bioco
 
 # Konfiguration
 theme:
   name: material
   language: de
-  features:
-  - scheme: default
+  logo: assets/logo.png # Platzhalter, füge ein Logo in 'docs/assets/logo.png' hinzu
+  favicon: assets/logo.png
+  palette:
+    - scheme: default
       primary: green
       accent: light-green
-features:
+  features:
     - navigation.tabs
     - navigation.top
     - search.suggest
     - search.highlight
 
-# Erweiterungen (für schöneres Code-Highlighting etc.)
+# Erweiterungen
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-  - admonition
+  - admonition # Wichtig für die farbigen Hinweis-Boxen
 
-# Navigation (Hier baust du deine Seitenstruktur auf)
+# Navigation
 nav:
   - Start: index.md
-  - Technischer Setup: technical_setup.md
+  - 'Technisches Setup (Doku)': technical_setup.md
+  - 'Technisches Setup (ProcessWire)': setup-anleitung-processwire.md 
   - Styleguide: styleguide.md
   - Governance: governance.md
