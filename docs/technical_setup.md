@@ -1,169 +1,199 @@
-Bauplan: Bioco Website (ProcessWire & Git-Workflow)
-
-Dies ist die Schritt-für-Schritt-Anleitung, wie wir die bioco.ch-Website auf dem Novatrend (cPanel)-Server aufgesetzt haben.
-
-Unser Ziel: Wir bauen die Website zweimal:
-
-Staging (Testküche): Unter staging.bioco.ch. Hier probieren wir alles aus, ohne dass es öffentliche Besucher sehen.
-
-Live (Restaurant): Unter www.bioco.ch. Das ist die fertige, öffentliche Seite.
-
-Unsere Werkzeuge:
-
-GitHub (Unser "Rezeptbuch"): Ein zentraler Ort im Internet, an dem wir den Code (unsere "Rezepte") sicher speichern. Wir benutzen GitHub Desktop, um Änderungen einfach zu "pushen" (speichern).
-
-cPanel (Unsere "Küche"): Die Verwaltungsoberfläche unseres Servers, auf dem die Website läuft.
-
-ProcessWire (Unser "Kochsystem"): Das Content Management System (CMS), das wir benutzen.
-
-Phase 1: Vorbereitung (Rezeptbuch füllen)
-
-Alles beginnt auf unserem lokalen PC und auf GitHub.
-
-GitHub-Repo (bioco-web-project) erstellen: Wir legen ein privates Repository (unser "Rezeptbuch") auf GitHub.com an.
-
-Zwei Kapitel anlegen (Branches): In unserem Rezeptbuch brauchen wir zwei Kapitel:
-
-main: Für die fertigen Rezepte (Live-Seite).
-
-develop: Für Test-Rezepte (Staging-Seite).
-
-ProcessWire lokal holen: Wir laden die ProcessWire-ZIP-Datei auf unseren PC herunter und entpacken sie.
-
-Dateien vorbereiten: Wir kopieren alle ProcessWire-Dateien (index.php, wire/, site-blank/ etc.) in den Projektordner auf unserem PC.
-
-Git-Regeln (.gitignore): Wir erstellen eine .gitignore-Datei, die Git sagt: "Bitte ignoriere sensible Dateien wie site/config.php (Passwörter) und site/assets/ (Uploads)."
-
-Hochladen (Push): Wir benutzen GitHub Desktop, um dieses "Grundrezept" (alle ProcessWire-Dateien) in beide Kapitel (main und develop) unseres GitHub-Rezeptbuchs hochzuladen ("pushen").
-
-Phase 2: Server-Vorbereitung (Küche einrichten)
-
-Jetzt loggen wir uns im cPanel ein und bereiten die Küche vor.
-
-Speisekammern (Datenbanken) anlegen:
-
-Wir gehen zu "MySQL-Datenbanken".
-
-Wir legen drei leere Datenbanken (Speisekammern) an:
-
-bioco_live (für das Restaurant)
-
-bioco_staging (für die Testküche)
-
-bioco_matomo (für die Besucher-Statistik)
-
-Wir legen einen "Koch" (Benutzer) an: bioco_wgusta.
-
-Wir geben bioco_wgusta "ALLE RECHTE" (den Generalschlüssel) für diese drei Datenbanken.
-[Bild der cPanel-Datenbankübersicht]
-
-Adresse (Subdomain) anlegen:
-
-Wir gehen zu "Subdomains".
-
-Wir erstellen staging.bioco.ch und weisen ihm einen Ordner zu (z.B. public_html/bioco_staging).
-
-Phase 3: Der Server-Terminal-Hack (Der Spezial-Schlüssel)
-
-Hier kam unser grosses Problem. Um unser Rezeptbuch (GitHub) automatisch mit der Küche (cPanel) zu verbinden, braucht der Server einen GitHub-Schlüssel.
-
-!!!warning "Das Problem: cPanel zwingt uns zu einem Passwort"
-Die cPanel-Grafikoberfläche ("SSH Access") zwingt uns, ein Passwort für jeden neuen Schlüssel zu erstellen (wie du im Screenshot gezeigt hast).
-
-Aber das automatische Git-Tool von cPanel (`Git Version Control`) *kann* kein Passwort eingeben. Es funktioniert **nur** mit einem schlüssellosen Zugang. Die cPanel-eigenen Werkzeuge sind also kaputt und widersprechen sich.
-
-
-Die Lösung: Der Terminal-Workaround
-
-Wir mussten die grafische Oberfläche umgehen und den Schlüssel direkt im cPanel Terminal (die "Kommandozeile") erstellen.
-
-Das war der wichtigste Schritt des ganzen Setups.
-
-# 1. Wir loggen uns ins cPanel "Terminal" ein.
-
-# 2. Wir löschen alle kaputten Schlüssel-Reste,
-#    die von der Grafikoberfläche erstellt wurden.
-rm /home/bioco/.ssh/id_rsa*
-rm /home/bioco/.ssh/authorized_keys
-
-# 3. DER HACK: Wir erstellen einen neuen Schlüssel (ssh-keygen)
-#    und zwingen ihn (-N ""), KEIN Passwort zu haben.
-#    (Ersetze 'bioco' mit dem cPanel-Benutzernamen)
-ssh-keygen -t rsa -b 2048 -f /home/bioco/.ssh/id_rsa -N ""
-
-# 4. Erfolg! Der Schlüssel (id_rsa) wurde ohne Passwort erstellt.
-
-
-Danach mussten wir diesen neuen Schlüssel "aktivieren":
-
-cPanel: Zurück zur "SSH Access"-Oberfläche. Der neue Schlüssel war da. Wir mussten auf "Manage" -> "Authorize" klicken.
-
-GitHub: Wir haben den Public Key (cat /home/bioco/.ssh/id_rsa.pub im Terminal) kopiert und ihn in GitHub bei unserem bioco-web-project als "Deploy Key" (mit Schreibrechten!) eingetragen.
-
-Jetzt hatten wir eine funktionierende, automatische Verbindung.
-
-Phase 4: Staging-Seite installieren (Die Testküche)
-
-Jetzt haben wir alles verbunden und konnten die Testküche aufbauen.
-
-Code holen (Klonen):
-
-In "Git Version Control" klonen wir unser GitHub-Repo (mit der SSH-URL git@github.com:...) in den Ordner public_html/bioco_staging.
-
-Wir klicken "Manage" und wechseln den Branch auf develop.
-
-Fehlerbehebung (Server einrichten):
-Die frische Installation funktionierte nicht sofort. Wir mussten 3 Fehler beheben:
-
-Fehler 1: 403 Forbidden (Türsteher-Problem).
-
-Lösung: Im "File Manager" die Berechtigungen korrigiert:
-
-Ordner public_html/bioco_staging/ auf 755 (Jeder darf reinsehen, nur wir dürfen ändern).
-
-Datei public_html/bioco_staging/.htaccess auf 644 (Jeder darf lesen).
-
-Fehler 2: Leere Seite (Falsche PHP-Version 7.4).
-
-Lösung: Die .htaccess-Datei bearbeitet und PHP 8.2 erzwungen:
-
-<IfModule mime_module>
-  AddHandler application/x-httpd-ea-php82 .php .php8 .phtml
-</IfModule>
-
-
-Fehler 3: Installer-Fehler (config.php nicht schreibbar).
-
-Lösung: Im "File Manager" die Berechtigung für den Ordner public_html/bioco_staging/site/ temporär auf 777 (Jeder darf alles) gesetzt.
-
-Installation (Browser):
-
-Wir rufen staging.bioco.ch auf. Der Installer (mit allen grünen Haken) startet.
-
-Wir geben die Datenbank-Daten ein:
-
-DB Name: bioco_staging
-
-DB User: bioco_wgusta
-
-DB Pass: (Unser geheimes Passwort)
-
-Wir legen den Admin-User an und speichern das Passwort.
-
-Aufräumen (WICHTIG):
-
-Zurück im "File Manager": Wir setzen die Berechtigung des site/-Ordners von 777 (unsicher) zurück auf 755 (sicher).
-
-Phase 5: Live-Seite installieren (Das Restaurant)
-
-Wir haben Phase 4 komplett wiederholt, aber mit den "Live"-Daten:
-
-Code holen: Den main-Branch in den public_html-Ordner geklont.
-
-Fehlerbehebung: Die exakt gleichen 3 Fehler (403, PHP, 777) im public_html-Ordner behoben.
-
-Installation: Den Installer auf www.bioco.ch aufgerufen und die bioco_live-Datenbank (mit dem bioco_wgusta-Benutzer) verbunden.
-
-Aufräumen: Den public_html/site-Ordner zurück auf 755 gesetzt.
-
-Ergebnis: Beide Seiten laufen, sind sicher und sauber mit GitHub verbunden.
+# Vollständige Setup-Anleitung: Doku-Seite (MkDocs)
+
+Dies ist der "Bauplan" für das `bioco-doku`-Projekt. Er dokumentiert den automatisierten "Git-First"-Workflow für die Doku-Seite `docs.bioco.ch`.
+
+**Das Ziel:** Ein extrem einfacher Workflow, der keine Server-Uploads per FTP oder File Manager erfordert.
+1.  Änderungen lokal auf dem PC im `bioco-doku`-Ordner vornehmen.
+2.  Mit GitHub Desktop "committen" und "pushen".
+3.  GitHub Actions (ein Roboter) baut die Seite automatisch neu und veröffentlicht sie live.
+
+**Die Werkzeuge:**
+* **GitHub (Rezeptbuch & Küche in einem):** Speichert den Quellcode (Markdown) und baut/hostet die fertige HTML-Seite.
+* **MkDocs (Lokales Werkzeug):** Das Programm auf unserem PC, um die Seite zu schreiben und lokal zu testen.
+* **cPanel (Nur für DNS):** Wird *nur* einmalig benötigt, um `docs.bioco.ch` auf GitHub umzuleiten.
+
+---
+
+## Phase 1: Lokales Setup (Dein PC) 💻
+
+Alle diese Schritte passieren auf deinem lokalen Computer (z.B. Mac) und müssen nur *einmal* durchgeführt werden.
+
+1.  **Installation der Werkzeuge (Terminal):**
+    * Wir benötigen `pip3` (den Python-Installer), um MkDocs und das Theme zu installieren.
+    * (Falls `pip3` nicht gefunden wird, muss `xcode-select --install` ausgeführt werden, um die Apple Command Line Tools zu installieren.)
+    ```bash
+    # 1. Installiert MkDocs
+    pip3 install mkdocs
+
+    # 2. Installiert das "Material" Design-Theme
+    pip3 install mkdocs-material
+    ```
+
+2.  **GitHub-Repo klonen:**
+    * Erstelle ein neues, **öffentliches** (Public) Repository auf GitHub.com. Name: `bioco-doku`.
+    * Klone dieses leere Repo mit **GitHub Desktop** auf deinen PC (z.B. in `~/Projekte/bioco-doku`).
+
+3.  **MkDocs-Projekt initialisieren (Terminal):**
+    * Navigiere im Terminal *in* deinen leeren `bioco-doku`-Ordner: `cd ~/Projekte/bioco-doku`
+    * Führe `mkdocs new .` aus (mit dem Punkt), um die Dateien im aktuellen Ordner zu erstellen:
+    ```bash
+    mkdocs new .
+    ```
+    * Dein Ordner enthält jetzt `mkdocs.yml` und `docs/`.
+
+4.  **Projekt-Dateien erstellen & konfigurieren:**
+    Jetzt erstellen wir die 4 wichtigen Konfigurationsdateien im `bioco-doku`-Ordner.
+
+    **A) `mkdocs.yml` (Die Haupt-Konfiguration)**
+    * Ersetze den Inhalt der `mkdocs.yml` mit dieser Konfiguration:
+    ```yaml
+    # Projekt-Informationen
+    site_name: Bioco Web-Projekt Doku
+    site_url: [https://docs.bioco.ch/](https://docs.bioco.ch/)
+    site_author: Bioco-Team
+    copyright: Copyright &copy; 2025 Bioco
+
+    # Konfiguration
+    theme:
+      name: material
+      language: de
+      logo: assets/logo.png # Platzhalter, füge ein Logo in 'docs/assets/logo.png' hinzu
+      favicon: assets/logo.png
+      palette:
+        - scheme: default
+          primary: green
+          accent: light-green
+      features:
+        - navigation.tabs
+        - navigation.top
+        - search.suggest
+        - search.highlight
+
+    # Erweiterungen
+    markdown_extensions:
+      - pymdownx.highlight:
+          anchor_linenums: true
+      - pymdownx.inlinehilite
+      - pymdownx.snippets
+      - pymdownx.superfences
+      - admonition # Wichtig für die farbigen Hinweis-Boxen
+
+    # Navigation (Hier baust du deine Seitenstruktur auf)
+    nav:
+      - Start: index.md
+      - 'Setup (ProcessWire)': setup-anleitung-processwire.md
+      - 'Setup (Doku)': technical_setup.md # Beispiel-Link zu dieser Datei
+      - Styleguide: styleguide.md
+      - Governance: governance.md
+    ```
+
+    **B) `.gitignore` (Git-Ignorierliste)**
+    * Erstelle eine `.gitignore`-Datei und füge hinzu:
+    ```text
+    site/
+    ```
+
+    **C) `requirements.txt` (Werkzeugliste für GitHub)**
+    * Erstelle eine `requirements.txt`-Datei und füge hinzu:
+    ```text
+    mkdocs
+    mkdocs-material
+    ```
+
+    **D) `.github/workflows/deploy.yml` (Der Automatisierungs-Roboter)**
+    * Erstelle den Ordner `.github`, darin den Ordner `workflows`.
+    * Erstelle *darin* die Datei `deploy.yml` und füge diesen Code ein:
+    ```yaml
+    name: Deploy MkDocs to GitHub Pages
+
+    on:
+      push:
+        branches:
+          - main  # oder 'master', je nach Haupt-Branch
+
+    jobs:
+      deploy:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v4
+
+          - name: Set up Python
+            uses: actions/setup-python@v5
+            with:
+              python-version: '3.10'
+
+          - name: Install dependencies
+            run: |
+              pip install -r requirements.txt
+
+          - name: Deploy
+            run: mkdocs gh-deploy --force --clean
+    ```
+
+---
+
+## Phase 2: GitHub-Konfiguration (Website) 🌐
+
+Diese Schritte sind nur *einmal* auf GitHub.com nötig.
+
+1.  **Code hochladen (GitHub Desktop):**
+    * Öffne GitHub Desktop. Alle neuen Dateien sind sichtbar.
+    * Schreibe eine Commit-Nachricht (z.B. "Initiales Doku-Setup mit Actions").
+    * Klicke **"Commit to main"** und dann **"Push origin"**.
+
+2.  **Schreibrechte für die Action geben:**
+    * Die erste Action wird fehlschlagen! Wir müssen ihr Schreibrechte geben.
+    * Gehe auf GitHub.com zum `bioco-doku`-Repo -> **"Settings"**.
+    * Klicke links auf "Actions" -> **"General"**.
+    * Scrolle runter zu "Workflow permissions".
+    * Wähle **"Read and write permissions"** und klicke "Save".
+
+3.  **Action erneut starten:**
+    * Gehe zum **"Actions"**-Tab.
+    * Klicke auf den fehlgeschlagenen (roten) Workflow.
+    * Klicke oben rechts auf **"Re-run jobs"**.
+    * Warte, bis der Job grün (erfolgreich) ist. Er erstellt jetzt einen neuen Branch `gh-pages`.
+
+4.  **GitHub Pages aktivieren:**
+    * Gehe zurück zu **"Settings"** -> **"Pages"**.
+    * **Source (Quelle):** Wähle "Deploy from a branch".
+    * **Branch:** Wähle den neuen Branch **`gh-pages`** aus und klicke "Save".
+
+5.  **Domain verbinden:**
+    * Trage im Feld "Custom domain" deine Domain ein: `docs.bioco.ch`
+    * Klicke **"Save"**.
+
+---
+
+## Phase 3: Server-Konfiguration (cPanel DNS) 📡
+
+!!!info "Kein Terminal, kein File Manager"
+    Für die Doku-Seite brauchen wir **keinen** SSH-Zugriff, kein Terminal und keinen File Manager auf dem Server. Die einzige Aktion findet im DNS-Editor statt.
+
+1.  **DNS-Zone öffnen:**
+    * Gehe im cPanel zu "Domains" -> **"Zone Editor"**.
+    * Klicke bei `bioco.ch` auf "Manage" (Verwalten).
+
+2.  **Alte Einträge löschen:**
+    * **Lösche** alle Einträge, die `docs.bioco.ch` im Namen haben (Typ A, TXT, SRV etc.), die cPanel automatisch erstellt hat.
+
+3.  **Neuen CNAME-Eintrag erstellen:**
+    * Klicke "+ Add Record" und erstelle diesen **einen** Eintrag:
+    * **Name:** `docs`
+    * **Type:** `CNAME`
+    * **Record (Ziel):** `wgusta.github.io` (Ersetze `wgusta` mit deinem GitHub-Namen)
+    * Klicke "Save Record".
+
+---
+
+## Phase 4: Dein Workflow (Tägliche Arbeit) ✍️
+
+Ab jetzt ist dein Workflow für die Doku extrem einfach:
+
+1.  Öffne den `bioco-doku`-Ordner auf deinem PC.
+2.  Bearbeite die `.md`-Dateien im `docs/`-Verzeichnis.
+3.  Starte `mkdocs serve` im Terminal, um eine Live-Vorschau unter `http://127.0.0.1:8000` zu sehen (optional).
+4.  Wenn du fertig bist: Öffne **GitHub Desktop**.
+5.  Schreibe eine Commit-Nachricht (z.B. "Governance-Seite aktualisiert").
+6.  Klicke **"Commit to main"** und dann **"Push origin"**.
+7.  Warte 1-2 Minuten. Die GitHub Action baut die Seite neu. `https://docs.bioco.ch` ist automatisch auf dem neuesten Stand.
