@@ -11,6 +11,10 @@ theme:
   name: material
   language: de
   features:
+  - scheme: default
+      primary: green
+      accent: light-green
+features:
     - navigation.tabs
     - navigation.top
     - search.suggest
@@ -23,9 +27,11 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - admonition
 
 # Navigation (Hier baust du deine Seitenstruktur auf)
 nav:
   - Start: index.md
+  - Technischer Setup: technical_setup.md
   - Styleguide: styleguide.md
   - Governance: governance.md
