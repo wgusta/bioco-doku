@@ -1,0 +1,5 @@
+# Diese robots.txt ist für die Doku-Seite (docs.bioco.ch)
+# Sie verbietet allen Bots, irgendeine Seite zu indexieren.
+
+User-agent: *
+Disallow: /
