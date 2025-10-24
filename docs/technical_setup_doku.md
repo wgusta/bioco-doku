@@ -7,20 +7,17 @@ Dies ist der "Bauplan" für das `bioco-doku`-Projekt. Er dokumentiert den automa
 2.  Mit GitHub Desktop "committen" und "pushen".
 3.  GitHub Actions (ein Roboter) baut die Seite automatisch neu und veröffentlicht sie live.
 
-**Die Werkzeuge:**
-* **GitHub (Rezeptbuch & Küche in einem):** Speichert den Quellcode (Markdown) und baut/hostet die fertige HTML-Seite.
-* **MkDocs (Lokales Werkzeug):** Das Programm auf unserem PC, um die Seite zu schreiben und lokal zu testen.
-* **cPanel (Nur für DNS):** Wird *nur* einmalig benötigt, um `docs.bioco.ch` auf GitHub umzuleiten.
-
 ---
 
 ## Phase 1: Lokales Setup (Dein PC) 💻
 
-Alle diese Schritte passieren auf deinem lokalen Computer (z.B. Mac) und müssen nur *einmal* durchgeführt werden.
+Alle diese Schritte passieren auf deinem lokalen Computer und müssen nur *einmal* durchgeführt werden.
 
-1.  **Installation der Werkzeuge (Terminal):**
-    * Wir benötigen `pip3` (den Python-Installer), um MkDocs und das Theme zu installieren.
-    * (Falls `pip3` nicht gefunden wird, muss `xcode-select --install` ausgeführt werden, um die Apple Command Line Tools zu installieren.)
+=== "Schritt 1: Werkzeuge installieren (Terminal)"
+
+    Wir benötigen `pip3` (den Python-Installer), um MkDocs und das Theme zu installieren.
+    (Falls `pip3` nicht gefunden wird, muss `xcode-select --install` ausgeführt werden, um die Apple Command Line Tools zu installieren.)
+    
     ```bash
     # 1. Installiert MkDocs
     pip3 install mkdocs
@@ -29,103 +26,75 @@ Alle diese Schritte passieren auf deinem lokalen Computer (z.B. Mac) und müssen
     pip3 install mkdocs-material
     ```
 
-2.  **GitHub-Repo klonen:**
-    * Erstelle ein neues, **öffentliches** (Public) Repository auf GitHub.com. Name: `bioco-doku`.
-    * Klone dieses leere Repo mit **GitHub Desktop** auf deinen PC (z.B. in `~/Projekte/bioco-doku`).
+=== "Schritt 2-3: Projekt klonen & initialisieren"
 
-3.  **MkDocs-Projekt initialisieren (Terminal):**
-    * Navigiere im Terminal *in* deinen leeren `bioco-doku`-Ordner: `cd ~/Projekte/bioco-doku`
-    * Führe `mkdocs new .` aus (mit dem Punkt), um die Dateien im aktuellen Ordner zu erstellen:
-    ```bash
-    mkdocs new .
-    ```
+    2.  **GitHub-Repo klonen:**
+        * Erstelle ein neues, **öffentliches** (Public) Repository auf GitHub.com. Name: `bioco-doku`.
+        * Klone dieses leere Repo mit **GitHub Desktop** auf deinen PC (z.B. in `~/Projekte/bioco-doku`).
+    3.  **MkDocs-Projekt initialisieren (Terminal):**
+        * Navigiere im Terminal *in* deinen leeren `bioco-doku`-Ordner: `cd ~/Projekte/bioco-doku`
+        * Führe `mkdocs new .` aus (mit dem Punkt), um die Dateien im aktuellen Ordner zu erstellen:
+        ```bash
+        mkdocs new .
+        ```
     * Dein Ordner enthält jetzt `mkdocs.yml` und `docs/`.
 
-4.  **Projekt-Dateien erstellen & konfigurieren:**
-    Jetzt erstellen wir die 4 wichtigen Konfigurationsdateien im `bioco-doku`-Ordner.
+=== "Schritt 4A: `mkdocs.yml` (Haupt-Konfig)"
 
-    **A) `mkdocs.yml` (Die Haupt-Konfiguration)**
-    * Ersetze den Inhalt der `mkdocs.yml` mit dieser Konfiguration:
+    Ersetze den Inhalt der `mkdocs.yml` mit dieser Konfiguration (oder der oben angepassten Version):
+
     ```yaml
-    # Projekt-Informationen
     site_name: Bioco Web-Projekt Doku
     site_url: [https://docs.bioco.ch/](https://docs.bioco.ch/)
-    site_author: Bioco-Team
-    copyright: Copyright &copy; 2025 Bioco
-
-    # Konfiguration
     theme:
       name: material
       language: de
-      logo: assets/logo.png # Platzhalter, füge ein Logo in 'docs/assets/logo.png' hinzu
-      favicon: assets/logo.png
-      palette:
-        - scheme: default
-          primary: green
-          accent: light-green
-      features:
-        - navigation.tabs
-        - navigation.top
-        - search.suggest
-        - search.highlight
-
-    # Erweiterungen
-    markdown_extensions:
-      - pymdownx.highlight:
-          anchor_linenums: true
-      - pymdownx.inlinehilite
-      - pymdownx.snippets
-      - pymdownx.superfences
-      - admonition # Wichtig für die farbigen Hinweis-Boxen
-
-    # Navigation (Hier baust du deine Seitenstruktur auf)
+      logo: assets/logo.png
+    # ... (Rest der Konfiguration siehe Datei 'mkdocs.yml' oben) ...
     nav:
       - Start: index.md
-      - 'Setup (ProcessWire)': setup-anleitung-processwire.md
-      - 'Setup (Doku)': technical_setup.md # Beispiel-Link zu dieser Datei
-      - Styleguide: styleguide.md
-      - Governance: governance.md
+      # ... (Rest der Navigation siehe Datei 'mkdocs.yml' oben) ...
     ```
 
-    **B) `.gitignore` (Git-Ignorierliste)**
-    * Erstelle eine `.gitignore`-Datei und füge hinzu:
+=== "Schritt 4B: `.gitignore` (Ignorierliste)"
+
+    Erstelle eine `.gitignore`-Datei und füge hinzu:
+    
     ```text
     site/
     ```
 
-    **C) `requirements.txt` (Werkzeugliste für GitHub)**
-    * Erstelle eine `requirements.txt`-Datei und füge hinzu:
+=== "Schritt 4C: `requirements.txt` (Werkzeugliste)"
+
+    Erstelle eine `requirements.txt`-Datei und füge hinzu:
+    
     ```text
     mkdocs
     mkdocs-material
     ```
 
-    **D) `.github/workflows/deploy.yml` (Der Automatisierungs-Roboter)**
-    * Erstelle den Ordner `.github`, darin den Ordner `workflows`.
-    * Erstelle *darin* die Datei `deploy.yml` und füge diesen Code ein:
+=== "Schritt 4D: `.github/workflows/deploy.yml` (Roboter)"
+
+    Erstelle den Ordner `.github`, darin den Ordner `workflows`. Erstelle *darin* die Datei `deploy.yml` und füge diesen Code ein:
+
     ```yaml
     name: Deploy MkDocs to GitHub Pages
-
     on:
       push:
         branches:
           - main  # oder 'master', je nach Haupt-Branch
-
     jobs:
       deploy:
         runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v4
-
           - name: Set up Python
             uses: actions/setup-python@v5
             with:
               python-version: '3.10'
-
           - name: Install dependencies
             run: |
               pip install -r requirements.txt
-
           - name: Deploy
             run: mkdocs gh-deploy --force --clean
     ```
@@ -140,25 +109,21 @@ Diese Schritte sind nur *einmal* auf GitHub.com nötig.
     * Öffne GitHub Desktop. Alle neuen Dateien sind sichtbar.
     * Schreibe eine Commit-Nachricht (z.B. "Initiales Doku-Setup mit Actions").
     * Klicke **"Commit to main"** und dann **"Push origin"**.
-
 2.  **Schreibrechte für die Action geben:**
     * Die erste Action wird fehlschlagen! Wir müssen ihr Schreibrechte geben.
     * Gehe auf GitHub.com zum `bioco-doku`-Repo -> **"Settings"**.
     * Klicke links auf "Actions" -> **"General"**.
     * Scrolle runter zu "Workflow permissions".
     * Wähle **"Read and write permissions"** und klicke "Save".
-
 3.  **Action erneut starten:**
     * Gehe zum **"Actions"**-Tab.
     * Klicke auf den fehlgeschlagenen (roten) Workflow.
     * Klicke oben rechts auf **"Re-run jobs"**.
     * Warte, bis der Job grün (erfolgreich) ist. Er erstellt jetzt einen neuen Branch `gh-pages`.
-
 4.  **GitHub Pages aktivieren:**
     * Gehe zurück zu **"Settings"** -> **"Pages"**.
     * **Source (Quelle):** Wähle "Deploy from a branch".
     * **Branch:** Wähle den neuen Branch **`gh-pages`** aus und klicke "Save".
-
 5.  **Domain verbinden:**
     * Trage im Feld "Custom domain" deine Domain ein: `docs.bioco.ch`
     * Klicke **"Save"**.
@@ -173,15 +138,13 @@ Diese Schritte sind nur *einmal* auf GitHub.com nötig.
 1.  **DNS-Zone öffnen:**
     * Gehe im cPanel zu "Domains" -> **"Zone Editor"**.
     * Klicke bei `bioco.ch` auf "Manage" (Verwalten).
-
 2.  **Alte Einträge löschen:**
     * **Lösche** alle Einträge, die `docs.bioco.ch` im Namen haben (Typ A, TXT, SRV etc.), die cPanel automatisch erstellt hat.
-
 3.  **Neuen CNAME-Eintrag erstellen:**
     * Klicke "+ Add Record" und erstelle diesen **einen** Eintrag:
     * **Name:** `docs`
     * **Type:** `CNAME`
-    * **Record (Ziel):** `wgusta.github.io` (Ersetze `wgusta` mit deinem GitHub-Namen)
+    * **Record (Ziel):** `"DEIN-GITHUB-KONTO".github.io`
     * Klicke "Save Record".
 
 ---

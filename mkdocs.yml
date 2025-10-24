@@ -8,7 +8,7 @@ copyright: Copyright &copy; 2025 Bioco
 theme:
   name: material
   language: de
-  logo: assets/logo.png # Platzhalter, füge ein Logo in 'docs/assets/logo.png' hinzu
+  logo: assets/logo.png
   favicon: assets/logo.png
   palette:
     - scheme: default
@@ -29,10 +29,12 @@ markdown_extensions:
   - pymdownx.superfences
   - admonition # Wichtig für die farbigen Hinweis-Boxen
 
-# Navigation
+# NEUE NAVIGATION (STRUKTURIERT)
 nav:
   - Start: index.md
-  - 'Technisches Setup (Doku)': technical_setup.md
-  - 'Technisches Setup (ProcessWire)': setup-anleitung-processwire.md 
+  - Anleitung für Redakteure: anleitung-redakteure.md
+  - Technische Dokumentation:
+    - 'Setup: ProcessWire (Server)': technical_setup_processwire.md
+    - 'Setup: Doku-Seite (MkDocs)': technical_setup_doku.md
   - Styleguide: styleguide.md
   - Governance: governance.md
