@@ -52,7 +52,7 @@ Google kann Bilder nicht "sehen", sondern nur lesen, wie wir sie beschreiben.
 
 ## 3. Technische Basis (Technical SEO)
 
-Dies ist der technische Teil, hier habe ich (Güney) die Basis gelegt. Da unsere Website nicht so kompliziert ist, sind das nur einige Grundkonfigurationen, die beim definitiven Aufschalten der Website einmalig gemacht werden müssen. Der Vollständigkeit halber: Das muss gemacht werden. Dieser Teil ist vor allem für unser Entwickler-Team wichtig. Auch als digitaler Projektleiter finde ich: Das braucht es weiterhin.
+Dies ist der technische Teil, hier habe ich (Güney) die Basis gelegt. Da unsere Website nicht so kompliziert ist, sind das nur einige Grundkonfigurationen, die beim definitiven Aufschalten der Website einmalig gemacht werden müssen. Der Vollständigkeit halber: Das muss gemacht werden.
 
 !!! abstract "Technische Details (für Entwickler)"
     Die Website ist technisch bereits sehr gut aufgestellt:
@@ -61,6 +61,7 @@ Dies ist der technische Teil, hier habe ich (Güney) die Basis gelegt. Da unsere
     *   **Performance:** Schnelle Ladezeiten durch Next.js Optimierungen.
     *   **Mobile First:** Die Seite funktioniert perfekt auf Handys (wichtiges Ranking-Signal).
     *   **Strukturierte Daten:** Wir sagen Google im Code explizit "Wir sind eine lokale Organisation in Gebenstorf" (Schema.org).
+        *(Hinweis: Schema.org ist noch nicht implementiert und fehlt in der aktuellen Codebasis!)*
 
 ### Meta-Tags (Die Vorschau in Google)
 
@@ -76,22 +77,44 @@ Jede Seite hat einen Titel und eine Beschreibung, die in den Suchergebnissen ang
 
 ---
 
-## 4. Nächste Schritte & Roadmap
+## 4. Go-Live Checkliste & Konfigurationen
 
-Was wir noch tun müssen, um noch besser gefunden zu werden. Damit könnt ihr dann selbst oder mit externen Partnern klare Projekte definieren und aufgleisen.
+Hier stehen die konkreten Dateien und Einstellungen, die beim finalen "Aufschalten" der Website hinterlegt oder aktiviert werden müssen.
 
-### Kurzfristig (Sofort bis 2 Wochen)
-*   [ ] **Sitemap & Robots.txt:** Technisches "Inhaltsverzeichnis" für Google erstellen.
-*   [ ] **Bilder-Texte:** Alle Bilder auf der Seite prüfen und beschriftet (Alt-Texte).
+### 4.1 Google Search Console (Einmalig)
 
-### Mittelfristig (1-3 Monate)
-*   [ ] **Google Search Console:** Einrichten, um zu sehen, über welche Begriffe wir tatsächlich gefunden werden.
-*   [ ] **Content-Updates:** Regelmäßig Neuigkeiten (Hofpost) veröffentlichen. Google mag "lebendige" Seiten.
-*   [ ] **Verlinkungen:** Partner und lokale Verzeichnisse bitten, auf biocò.ch zu verlinken.
+Damit Google uns "kennt" und wir sehen, wer uns sucht.
 
-### Langfristig
-*   [ ] **FAQ-Sektion:** Fragen beantworten, die Leute oft stellen (z.B. "Wie funktioniert Solawi?").
-*   [ ] **Analyse:** Regelmäßig prüfen, ob die Strategie aufgeht und nachjustieren. Bis Ende Jahr schauen wir sicher mal ohne Kosten (nur Zeit von uns), danach weiss ich noch nicht, wie es aussieht und wir müssten dann situativ schauen.
+1.  **Domain verifizieren:** `bioco.ch` als "Domain Property" hinzufügen.
+2.  **DNS-Eintrag:** Den TXT-Record von Google bei unserem Hoster (Hostpoint/Metanet/etc.) im DNS eintragen.
+3.  **Sitemap einreichen:** Die URL `https://bioco.ch/sitemap.xml` in der Search Console hinterlegen.
+
+### 4.2 Matomo Analytics (Konfiguration)
+
+Für die DSGVO-konforme Statistik. Die Basis ist bereits im Code (`MatomoScript.tsx`), aber die Umgebungsvariablen müssen auf dem Live-Server gesetzt werden.
+
+*   `NEXT_PUBLIC_MATOMO_URL`: URL zu unserer Matomo-Instanz (z.B. `https://analytics.bioco.ch/`).
+*   `NEXT_PUBLIC_MATOMO_SITE_ID`: Die ID der Website in Matomo (z.B. `1`).
+
+### 4.3 Fehlende Dateien erstellen
+
+Diese Dateien müssen ins Hauptverzeichnis (`public/`-Ordner), damit Suchmaschinen sie finden:
+
+*   [ ] **`robots.txt`**: Die "Hausordnung" für Google.
+    ```text
+    User-agent: *
+    Allow: /
+    Sitemap: https://bioco.ch/sitemap.xml
+    ```
+
+*   [ ] **`sitemap.xml`**: Das Inhaltsverzeichnis aller Seiten.
+    *(Kann automatisch generiert werden oder manuell erstellt werden für: `/`, `/ernte`, `/abos`, `/depots`, `/wir`, `/aktuelles`)*
+
+### 4.4 Schema.org (Strukturierte Daten)
+
+*   [ ] **Implementierung fehlt noch:** Es muss eine Komponente (z.B. `JsonLd.tsx`) erstellt werden, die auf der Homepage und Kontaktseite eingebunden wird.
+    *   **Typ:** `Organization` oder `LocalBusiness`
+    *   **Inhalt:** Name (biocò), Adresse (Geisshof), Logo, Social Media Links.
 
 ---
 
@@ -101,7 +124,7 @@ Was wir noch tun müssen, um noch besser gefunden zu werden. Damit könnt ihr da
 | :--- | :--- | :--- |
 | **Server-Side Rendering** | ✅ Fertig | Google kann alles lesen. |
 | **Mobile-Optimierung** | ✅ Fertig | Handyfreundlich. |
-| **Strukturierte Daten** | ✅ Fertig | Infos für Google aufbereitet. |
-| **Sitemap.xml** | ⏳ Offen | Inhaltsverzeichnis fehlt noch. |
-| **Robots.txt** | ⏳ Offen | Wegweiser für Google fehlt noch. |
+| **Strukturierte Daten** | ❌ Offen | **Muss noch programmiert werden.** |
+| **Sitemap.xml** | ⏳ Offen | Datei muss erstellt werden. |
+| **Robots.txt** | ⏳ Offen | Datei muss erstellt werden. |
 | **Bilder-Texte (Alt)** | ⏳ Offen | Müssen noch gepflegt werden. |
