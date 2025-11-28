@@ -12,16 +12,24 @@ Wir wollen, dass Menschen in der Region Baden-Brugg uns finden, wenn sie nach ge
 
 Hier sehen wir, wonach Menschen tatsächlich suchen. Das hilft uns, die richtigen Worte in unseren Texten zu verwenden. Ich kann zwar aktuell nicht sagen, wie sich die Zahlen nächsten Monat entwickeln, aber diese Schätzungen geben eine gute Richtung vor.
 
+!!! warning "Hinweis zur Konkurrenz"
+    Bei den ganz großen Begriffen ("Bio Gemüse Schweiz") ist die Konkurrenz riesig. Deshalb konzentrieren wir uns im ersten Moment auf die primären Suchwörter (lokal & spezifisch), wo wir direkt gewinnen können.
+
 ### Google Search Metrics (Geschätzt für die Schweiz)
 
-| Suchbegriff | Relevanz | Suchvolumen (geschätzt) | Erklärung |
-| :--- | :--- | :--- | :--- |
-| **Gemüseabo** | Hoch | ~1'000 - 3'000 / Mt. | Der häufigste Begriff für unser Angebot. |
-| **Bio Gemüse** | Hoch | ~1'000 - 5'000 / Mt. | Sehr allgemein, aber wichtig. |
-| **Solidarische Landwirtschaft** | Mittel | ~500 - 1'000 / Mt. | Unser Kernkonzept (Solawi). |
-| **Demeter Gemüse** | Mittel | ~200 - 500 / Mt. | Zeigt hohes Qualitätsbewusstsein. |
-| **Gemüseabo Baden** | Sehr Hoch | ~50 - 100 / Mt. | Weniger Suchen, aber genau unsere Zielgruppe! |
-| **Gemüseabo Brugg** | Sehr Hoch | ~20 - 50 / Mt. | Ebenfalls unsere direkte Zielgruppe. |
+| Kategorie | Suchbegriff | Relevanz | Suchvolumen (geschätzt) | Erklärung |
+| :--- | :--- | :--- | :--- | :--- |
+| **Primär** | **Gemüseabo** | Hoch | ~1'000 - 3'000 / Mt. | Der häufigste Begriff für unser Angebot. |
+| **Primär** | **Bio Gemüse** | Hoch | ~1'000 - 5'000 / Mt. | Sehr allgemein, aber wichtig. |
+| **Primär** | **Solidarische Landwirtschaft** | Mittel | ~500 - 1'000 / Mt. | Unser Kernkonzept (Solawi). |
+| **Primär** | **Gemüseabo Baden** | Sehr Hoch | ~50 - 100 / Mt. | Weniger Suchen, aber genau unsere Zielgruppe! |
+| **Primär** | **Gemüseabo Brugg** | Sehr Hoch | ~20 - 50 / Mt. | Ebenfalls unsere direkte Zielgruppe. |
+| **Sekundär** | **Gemüsekiste / Korb** | Mittel | ~800 - 1'500 / Mt. | Alternative zu "Abo". |
+| **Sekundär** | **Hofladen Baden** | Mittel | ~200 - 400 / Mt. | Sucht nach "direkt vom Bauern". |
+| **Sekundär** | **Regional einkaufen Aargau** | Mittel | ~100 - 300 / Mt. | Fokus auf Herkunft. |
+| **Tertiär** | **Demeter Karotten kaufen** | Nische | ~10 - 50 / Mt. | Sehr spezifisch, hohe Kaufabsicht. |
+| **Tertiär** | **Plastikfrei einkaufen** | Nische | ~50 - 100 / Mt. | Werte-basierte Suche. |
+| **Tertiär** | **Mitmach-Bauernhof** | Nische | ~20 - 50 / Mt. | Sucht das Erlebnis. |
 
 !!! tip "Tipp für Redakteure"
     Verwendet diese Begriffe natürlich in Überschriften und Texten. Schreibt aber immer für Menschen, nicht für Suchmaschinen!
@@ -63,17 +71,34 @@ Dies ist der technische Teil, hier habe ich (Güney) die Basis gelegt. Da unsere
     *   **Strukturierte Daten:** Wir sagen Google im Code explizit "Wir sind eine lokale Organisation in Gebenstorf" (Schema.org).
         *(Hinweis: Schema.org ist noch nicht implementiert und fehlt in der aktuellen Codebasis!)*
 
-### Meta-Tags (Die Vorschau in Google)
+### Meta-Tags & Beschreibungen (Status Quo)
 
-Jede Seite hat einen Titel und eine Beschreibung, die in den Suchergebnissen angezeigt wird.
+Hier sind die aktuellen, bestmöglichen Beschreibungen pro Seite, so wie sie idealerweise hinterlegt werden sollten:
 
-*   **Titel:** Kurz und knackig (max. 60 Zeichen).
-*   **Beschreibung:** Ein werbender Satz, der zum Klicken anregt (max. 160 Zeichen).
-
-**Beispiel Homepage:**
+#### Homepage (`/`)
 > **Titel:** biocò | Bio-Gemüse aus der Region Baden-Brugg
 >
 > **Beschreibung:** Gemüsegenossenschaft biocò: Frisches Demeter-Gemüse aus solidarischer Landwirtschaft. Wöchentliche Gemüsekörbe vom Geisshof in Gebenstorf.
+
+#### Ernte (`/ernte`)
+> **Titel:** Saisonales Demeter Gemüse | Was wächst gerade | biocò
+>
+> **Beschreibung:** Entdecke unser saisonales Bio-Gemüse in Demeter-Qualität. Frisch vom Geisshof in Gebenstorf für die Region Baden-Brugg.
+
+#### Abos (`/abos`)
+> **Titel:** Gemüseabo Baden | Demeter Gemüse wöchentlich | biocò
+>
+> **Beschreibung:** Gemüseabo für die Region Baden-Brugg: Wöchentlich frisches Bio-Gemüse in Demeter-Qualität. Solidarische Landwirtschaft vom Geisshof Gebenstorf.
+
+#### Depots (`/depots`)
+> **Titel:** Standorte & Depots Baden-Brugg | Gemüse abholen | biocò
+>
+> **Beschreibung:** Gemüseabholung in Baden, Brugg und Umgebung. Finde dein Depot für frisches Bio-Gemüse aus solidarischer Landwirtschaft vom Geisshof Gebenstorf.
+
+#### Wir (`/wir`)
+> **Titel:** Über uns | Solidarische Landwirtschaft Baden | biocò Gemüsegenossenschaft
+>
+> **Beschreibung:** biocò Gemüsegenossenschaft: Seit 2014 solidarische Landwirtschaft auf dem Geisshof Gebenstorf. Demeter-zertifiziertes Bio-Gemüse für Baden-Brugg.
 
 ---
 
