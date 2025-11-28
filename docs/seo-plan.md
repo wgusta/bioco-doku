@@ -1,9 +1,5 @@
 # SEO Plan für biocò.ch
 
-Liebe Redakteure und Entwickler
-
-Herzlichen Dank für euren Einsatz an unserer Webseite. Hier findet ihr unseren aktuellen Plan, wie wir biocò noch sichtbarer machen.
-
 !!! info "Was ist dieser Plan?"
     Dieses Dokument ist unsere Auslegeordnung für die Google-Suche.
     Es hilft euch beim Schreiben (Redakteure) und beim Coden (Entwickler).
@@ -56,7 +52,7 @@ Google kann Bilder nicht "sehen", sondern nur lesen, wie wir sie beschreiben.
 
 ## 3. Technische Basis (Technical SEO)
 
-Dieser Teil ist vor allem für unser Entwickler-Team wichtig. Auch als digitaler Projektleiter finde ich: Das braucht es weiterhin.
+Dies ist der technische Teil, hier habe ich (Güney) die Basis gelegt. Da unsere Website nicht so kompliziert ist, sind das nur einige Grundkonfigurationen, die beim definitiven Aufschalten der Website einmalig gemacht werden müssen. Der Vollständigkeit halber: Das muss gemacht werden. Dieser Teil ist vor allem für unser Entwickler-Team wichtig. Auch als digitaler Projektleiter finde ich: Das braucht es weiterhin.
 
 !!! abstract "Technische Details (für Entwickler)"
     Die Website ist technisch bereits sehr gut aufgestellt:
@@ -109,9 +105,3 @@ Was wir noch tun müssen, um noch besser gefunden zu werden. Damit könnt ihr da
 | **Sitemap.xml** | ⏳ Offen | Inhaltsverzeichnis fehlt noch. |
 | **Robots.txt** | ⏳ Offen | Wegweiser für Google fehlt noch. |
 | **Bilder-Texte (Alt)** | ⏳ Offen | Müssen noch gepflegt werden. |
-
-Lieber Gruss
-
-Das Bioco-Team
-
-P.S. Ich finde die neue Doku besonders gelungen, auch als Gemüse-Fan finde ich: Das braucht es weiterhin.
