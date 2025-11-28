@@ -38,3 +38,4 @@ nav:
     - 'Setup: Doku-Seite (MkDocs)': technical_setup_doku.md
   - Styleguide: styleguide.md
   - Governance: governance.md
+  - SEO Plan: seo-plan.md
