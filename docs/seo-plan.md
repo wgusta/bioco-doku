@@ -1,155 +1,177 @@
 # SEO Plan für biocò.ch
 
-!!! info "Was ist dieser Plan?"
-    Dieses Dokument ist unsere Auslegeordnung für die Google-Suche.
-    Es hilft euch beim Schreiben (Redakteure) und beim Coden (Entwickler).
+!!! info "Über dieses Dokument"
+    Dies ist die zentrale Strategie für die Suchmaschinenoptimierung (SEO) von biocò.ch. 
+    Es dient als Leitfaden für **Redaktion** (Inhalte) und **Entwicklung** (Technik).
 
-## Übersicht
-
-Wir wollen, dass Menschen in der Region Baden-Brugg uns finden, wenn sie nach gesundem, regionalem Gemüse suchen. Dafür setzen wir auf eine Kombination aus technischer Optimierung und guten Inhalten.
-
-## 1. Suchbegriffe & Kennzahlen (Keywords)
-
-Hier sehen wir, wonach Menschen tatsächlich suchen. Das hilft uns, die richtigen Worte in unseren Texten zu verwenden. Ich kann zwar aktuell nicht sagen, wie sich die Zahlen nächsten Monat entwickeln, aber diese Schätzungen geben eine gute Richtung vor.
-
-!!! warning "Hinweis zur Konkurrenz"
-    Bei den ganz großen Begriffen ("Bio Gemüse Schweiz") ist die Konkurrenz riesig. Deshalb konzentrieren wir uns im ersten Moment auf die primären Suchwörter (lokal & spezifisch), wo wir direkt gewinnen können.
-
-### Google Search Metrics (Geschätzt für die Schweiz)
-
-| Kategorie | Suchbegriff | Relevanz | Suchvolumen (geschätzt) | Erklärung |
-| :--- | :--- | :--- | :--- | :--- |
-| **Primär** | **Gemüseabo** | Hoch | ~1'000 - 3'000 / Mt. | Der häufigste Begriff für unser Angebot. |
-| **Primär** | **Bio Gemüse** | Hoch | ~1'000 - 5'000 / Mt. | Sehr allgemein, aber wichtig. |
-| **Primär** | **Solidarische Landwirtschaft** | Mittel | ~500 - 1'000 / Mt. | Unser Kernkonzept (Solawi). |
-| **Primär** | **Gemüseabo Baden** | Sehr Hoch | ~50 - 100 / Mt. | Weniger Suchen, aber genau unsere Zielgruppe! |
-| **Primär** | **Gemüseabo Brugg** | Sehr Hoch | ~20 - 50 / Mt. | Ebenfalls unsere direkte Zielgruppe. |
-| **Sekundär** | **Gemüsekiste / Korb** | Mittel | ~800 - 1'500 / Mt. | Alternative zu "Abo". |
-| **Sekundär** | **Hofladen Baden** | Mittel | ~200 - 400 / Mt. | Sucht nach "direkt vom Bauern". |
-| **Sekundär** | **Regional einkaufen Aargau** | Mittel | ~100 - 300 / Mt. | Fokus auf Herkunft. |
-| **Tertiär** | **Demeter Karotten kaufen** | Nische | ~10 - 50 / Mt. | Sehr spezifisch, hohe Kaufabsicht. |
-| **Tertiär** | **Plastikfrei einkaufen** | Nische | ~50 - 100 / Mt. | Werte-basierte Suche. |
-| **Tertiär** | **Mitmach-Bauernhof** | Nische | ~20 - 50 / Mt. | Sucht das Erlebnis. |
-
-!!! tip "Tipp für Redakteure"
-    Verwendet diese Begriffe natürlich in Überschriften und Texten. Schreibt aber immer für Menschen, nicht für Suchmaschinen!
+    **Ziel:** Menschen in der Region Baden-Brugg sollen uns finden, wenn sie nach regionalem Bio-Gemüse suchen.
 
 ---
 
-## 2. Inhalte (On-Page SEO)
+## 📚 SEO-Grundlagen (für Einsteiger)
 
-Das wichtigste für Google sind gute, relevante Inhalte. Und wenn ich so frech sein darf: Gerne sehe ich lebendige Texte, die Lust auf unser Gemüse machen. Das klingt spannend! Geht das? 🙂
+Suchmaschinenoptimierung kann komplex wirken, basiert aber auf einfachen Prinzipien. Hier sind die wichtigsten Konzepte für unser Projekt, basierend auf den [offiziellen Google Richtlinien](https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=de).
 
-### 2.1 Wichtige Seiten & ihre Ziele
+<div class="grid cards" markdown>
 
-*   **Homepage (`/`):** Das "Schaufenster". Muss klar machen: Wer sind wir? (Gemüsegenossenschaft), Wo sind wir? (Baden-Brugg/Geisshof), Was bieten wir? (Gemüseabo/Solawi).
-*   **Ernte (`/ernte`):** Zeigt, was gerade wächst. Wichtig für Begriffe wie "Saisonales Gemüse".
-*   **Abos (`/abos`):** Hier entscheiden sich die Leute. Klarer Fokus auf "Gemüseabo" und "Wöchentlicher Korb".
-*   **Depots (`/depots`):** Entscheidend für die lokale Suche ("Gemüse abholen Baden").
-*   **Wir (`/wir`):** Baut Vertrauen auf. "Genossenschaft", "Team", "Geisshof".
-
-### 2.2 Bilder optimieren
-
-Google kann Bilder nicht "sehen", sondern nur lesen, wie wir sie beschreiben.
-
-!!! check "Aufgabe für Redakteure"
-    *   Gebt jedem Bild einen sinnvollen Dateinamen **bevor** ihr es hochladet (z.B. `karotten-ernte-geisshof.jpg` statt `IMG_1234.JPG`).
-    *   Füllt (wenn technisch möglich) den "Alt-Text" (Alternativtext) aus. Beschreibt kurz, was auf dem Bild zu sehen ist.
-
----
-
-## 3. Technische Basis (Technical SEO)
-
-Dies ist der technische Teil, hier habe ich (Güney) die Basis gelegt. Da unsere Website nicht so kompliziert ist, sind das nur einige Grundkonfigurationen, die beim definitiven Aufschalten der Website einmalig gemacht werden müssen. Der Vollständigkeit halber: Das muss gemacht werden.
-
-!!! abstract "Technische Details (für Entwickler)"
-    Die Website ist technisch bereits sehr gut aufgestellt:
+-   **🔍 Suchintention (Search Intent)**
+    ---
+    Das Wichtigste ist nicht das Keyword selbst, sondern *warum* jemand sucht.
     
-    *   **Server-Side Rendering (SSR):** Inhalte sind sofort für Google lesbar.
-    *   **Performance:** Schnelle Ladezeiten durch Next.js Optimierungen.
-    *   **Mobile First:** Die Seite funktioniert perfekt auf Handys (wichtiges Ranking-Signal).
-    *   **Strukturierte Daten:** Wir sagen Google im Code explizit "Wir sind eine lokale Organisation in Gebenstorf" (Schema.org).
-        *(Hinweis: Schema.org ist noch nicht implementiert und fehlt in der aktuellen Codebasis!)*
+    *   **Informational:** "Was wächst im März?" -> Will Infos -> Landingpage: `/ernte`
+    *   **Transactional:** "Gemüseabo kaufen" -> Will kaufen -> Landingpage: `/abos`
+    *   **Navigational:** "bioco login" -> Will zu uns -> Homepage
 
-### Meta-Tags & Beschreibungen (Status Quo)
+-   **👑 Content is King**
+    ---
+    Google liebt Inhalte, die für Menschen geschrieben sind, nicht für Maschinen.
+    
+    *   Schreibe natürlich und hilfreich.
+    *   Beantworte Fragen der Nutzer.
+    *   Vermeide "Keyword-Stuffing" (unnötiges Wiederholen von Begriffen).
 
-Hier sind die aktuellen, bestmöglichen Beschreibungen pro Seite, so wie sie idealerweise hinterlegt werden sollten:
+-   **📍 Local SEO**
+    ---
+    Für uns als lokale Genossenschaft entscheidend.
+    
+    *   Leute suchen "in meiner Nähe" oder "in Baden".
+    *   Google nutzt Standortdaten.
+    *   Wichtig: Konsistente Adressdaten auf der Website.
 
-#### Homepage (`/`)
-> **Titel:** biocò | Bio-Gemüse aus der Region Baden-Brugg
->
-> **Beschreibung:** Gemüsegenossenschaft biocò: Frisches Demeter-Gemüse aus solidarischer Landwirtschaft. Wöchentliche Gemüsekörbe vom Geisshof in Gebenstorf.
+-   **⚡ Technische Basis**
+    ---
+    Die beste Website nützt nichts, wenn Google sie nicht lesen kann.
+    
+    *   Schnelle Ladezeiten.
+    *   Mobilfreundlichkeit (Mobile First).
+    *   Saubere Struktur (Sitemap, robots.txt).
 
-#### Ernte (`/ernte`)
-> **Titel:** Saisonales Demeter Gemüse | Was wächst gerade | biocò
->
-> **Beschreibung:** Entdecke unser saisonales Bio-Gemüse in Demeter-Qualität. Frisch vom Geisshof in Gebenstorf für die Region Baden-Brugg.
+</div>
 
-#### Abos (`/abos`)
-> **Titel:** Gemüseabo Baden | Demeter Gemüse wöchentlich | biocò
->
-> **Beschreibung:** Gemüseabo für die Region Baden-Brugg: Wöchentlich frisches Bio-Gemüse in Demeter-Qualität. Solidarische Landwirtschaft vom Geisshof Gebenstorf.
-
-#### Depots (`/depots`)
-> **Titel:** Standorte & Depots Baden-Brugg | Gemüse abholen | biocò
->
-> **Beschreibung:** Gemüseabholung in Baden, Brugg und Umgebung. Finde dein Depot für frisches Bio-Gemüse aus solidarischer Landwirtschaft vom Geisshof Gebenstorf.
-
-#### Wir (`/wir`)
-> **Titel:** Über uns | Solidarische Landwirtschaft Baden | biocò Gemüsegenossenschaft
->
-> **Beschreibung:** biocò Gemüsegenossenschaft: Seit 2014 solidarische Landwirtschaft auf dem Geisshof Gebenstorf. Demeter-zertifiziertes Bio-Gemüse für Baden-Brugg.
-
----
-
-## 4. Go-Live Checkliste & Konfigurationen
-
-Hier stehen die konkreten Dateien und Einstellungen, die beim finalen "Aufschalten" der Website hinterlegt oder aktiviert werden müssen.
-
-### 4.1 Google Search Console (Einmalig)
-
-Damit Google uns "kennt" und wir sehen, wer uns sucht.
-
-1.  **Domain verifizieren:** `bioco.ch` als "Domain Property" hinzufügen.
-2.  **DNS-Eintrag:** Den TXT-Record von Google bei unserem Hoster (Hostpoint/Metanet/etc.) im DNS eintragen.
-3.  **Sitemap einreichen:** Die URL `https://bioco.ch/sitemap.xml` in der Search Console hinterlegen.
-
-### 4.2 Matomo Analytics (Konfiguration)
-
-Für die DSGVO-konforme Statistik. Die Basis ist bereits im Code (`MatomoScript.tsx`), aber die Umgebungsvariablen müssen auf dem Live-Server gesetzt werden.
-
-*   `NEXT_PUBLIC_MATOMO_URL`: URL zu unserer Matomo-Instanz (z.B. `https://analytics.bioco.ch/`).
-*   `NEXT_PUBLIC_MATOMO_SITE_ID`: Die ID der Website in Matomo (z.B. `1`).
-
-### 4.3 Fehlende Dateien erstellen
-
-Diese Dateien müssen ins Hauptverzeichnis (`public/`-Ordner), damit Suchmaschinen sie finden:
-
-*   [ ] **`robots.txt`**: Die "Hausordnung" für Google.
-    ```text
-    User-agent: *
-    Allow: /
-    Sitemap: https://bioco.ch/sitemap.xml
-    ```
-
-*   [ ] **`sitemap.xml`**: Das Inhaltsverzeichnis aller Seiten.
-    *(Kann automatisch generiert werden oder manuell erstellt werden für: `/`, `/ernte`, `/abos`, `/depots`, `/wir`, `/aktuelles`)*
-
-### 4.4 Schema.org (Strukturierte Daten)
-
-*   [ ] **Implementierung fehlt noch:** Es muss eine Komponente (z.B. `JsonLd.tsx`) erstellt werden, die auf der Homepage und Kontaktseite eingebunden wird.
-    *   **Typ:** `Organization` oder `LocalBusiness`
-    *   **Inhalt:** Name (biocò), Adresse (Geisshof), Logo, Social Media Links.
+!!! tip "Google Empfehlung"
+    > "Erstellen Sie Inhalte in erster Linie für Nutzer, nicht für Suchmaschinen."
+    > 
+    > – [Google Search Central](https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=de)
 
 ---
 
-## 5. Technische Checkliste (Status Quo)
+## 1. Keyword-Strategie
 
-| Feature | Status | Erklärung |
-| :--- | :--- | :--- |
-| **Server-Side Rendering** | ✅ Fertig | Google kann alles lesen. |
-| **Mobile-Optimierung** | ✅ Fertig | Handyfreundlich. |
-| **Strukturierte Daten** | ❌ Offen | **Muss noch programmiert werden.** |
-| **Sitemap.xml** | ⏳ Offen | Datei muss erstellt werden. |
-| **Robots.txt** | ⏳ Offen | Datei muss erstellt werden. |
-| **Bilder-Texte (Alt)** | ⏳ Offen | Müssen noch gepflegt werden. |
+Unsere Analyse zeigt, dass wir uns auf **Nischen-Begriffe** und **lokale Suche** konzentrieren sollten. Gegen grosse nationale Anbieter ("Bio Gemüse Schweiz") zu konkurrieren ist schwer und ineffizient.
+
+### Fokus-Keywords (Primär)
+
+Diese Begriffe beschreiben unser Kernangebot und haben die höchste Relevanz.
+
+| Suchbegriff | Suchvolumen/Mt. | Intention | Zielseite |
+|:------------|:---------------:|:----------|:----------|
+| **Gemüseabo** | Hoch | Kauf | `/abos` |
+| **Bio Gemüse** | Hoch | Kauf | `/abos` |
+| **Solidarische Landwirtschaft** | Mittel | Info | `/solawi`, `/wir` |
+| **Solawi** (Abkürzung) | Mittel | Info | `/solawi` |
+| **Gemüseabo Baden/Brugg** | Nische (Lokal) | Kauf | `/abos`, `/depots` |
+
+### Ergänzende Keywords (Sekundär)
+
+Wichtige Variationen, die wir im Textfluss verwenden.
+
+| Suchbegriff | Kontext | Zielseite |
+|:------------|:--------|:----------|
+| **Bio Bauernhof** | Herkunft betonen | `/wir` |
+| **Bio Gemüse Kiste/Lieferung** | Synonyme für Abo | `/abos` |
+| **Saisonales Gemüse** | Zeitbezug | `/ernte` |
+| **Regional einkaufen** | Wertebezug | Homepage |
+
+!!! warning "Vermeide Kannibalisierung"
+    Versuche nicht, mit *jeder* Seite für *jedes* Keyword zu ranken. 
+    **Eine Seite = Ein Hauptthema.**
+
+---
+
+## 2. Content-Planung (On-Page SEO)
+
+Damit Google unsere Seiten richtig einordnet, brauchen sie eine klare Struktur. Hier ist der Plan für die wichtigsten Seiten.
+
+### 🏠 Homepage (`/`)
+*   **Ziel:** Überblick & Navigation.
+*   **Fokus:** "Gemüsegenossenschaft", "Baden-Brugg", "Geisshof".
+*   **Google-Tipp:** Klare `<h1>` Überschrift und beschreibende Texte "above the fold" (ohne Scrollen sichtbar).
+
+### 🥬 Ernte (`/ernte`)
+*   **Ziel:** Informationssuchende abholen.
+*   **Keywords:** "Saisonales Gemüse", "Saisonkalender", "Was wächst jetzt".
+*   **Strategie:** Monatliche Aktualität signalisiert Google "frischen Content".
+
+### 📦 Abos (`/abos`)
+*   **Ziel:** Conversion (Mitglied werden).
+*   **Keywords:** "Gemüseabo bestellen", "Bio Kiste", "Preise".
+*   **Strategie:** Klare Handlungsaufforderungen (CTAs) und Trust-Elemente.
+
+### 🚜 Solawi (`/solawi`)
+*   **Ziel:** Aufklärung & Konzept-Erklärung.
+*   **Keywords:** "Solidarische Landwirtschaft", "Solawi Funktionsweise".
+*   **Strategie:** Ausführliche Texte ("Long Form Content") ranken hier oft gut für Erklär-Suchanfragen.
+
+### 📍 Depots (`/depots`)
+*   **Ziel:** Lokale Auffindbarkeit.
+*   **Keywords:** "Gemüse abholen [Ort]", "Depot [Ort]".
+*   **Strategie:** Adressen als Text (nicht nur Bild) hinterlegen für Local SEO.
+
+---
+
+## 3. Technische Checkliste
+
+Diese technischen Maßnahmen stellen sicher, dass Google die Seite optimal indizieren kann.
+
+### 🤖 Indexierung
+*   [ ] **robots.txt:** Weist Crawler an, was sie besuchen dürfen. [Google Doku](https://developers.google.com/search/docs/crawling-indexing/robots/intro?hl=de).
+*   [ ] **sitemap.xml:** Eine Landkarte aller Seiten für Google. [Google Doku](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview?hl=de).
+
+### 🏷️ Meta-Daten (Snippets)
+Das sind die Texte, die in den Google-Suchergebnissen erscheinen. Sie müssen zum Klicken anregen ("Click-Through-Rate").
+
+!!! quote "Beispiel: Solawi Seite"
+    **Titel:** Was ist Solidarische Landwirtschaft (SoLaWi)? | biocò
+    **Beschreibung:** Solidarische Landwirtschaft: Gemeinsam Verantwortung tragen für regionales Bio-Gemüse. Erfahre mehr über unser Konzept auf dem Geisshof.
+
+### 🧩 Strukturierte Daten (Schema.org)
+Wir helfen Google, den Inhalt maschinenlesbar zu verstehen.
+
+*   **Typ:** `LocalBusiness` oder `Organization`.
+*   **Nutzen:** Kann zu "Rich Snippets" führen (z.B. Anzeige von Logo und Adresse direkt in der Suche).
+*   **Referenz:** [Google zu strukturierten Daten](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=de).
+
+### 🖼️ Bilder-SEO
+*   **Dateinamen:** Sprechend wählen (`karotten-baden.jpg` statt `IMG_001.jpg`).
+*   **Alt-Text:** Bildinhalt kurz beschreiben (Barrierefreiheit & SEO).
+
+---
+
+## 4. Monitoring & Tools
+
+SEO ist kein einmaliges Projekt, sondern ein Prozess. Wir nutzen folgende Tools zur Überwachung:
+
+1.  **Google Search Console:** Das wichtigste Tool. Zeigt an:
+    *   Wie oft wir in der Suche erscheinen.
+    *   Über welche Begriffe Besucher kommen.
+    *   Technische Fehler auf der Seite.
+    *   [Zur Search Console](https://search.google.com/search-console/about?hl=de)
+
+2.  **Matomo Analytics:**
+    *   Zeigt Nutzerverhalten *auf* der Seite (Datenschutzfreundlich).
+    *   Hilft zu verstehen, welche Inhalte funktionieren.
+
+---
+
+## ✅ Nächste Schritte (ToDo)
+
+| Aufgabe | Bereich | Prio |
+|:--------|:--------|:-----|
+| **Content:** Keywords in neue Texte integrieren | Redaktion | Hoch |
+| **Tech:** `sitemap.xml` & `robots.txt` erstellen | Entwicklung | Hoch |
+| **Tech:** Schema.org (JSON-LD) implementieren | Entwicklung | Mittel |
+| **Setup:** Search Console & Matomo verbinden | Admin | Mittel |
+| **Content:** Bilder mit Alt-Texten versehen | Redaktion | Laufend |
+
+!!! success "Fazit"
+    Unser größter Hebel ist nicht technisches Micro-Management, sondern **relevanter, lokaler Content**, der die Fragen unserer Zielgruppe beantwortet. Die Technik muss lediglich sicherstellen, dass dieser Content für Google barrierefrei zugänglich ist.
