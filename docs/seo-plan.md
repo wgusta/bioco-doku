@@ -12,41 +12,37 @@
 
 Suchmaschinenoptimierung kann komplex wirken, basiert aber auf einfachen Prinzipien. Hier sind die wichtigsten Konzepte für unser Projekt, basierend auf den [offiziellen Google Richtlinien](https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=de).
 
-<div class="grid cards" markdown>
+### 🔍 Suchintention (Search Intent)
 
--   **🔍 Suchintention (Search Intent)**
-    ---
-    Das Wichtigste ist nicht das Keyword selbst, sondern *warum* jemand sucht.
-    
-    *   **Informational:** "Was wächst im März?" -> Will Infos -> Landingpage: `/gemuese`
-    *   **Transactional:** "Gemüseabo kaufen" -> Will kaufen -> Landingpage: `/abos`
-    *   **Navigational:** "bioco login" -> Will zu uns -> Homepage
+Das Wichtigste ist nicht das Keyword selbst, sondern *warum* jemand sucht.
 
--   **👑 Content is King**
-    ---
-    Google liebt Inhalte, die für Menschen geschrieben sind, nicht für Maschinen.
-    
-    *   Schreibe natürlich und hilfreich.
-    *   Beantworte Fragen der Nutzer.
-    *   Vermeide "Keyword-Stuffing" (unnötiges Wiederholen von Begriffen).
+*   **Informational:** "Was wächst im März?" → Will Infos → Landingpage: `/gemuese`
+*   **Transactional:** "Gemüseabo kaufen" → Will kaufen → Landingpage: `/abos`
+*   **Navigational:** "bioco login" → Will zu uns → Homepage
 
--   **📍 Local SEO**
-    ---
-    Für uns als lokale Genossenschaft entscheidend.
-    
-    *   Leute suchen "in meiner Nähe" oder "in Baden".
-    *   Google nutzt Standortdaten.
-    *   Wichtig: Konsistente Adressdaten auf der Website.
+### 👑 Content is King
 
--   **⚡ Technische Basis**
-    ---
-    Die beste Website nützt nichts, wenn Google sie nicht lesen kann.
-    
-    *   Schnelle Ladezeiten.
-    *   Mobilfreundlichkeit (Mobile First).
-    *   Saubere Struktur (Sitemap, robots.txt).
+Google liebt Inhalte, die für Menschen geschrieben sind, nicht für Maschinen.
 
-</div>
+*   Schreibe natürlich und hilfreich.
+*   Beantworte Fragen der Nutzer.
+*   Vermeide "Keyword-Stuffing" (unnötiges Wiederholen von Begriffen).
+
+### 📍 Local SEO
+
+Für uns als lokale Genossenschaft entscheidend.
+
+*   Leute suchen "in meiner Nähe" oder "in Baden".
+*   Google nutzt Standortdaten.
+*   Wichtig: Konsistente Adressdaten auf der Website.
+
+### ⚡ Technische Basis
+
+Die beste Website nützt nichts, wenn Google sie nicht lesen kann.
+
+*   Schnelle Ladezeiten.
+*   Mobilfreundlichkeit (Mobile First).
+*   Saubere Struktur (Sitemap, robots.txt).
 
 !!! tip "Google Empfehlung"
     > "Erstellen Sie Inhalte in erster Linie für Nutzer, nicht für Suchmaschinen."
