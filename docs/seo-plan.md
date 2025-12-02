@@ -18,7 +18,7 @@ Suchmaschinenoptimierung kann komplex wirken, basiert aber auf einfachen Prinzip
     ---
     Das Wichtigste ist nicht das Keyword selbst, sondern *warum* jemand sucht.
     
-    *   **Informational:** "Was wächst im März?" -> Will Infos -> Landingpage: `/ernte`
+    *   **Informational:** "Was wächst im März?" -> Will Infos -> Landingpage: `/gemuese`
     *   **Transactional:** "Gemüseabo kaufen" -> Will kaufen -> Landingpage: `/abos`
     *   **Navigational:** "bioco login" -> Will zu uns -> Homepage
 
@@ -69,7 +69,7 @@ Diese Begriffe beschreiben unser Kernangebot und haben die höchste Relevanz.
 | **Bio Gemüse** | Hoch | Kauf | `/abos` |
 | **Solidarische Landwirtschaft** | Mittel | Info | `/solawi`, `/wir` |
 | **Solawi** (Abkürzung) | Mittel | Info | `/solawi` |
-| **Gemüseabo Baden/Brugg** | Nische (Lokal) | Kauf | `/abos`, `/depots` |
+| **Gemüseabo Baden/Brugg** | Nische (Lokal) | Kauf | `/abos`, `/standorte-depots` |
 
 ### Ergänzende Keywords (Sekundär)
 
@@ -77,9 +77,9 @@ Wichtige Variationen, die wir im Textfluss verwenden.
 
 | Suchbegriff | Kontext | Zielseite |
 |:------------|:--------|:----------|
-| **Bio Bauernhof** | Herkunft betonen | `/wir` |
+| **Bio Bauernhof** | Herkunft betonen | `/wir`, `/standorte-depots` |
 | **Bio Gemüse Kiste/Lieferung** | Synonyme für Abo | `/abos` |
-| **Saisonales Gemüse** | Zeitbezug | `/ernte` |
+| **Saisonales Gemüse** | Zeitbezug | `/gemuese` |
 | **Regional einkaufen** | Wertebezug | Homepage |
 
 !!! warning "Vermeide Kannibalisierung"
@@ -90,32 +90,86 @@ Wichtige Variationen, die wir im Textfluss verwenden.
 
 ## 2. Content-Planung (On-Page SEO)
 
-Damit Google unsere Seiten richtig einordnet, brauchen sie eine klare Struktur. Hier ist der Plan für die wichtigsten Seiten.
+Damit Google unsere Seiten richtig einordnet, brauchen sie eine klare Struktur. Hier ist der Plan für die wichtigsten Seiten inkl. vollständiger Meta-Daten.
 
 ### 🏠 Homepage (`/`)
+
+**Sichtbarer Name:** Home  
+**URL:** `/`  
+**Navigation:** Hauptmenü
+
 *   **Ziel:** Überblick & Navigation.
-*   **Fokus:** "Gemüsegenossenschaft", "Baden-Brugg", "Geisshof".
+*   **Fokus-Keywords:** "Gemüsegenossenschaft", "Baden-Brugg", "Geisshof"
+*   **Meta-Titel:** `biocò | Bio-Gemüse aus der Region Baden-Brugg`
+*   **Meta-Beschreibung:** `Gemüsegenossenschaft biocò: Frisches Demeter-Gemüse aus solidarischer Landwirtschaft. Wöchentliche Gemüsekörbe vom Geisshof in Gebenstorf.`
 *   **Google-Tipp:** Klare `<h1>` Überschrift und beschreibende Texte "above the fold" (ohne Scrollen sichtbar).
 
-### 🥬 Ernte (`/ernte`)
+### 🥬 Gemüse (`/gemuese`)
+
+**Sichtbarer Name:** Gemüse  
+**URL:** `/gemuese` (⚠️ vorher `/ernte`)  
+**Navigation:** Hauptmenü
+
 *   **Ziel:** Informationssuchende abholen.
-*   **Keywords:** "Saisonales Gemüse", "Saisonkalender", "Was wächst jetzt".
+*   **Fokus-Keywords:** "Saisonales Gemüse", "Saisonkalender", "Was wächst jetzt"
+*   **Meta-Titel:** `Saisonales Demeter Gemüse | Was wächst gerade | biocò`
+*   **Meta-Beschreibung:** `Entdecke unser saisonales Bio-Gemüse in Demeter-Qualität. Frisch vom Geisshof in Gebenstorf für die Region Baden-Brugg.`
 *   **Strategie:** Monatliche Aktualität signalisiert Google "frischen Content".
+*   **⚠️ Migration:** 301-Redirect von `/ernte` → `/gemuese` erforderlich
 
 ### 📦 Abos (`/abos`)
+
+**Sichtbarer Name:** Abos  
+**URL:** `/abos`  
+**Navigation:** Hauptmenü
+
 *   **Ziel:** Conversion (Mitglied werden).
-*   **Keywords:** "Gemüseabo bestellen", "Bio Kiste", "Preise".
+*   **Fokus-Keywords:** "Gemüseabo", "Bio Gemüse", "Gemüseabo Baden/Brugg"
+*   **Sekundäre Keywords:** "Bio Gemüse Kiste", "Bio Gemüse Lieferung", "Biogemüse bestellen"
+*   **Meta-Titel:** `Gemüseabo Baden | Demeter Gemüse wöchentlich | biocò`
+*   **Meta-Beschreibung:** `Gemüseabo für die Region Baden-Brugg: Wöchentlich frisches Bio-Gemüse in Demeter-Qualität. Solidarische Landwirtschaft vom Geisshof Gebenstorf.`
 *   **Strategie:** Klare Handlungsaufforderungen (CTAs) und Trust-Elemente.
 
-### 🚜 Solawi (`/solawi`)
-*   **Ziel:** Aufklärung & Konzept-Erklärung.
-*   **Keywords:** "Solidarische Landwirtschaft", "Solawi Funktionsweise".
-*   **Strategie:** Ausführliche Texte ("Long Form Content") ranken hier oft gut für Erklär-Suchanfragen.
+### 📍 Standorte (`/standorte-depots`)
 
-### 📍 Depots (`/depots`)
+**Sichtbarer Name:** Standorte  
+**URL:** `/standorte-depots` (⚠️ vorher `/depots`)  
+**Navigation:** Hauptmenü
+
 *   **Ziel:** Lokale Auffindbarkeit.
-*   **Keywords:** "Gemüse abholen [Ort]", "Depot [Ort]".
+*   **Fokus-Keywords:** "Gemüse abholen [Ort]", "Depot Baden/Brugg"
+*   **Sekundäre Keywords:** "Bio Bauernhof" (im Kontext von Abholstationen)
+*   **Meta-Titel:** `Standorte & Depots Baden-Brugg | Gemüse abholen | biocò`
+*   **Meta-Beschreibung:** `Gemüseabholung in Baden, Brugg und Umgebung. Finde dein Depot für frisches Bio-Gemüse aus solidarischer Landwirtschaft vom Geisshof Gebenstorf.`
 *   **Strategie:** Adressen als Text (nicht nur Bild) hinterlegen für Local SEO.
+*   **⚠️ Migration:** 301-Redirect von `/depots` → `/standorte-depots` erforderlich
+
+### 👥 Wir (`/wir`)
+
+**Sichtbarer Name:** Wir  
+**URL:** `/wir`  
+**Navigation:** Hauptmenü
+
+*   **Ziel:** Vertrauen aufbauen, Geschichte erzählen.
+*   **Fokus-Keywords:** "Bio Bauernhof", "Genossenschaft", "Team", "Geisshof"
+*   **Sekundäre Keywords:** "Solidarische Landwirtschaft" (mit Link zu `/solawi`)
+*   **Meta-Titel:** `Über uns | Bio Bauernhof Baden | biocò Gemüsegenossenschaft`
+*   **Meta-Beschreibung:** `biocò Gemüsegenossenschaft: Seit 2014 bewirtschaften wir einen Bio Bauernhof auf dem Geisshof Gebenstorf. Demeter-zertifiziertes Gemüse für Baden-Brugg.`
+*   **Strategie:** Natürliche Erwähnung "Wir bewirtschaften einen Bio Bauernhof..." im Text.
+*   **🔗 Wichtig:** Link zu `/solawi` einfügen (z.B. "Mehr über solidarische Landwirtschaft erfahren")
+
+### 🚜 Solawi (`/solawi`)
+
+**Sichtbarer Name:** Solidarische Landwirtschaft  
+**URL:** `/solawi`  
+**Navigation:** ⚠️ **KEINE** (Orphaned Page - nur via Link von `/wir`)
+
+*   **Ziel:** Aufklärung & Konzept-Erklärung.
+*   **Fokus-Keywords:** "Solidarische Landwirtschaft", "Solawi", "SoLaWi"
+*   **Meta-Titel:** `Was ist Solidarische Landwirtschaft (SoLaWi)? | biocò`
+*   **Meta-Beschreibung:** `Solidarische Landwirtschaft (Solawi/SoLaWi): Gemeinsam Verantwortung tragen für regionales Bio-Gemüse. Erfahre mehr über unser Konzept auf dem Geisshof.`
+*   **Strategie:** Ausführliche Texte ("Long Form Content", 500+ Wörter) ranken oft gut für Erklär-Suchanfragen.
+*   **🔗 Wichtig:** Diese Seite erscheint NICHT im Hauptmenü, wird aber von `/wir` verlinkt.
 
 ---
 
