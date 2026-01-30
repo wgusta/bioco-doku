@@ -8,7 +8,7 @@ Die Webseite wird mit einem System namens **ProcessWire** verwaltet. ProcessWire
 
 Um Inhalte zu bearbeiten, müssen Sie sich im "Büro" (dem Admin-Bereich) anmelden.
 
-1.  Öffnen Sie in Ihrem Browser die Anmelde-Seite. (Der Link wird Ihnen vom technischen Administrator mitgeteilt, er lautet meist `https://www.bioco.ch/processwire/`).
+1.  Öffnen Sie in Ihrem Browser die Anmelde-Seite: `https://cms.bioco.ch/processwire/`
 2.  Geben Sie Ihren Benutzernamen und Ihr Passwort ein.
 3.  Klicken Sie auf "Anmelden".
 

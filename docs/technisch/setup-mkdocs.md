@@ -9,7 +9,7 @@ Dies ist der "Bauplan" für das `bioco-doku`-Projekt. Er dokumentiert den automa
 
 ---
 
-## Phase 1: Lokales Setup (Dein PC) 💻
+## Phase 1: Lokales Setup (Dein PC)
 
 Alle diese Schritte passieren auf deinem lokalen Computer und müssen nur *einmal* durchgeführt werden.
 
@@ -101,7 +101,7 @@ Alle diese Schritte passieren auf deinem lokalen Computer und müssen nur *einma
 
 ---
 
-## Phase 2: GitHub-Konfiguration (Website) 🌐
+## Phase 2: GitHub-Konfiguration (Website)
 
 Diese Schritte sind nur *einmal* auf GitHub.com nötig.
 
@@ -130,7 +130,7 @@ Diese Schritte sind nur *einmal* auf GitHub.com nötig.
 
 ---
 
-## Phase 3: Server-Konfiguration (cPanel DNS) 📡
+## Phase 3: Server-Konfiguration (cPanel DNS)
 
 !!!info "Kein Terminal, kein File Manager"
     Für die Doku-Seite brauchen wir **keinen** SSH-Zugriff, kein Terminal und keinen File Manager auf dem Server. Die einzige Aktion findet im DNS-Editor statt.
@@ -149,7 +149,7 @@ Diese Schritte sind nur *einmal* auf GitHub.com nötig.
 
 ---
 
-## Phase 4: Dein Workflow (Tägliche Arbeit) ✍️
+## Phase 4: Dein Workflow (Taegliche Arbeit)
 
 Ab jetzt ist dein Workflow für die Doku extrem einfach:
 

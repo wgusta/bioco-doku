@@ -8,11 +8,11 @@
 
 ---
 
-## 📚 SEO-Grundlagen (für Einsteiger)
+## SEO-Grundlagen (fuer Einsteiger)
 
 Suchmaschinenoptimierung kann komplex wirken, basiert aber auf einfachen Prinzipien. Hier sind die wichtigsten Konzepte für unser Projekt, basierend auf den [offiziellen Google Richtlinien](https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=de).
 
-### 🔍 Suchintention (Search Intent)
+### Suchintention (Search Intent)
 
 Das Wichtigste ist nicht das Keyword selbst, sondern *warum* jemand sucht.
 
@@ -20,7 +20,7 @@ Das Wichtigste ist nicht das Keyword selbst, sondern *warum* jemand sucht.
 *   **Transactional:** "Gemüseabo kaufen" → Will kaufen → Landingpage: `/abos`
 *   **Navigational:** "bioco login" → Will zu uns → Homepage
 
-### 👑 Content is King
+### Content is King
 
 Google liebt Inhalte, die für Menschen geschrieben sind, nicht für Maschinen.
 
@@ -28,7 +28,7 @@ Google liebt Inhalte, die für Menschen geschrieben sind, nicht für Maschinen.
 *   Beantworte Fragen der Nutzer.
 *   Vermeide "Keyword-Stuffing" (unnötiges Wiederholen von Begriffen).
 
-### 📍 Local SEO
+### Local SEO
 
 Für uns als lokale Genossenschaft entscheidend.
 
@@ -36,7 +36,7 @@ Für uns als lokale Genossenschaft entscheidend.
 *   Google nutzt Standortdaten.
 *   Wichtig: Konsistente Adressdaten auf der Website.
 
-### ⚡ Technische Basis
+### Technische Basis
 
 Die beste Website nützt nichts, wenn Google sie nicht lesen kann.
 
@@ -88,7 +88,7 @@ Wichtige Variationen, die wir im Textfluss verwenden.
 
 Damit Google unsere Seiten richtig einordnet, brauchen sie eine klare Struktur. Hier ist der Plan für die wichtigsten Seiten inkl. vollständiger Meta-Daten.
 
-### 🏠 Homepage (`/`)
+### Homepage (/)
 
 **Sichtbarer Name:** Home  
 **URL:** `/`  
@@ -100,7 +100,7 @@ Damit Google unsere Seiten richtig einordnet, brauchen sie eine klare Struktur. 
 *   **Meta-Beschreibung:** `Gemüsegenossenschaft biocò: Frisches Demeter-Gemüse aus solidarischer Landwirtschaft. Wöchentliche Gemüsekörbe vom Geisshof in Gebenstorf.`
 *   **Google-Tipp:** Klare `<h1>` Überschrift und beschreibende Texte "above the fold" (ohne Scrollen sichtbar).
 
-### 🥬 Gemüse (`/gemuese`)
+### Gemuese (/gemuese)
 
 **Sichtbarer Name:** Gemüse  
 **URL:** `/gemuese` (⚠️ vorher `/ernte`)  
@@ -113,7 +113,7 @@ Damit Google unsere Seiten richtig einordnet, brauchen sie eine klare Struktur. 
 *   **Strategie:** Monatliche Aktualität signalisiert Google "frischen Content".
 *   **⚠️ Migration:** 301-Redirect von `/ernte` → `/gemuese` erforderlich
 
-### 📦 Abos (`/abos`)
+### Abos (/abos)
 
 **Sichtbarer Name:** Abos  
 **URL:** `/abos`  
@@ -126,7 +126,7 @@ Damit Google unsere Seiten richtig einordnet, brauchen sie eine klare Struktur. 
 *   **Meta-Beschreibung:** `Gemüseabo für die Region Baden-Brugg: Wöchentlich frisches Bio-Gemüse in Demeter-Qualität. Solidarische Landwirtschaft vom Geisshof Gebenstorf.`
 *   **Strategie:** Klare Handlungsaufforderungen (CTAs) und Trust-Elemente.
 
-### 📍 Standorte (`/standorte-depots`)
+### Standorte (/standorte-depots)
 
 **Sichtbarer Name:** Standorte  
 **URL:** `/standorte-depots` (⚠️ vorher `/depots`)  
@@ -140,7 +140,7 @@ Damit Google unsere Seiten richtig einordnet, brauchen sie eine klare Struktur. 
 *   **Strategie:** Adressen als Text (nicht nur Bild) hinterlegen für Local SEO.
 *   **⚠️ Migration:** 301-Redirect von `/depots` → `/standorte-depots` erforderlich
 
-### 👥 Wir (`/wir`)
+### Wir (/wir)
 
 **Sichtbarer Name:** Wir  
 **URL:** `/wir`  
@@ -154,7 +154,7 @@ Damit Google unsere Seiten richtig einordnet, brauchen sie eine klare Struktur. 
 *   **Strategie:** Natürliche Erwähnung "Wir bewirtschaften einen Bio Bauernhof..." im Text.
 *   **🔗 Wichtig:** Link zu `/solawi` einfügen (z.B. "Mehr über solidarische Landwirtschaft erfahren")
 
-### 🚜 Solawi (`/solawi`)
+### Solawi (/solawi)
 
 **Sichtbarer Name:** Solidarische Landwirtschaft  
 **URL:** `/solawi`  
@@ -173,25 +173,25 @@ Damit Google unsere Seiten richtig einordnet, brauchen sie eine klare Struktur. 
 
 Diese technischen Maßnahmen stellen sicher, dass Google die Seite optimal indizieren kann.
 
-### 🤖 Indexierung
+### Indexierung
 *   [ ] **robots.txt:** Weist Crawler an, was sie besuchen dürfen. [Google Doku](https://developers.google.com/search/docs/crawling-indexing/robots/intro?hl=de).
 *   [ ] **sitemap.xml:** Eine Landkarte aller Seiten für Google. [Google Doku](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview?hl=de).
 
-### 🏷️ Meta-Daten (Snippets)
+### Meta-Daten (Snippets)
 Das sind die Texte, die in den Google-Suchergebnissen erscheinen. Sie müssen zum Klicken anregen ("Click-Through-Rate").
 
 !!! quote "Beispiel: Solawi Seite"
     **Titel:** Was ist Solidarische Landwirtschaft (SoLaWi)? | biocò
     **Beschreibung:** Solidarische Landwirtschaft: Gemeinsam Verantwortung tragen für regionales Bio-Gemüse. Erfahre mehr über unser Konzept auf dem Geisshof.
 
-### 🧩 Strukturierte Daten (Schema.org)
+### Strukturierte Daten (Schema.org)
 Wir helfen Google, den Inhalt maschinenlesbar zu verstehen.
 
 *   **Typ:** `LocalBusiness` oder `Organization`.
 *   **Nutzen:** Kann zu "Rich Snippets" führen (z.B. Anzeige von Logo und Adresse direkt in der Suche).
 *   **Referenz:** [Google zu strukturierten Daten](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=de).
 
-### 🖼️ Bilder-SEO
+### Bilder-SEO
 *   **Dateinamen:** Sprechend wählen (`karotten-baden.jpg` statt `IMG_001.jpg`).
 *   **Alt-Text:** Bildinhalt kurz beschreiben (Barrierefreiheit & SEO).
 
@@ -213,7 +213,7 @@ SEO ist kein einmaliges Projekt, sondern ein Prozess. Wir nutzen folgende Tools 
 
 ---
 
-## ✅ Nächste Schritte (ToDo)
+## Naechste Schritte (ToDo)
 
 | Aufgabe | Bereich | Prio |
 |:--------|:--------|:-----|

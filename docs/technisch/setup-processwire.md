@@ -13,7 +13,7 @@ Dies ist der "Bauplan" für das `bioco-web-project`. Er dokumentiert den gesamte
 
 ---
 
-## Phase 1: Vorbereitung (Lokal & GitHub) 🧠
+## Phase 1: Vorbereitung (Lokal und GitHub)
 
 Zuerst bereiten wir den Code (das "Rezept") auf unserem PC und in unserem "Rezeptbuch" (GitHub) vor.
 
@@ -59,7 +59,7 @@ Zuerst bereiten wir den Code (das "Rezept") auf unserem PC und in unserem "Rezep
 
 ---
 
-## Phase 2: Server-Vorbereitung (cPanel) 🔧
+## Phase 2: Server-Vorbereitung (cPanel)
 
 Jetzt bereiten wir die "Küche" (Novatrend-Server) vor.
 
@@ -77,7 +77,7 @@ Jetzt bereiten wir die "Küche" (Novatrend-Server) vor.
 
 ---
 
-## Phase 3: Der cPanel-SSH-Hack (Der Spezialschlüssel) 🔑
+## Phase 3: Der cPanel-SSH-Hack (Der Spezialschluessel)
 
 Das ist der **wichtigste und komplizierteste** Teil. Wir müssen eine sichere Verbindung zwischen Server und GitHub herstellen.
 
@@ -124,7 +124,7 @@ Das ist der **wichtigste und komplizierteste** Teil. Wir müssen eine sichere Ve
 
 ---
 
-## Phase 4: Staging-Seite installieren (`staging.bioco.ch`) 🚀
+## Phase 4: Staging-Seite installieren (staging.bioco.ch)
 
 Jetzt bauen wir die Testküche.
 
@@ -173,7 +173,7 @@ Jetzt bauen wir die Testküche.
 
 ---
 
-## Phase 5: Live-Seite installieren (`www.bioco.ch`) 🍽️
+## Phase 5: Live-Seite installieren (www.bioco.ch)
 
 Wiederhole Phase 4 exakt, aber für die Live-Seite.
 
@@ -197,7 +197,7 @@ Wiederhole Phase 4 exakt, aber für die Live-Seite.
 
 ---
 
-## Phase 6: Abschluss (Doku & Matomo) 📊
+## Phase 6: Abschluss (Doku und Matomo)
 
 1.  **Matomo:**
     * Installiere Matomo im Ordner `public_html/matomo`.
