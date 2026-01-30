@@ -1,0 +1,2001 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Bioco-Team">
+      
+      
+        <link rel="canonical" href="https://docs.bioco.ch/seo/umsetzung/">
+      
+      
+        <link rel="prev" href="../strategie/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Umsetzung - Bioco Web-Projekt Doku</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#seo-implementation-spec-biococh" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../.." title="Bioco Web-Projekt Doku" class="md-header__button md-logo" aria-label="Bioco Web-Projekt Doku" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bioco Web-Projekt Doku
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Umsetzung
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../redaktion/" class="md-tabs__link">
+          
+  
+  
+  Fuer Redakteure
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../governance/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Governance
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../technisch/" class="md-tabs__link">
+          
+  
+  
+  Technisch
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  SEO
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Bioco Web-Projekt Doku" class="md-nav__button md-logo" aria-label="Bioco Web-Projekt Doku" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Bioco Web-Projekt Doku
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fuer Redakteure
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fuer Redakteure
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redaktion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uebersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redaktion/anleitung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anleitung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redaktion/strukturhandbuch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strukturhandbuch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technisch
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Technisch
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technisch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uebersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technisch/setup-processwire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ProcessWire Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technisch/setup-mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MkDocs Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technisch/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Dokumentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SEO
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SEO
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uebersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strategie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strategie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Umsetzung
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Umsetzung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vollstaendige-seitenuebersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vollstaendige Seitenuebersicht
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vollstaendige Seitenuebersicht">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hauptseiten-in-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hauptseiten (in Navigation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spezialseiten-nicht-in-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spezialseiten (nicht in Navigation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meta-daten-pro-seite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meta-Daten pro Seite
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Meta-Daten pro Seite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#homepage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Homepage (/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gemuse-gemuese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gemüse (/gemuese)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abos-abos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abos (/abos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standorte-standorte-depots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standorte (/standorte-depots)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wir-wir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wir (/wir)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solawi-solawi-neue-seite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solawi (/solawi) - NEUE SEITE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technische-implementierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technische Implementierung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technische Implementierung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-url-migrationen-301-redirects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. URL-Migrationen (301 Redirects)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-robotstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. robots.txt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sitemapxml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. sitemap.xml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-schemaorg-strukturierte-daten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Schema.org Strukturierte Daten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-bilder-seo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Bilder-SEO
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#umsetzungs-checkliste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Umsetzungs-Checkliste
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Umsetzungs-Checkliste">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-content-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Content Updates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-technische-umsetzung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Technische Umsetzung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifikation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verifikation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verifikation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checkliste-pro-seite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkliste pro Seite
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technische-verifikation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technische Verifikation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referenzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referenzen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#konsistenz-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konsistenz-Check
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vollstaendige-seitenuebersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vollstaendige Seitenuebersicht
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vollstaendige Seitenuebersicht">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hauptseiten-in-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hauptseiten (in Navigation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spezialseiten-nicht-in-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spezialseiten (nicht in Navigation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meta-daten-pro-seite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meta-Daten pro Seite
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Meta-Daten pro Seite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#homepage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Homepage (/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gemuse-gemuese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gemüse (/gemuese)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abos-abos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abos (/abos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standorte-standorte-depots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standorte (/standorte-depots)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wir-wir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wir (/wir)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solawi-solawi-neue-seite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solawi (/solawi) - NEUE SEITE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technische-implementierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technische Implementierung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technische Implementierung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-url-migrationen-301-redirects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. URL-Migrationen (301 Redirects)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-robotstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. robots.txt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sitemapxml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. sitemap.xml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-schemaorg-strukturierte-daten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Schema.org Strukturierte Daten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-bilder-seo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Bilder-SEO
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#umsetzungs-checkliste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Umsetzungs-Checkliste
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Umsetzungs-Checkliste">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-content-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Content Updates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-technische-umsetzung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Technische Umsetzung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifikation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verifikation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verifikation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checkliste-pro-seite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkliste pro Seite
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technische-verifikation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technische Verifikation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referenzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referenzen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#konsistenz-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konsistenz-Check
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="seo-implementation-spec-biococh">SEO Implementation Spec - biocò.ch</h1>
+<div class="admonition info">
+<p class="admonition-title">Zweck dieses Dokuments</p>
+<p>Dies ist die <strong>Umsetzungscheckliste</strong> für Entwickler und Content-Manager.
+Sie enthält alle technischen und inhaltlichen Anforderungen für die SEO-Optimierung.</p>
+</div>
+<hr />
+<h2 id="vollstaendige-seitenuebersicht">Vollstaendige Seitenuebersicht</h2>
+<h3 id="hauptseiten-in-navigation">Hauptseiten (in Navigation)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">URL Slug</th>
+<th style="text-align: left;">Sichtbarer Name</th>
+<th style="text-align: left;">Navigation</th>
+<th style="text-align: left;">Status</th>
+<th style="text-align: left;">301 Redirect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>/</code></td>
+<td style="text-align: left;">Home</td>
+<td style="text-align: left;">Hauptmenü</td>
+<td style="text-align: left;">✅ Existing</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/gemuese</code></td>
+<td style="text-align: left;">Gemüse</td>
+<td style="text-align: left;">Hauptmenü</td>
+<td style="text-align: left;">⚠️ Rename</td>
+<td style="text-align: left;"><code>/ernte</code> → <code>/gemuese</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/abos</code></td>
+<td style="text-align: left;">Abos</td>
+<td style="text-align: left;">Hauptmenü</td>
+<td style="text-align: left;">✅ Existing</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/standorte-depots</code></td>
+<td style="text-align: left;">Standorte</td>
+<td style="text-align: left;">Hauptmenü</td>
+<td style="text-align: left;">⚠️ Rename</td>
+<td style="text-align: left;"><code>/depots</code> → <code>/standorte-depots</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/wir</code></td>
+<td style="text-align: left;">Wir</td>
+<td style="text-align: left;">Hauptmenü</td>
+<td style="text-align: left;">✅ Existing</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spezialseiten-nicht-in-navigation">Spezialseiten (nicht in Navigation)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">URL Slug</th>
+<th style="text-align: left;">Sichtbarer Name</th>
+<th style="text-align: left;">Link-Quelle</th>
+<th style="text-align: left;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>/solawi</code></td>
+<td style="text-align: left;">Solidarische Landwirtschaft</td>
+<td style="text-align: left;">Von <code>/wir</code> verlinkt</td>
+<td style="text-align: left;">🆕 Neu erstellen</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="meta-daten-pro-seite">Meta-Daten pro Seite</h2>
+<h3 id="homepage">Homepage (<code>/</code>)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;biocò</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">Bio-Gemüse</span><span class="nv"> </span><span class="s">aus</span><span class="nv"> </span><span class="s">der</span><span class="nv"> </span><span class="s">Region</span><span class="nv"> </span><span class="s">Baden-Brugg&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Gemüsegenossenschaft</span><span class="nv"> </span><span class="s">biocò:</span><span class="nv"> </span><span class="s">Frisches</span><span class="nv"> </span><span class="s">Demeter-Gemüse</span><span class="nv"> </span><span class="s">aus</span><span class="nv"> </span><span class="s">solidarischer</span><span class="nv"> </span><span class="s">Landwirtschaft.</span><span class="nv"> </span><span class="s">Wöchentliche</span><span class="nv"> </span><span class="s">Gemüsekörbe</span><span class="nv"> </span><span class="s">vom</span><span class="nv"> </span><span class="s">Geisshof</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">Gebenstorf.&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">h1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Frisches</span><span class="nv"> </span><span class="s">Bio-Gemüse</span><span class="nv"> </span><span class="s">aus</span><span class="nv"> </span><span class="s">Baden-Brugg&quot;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">keywords</span><span class="p">:</span><span class="w"> </span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Gemüsegenossenschaft</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Baden-Brugg</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Geisshof</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bio Gemüse</span>
+</code></pre></div>
+<p><strong>Content-Anforderungen:</strong>
+- Klare H1-Überschrift above the fold
+- Kurzbeschreibung des Angebots (Gemüseabo, Solawi-Konzept)
+- Trust-Elemente (Demeter-Logo, Mitgliederzahl)
+- Call-to-Action (Abo bestellen, mehr erfahren)</p>
+<hr />
+<h3 id="gemuse-gemuese">Gemüse (<code>/gemuese</code>)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/gemuese</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">old_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/ernte</span><span class="w">  </span><span class="c1"># 301 Redirect erforderlich!</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Saisonales</span><span class="nv"> </span><span class="s">Demeter</span><span class="nv"> </span><span class="s">Gemüse</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">Was</span><span class="nv"> </span><span class="s">wächst</span><span class="nv"> </span><span class="s">gerade</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">biocò&quot;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Entdecke</span><span class="nv"> </span><span class="s">unser</span><span class="nv"> </span><span class="s">saisonales</span><span class="nv"> </span><span class="s">Bio-Gemüse</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">Demeter-Qualität.</span><span class="nv"> </span><span class="s">Frisch</span><span class="nv"> </span><span class="s">vom</span><span class="nv"> </span><span class="s">Geisshof</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">Gebenstorf</span><span class="nv"> </span><span class="s">für</span><span class="nv"> </span><span class="s">die</span><span class="nv"> </span><span class="s">Region</span><span class="nv"> </span><span class="s">Baden-Brugg.&quot;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nt">h1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Was</span><span class="nv"> </span><span class="s">wächst</span><span class="nv"> </span><span class="s">gerade</span><span class="nv"> </span><span class="s">auf</span><span class="nv"> </span><span class="s">dem</span><span class="nv"> </span><span class="s">Geisshof?&quot;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nt">keywords</span><span class="p">:</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Saisonales Gemüse</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Saisonkalender</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Was wächst jetzt</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Gemüse Saison</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Demeter Gemüse</span>
+</code></pre></div>
+<p><strong>Content-Anforderungen:</strong>
+- Saisonkalender (monatlich aktualisierbar)
+- Liste aktuell verfügbares Gemüse
+- Bilder vom Feld/Ernte
+- Filter/Sortierung nach Monat (optional)</p>
+<p><strong>SEO-Strategie:</strong>
+- Monatliche Updates signalisieren Google "Fresh Content"
+- Long-tail Keywords: "Saisonales Gemüse März", "Was wächst im Frühling"</p>
+<hr />
+<h3 id="abos-abos">Abos (<code>/abos</code>)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/abos</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Gemüseabo</span><span class="nv"> </span><span class="s">Baden</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">Demeter</span><span class="nv"> </span><span class="s">Gemüse</span><span class="nv"> </span><span class="s">wöchentlich</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">biocò&quot;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Gemüseabo</span><span class="nv"> </span><span class="s">für</span><span class="nv"> </span><span class="s">die</span><span class="nv"> </span><span class="s">Region</span><span class="nv"> </span><span class="s">Baden-Brugg:</span><span class="nv"> </span><span class="s">Wöchentlich</span><span class="nv"> </span><span class="s">frisches</span><span class="nv"> </span><span class="s">Bio-Gemüse</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">Demeter-Qualität.</span><span class="nv"> </span><span class="s">Solidarische</span><span class="nv"> </span><span class="s">Landwirtschaft</span><span class="nv"> </span><span class="s">vom</span><span class="nv"> </span><span class="s">Geisshof</span><span class="nv"> </span><span class="s">Gebenstorf.&quot;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nt">h1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Dein</span><span class="nv"> </span><span class="s">wöchentliches</span><span class="nv"> </span><span class="s">Gemüseabo&quot;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nt">keywords</span><span class="p">:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Gemüseabo</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bio Gemüse</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Gemüseabo Baden</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Gemüseabo Brugg</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bio Gemüse Kiste</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bio Gemüse Lieferung</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Biogemüse bestellen</span>
+</code></pre></div>
+<p><strong>Content-Anforderungen:</strong>
+- Übersicht Abo-Modelle (Größen, Preise)
+- Klare CTAs ("Jetzt Mitglied werden")
+- Trust-Elemente (Testimonials, Fotos zufriedener Mitglieder)
+- FAQ-Bereich (Wie funktioniert das Abo?)</p>
+<p><strong>Keyword-Integration:</strong>
+- "Bio Gemüse Kiste" im Fließtext verwenden
+- "Bestellen Sie Ihr Biogemüse direkt vom Hof"
+- "Wöchentliche Bio Gemüse Lieferung an Ihr Depot"</p>
+<hr />
+<h3 id="standorte-standorte-depots">Standorte (<code>/standorte-depots</code>)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/standorte-depots</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nt">old_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/depots</span><span class="w">  </span><span class="c1"># 301 Redirect erforderlich!</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nt">visible_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Standorte&quot;</span><span class="w">  </span><span class="c1"># Kurz im Menü</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Standorte</span><span class="nv"> </span><span class="s">&amp;</span><span class="nv"> </span><span class="s">Depots</span><span class="nv"> </span><span class="s">Baden-Brugg</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">Gemüse</span><span class="nv"> </span><span class="s">abholen</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">biocò&quot;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Gemüseabholung</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">Baden,</span><span class="nv"> </span><span class="s">Brugg</span><span class="nv"> </span><span class="s">und</span><span class="nv"> </span><span class="s">Umgebung.</span><span class="nv"> </span><span class="s">Finde</span><span class="nv"> </span><span class="s">dein</span><span class="nv"> </span><span class="s">Depot</span><span class="nv"> </span><span class="s">für</span><span class="nv"> </span><span class="s">frisches</span><span class="nv"> </span><span class="s">Bio-Gemüse</span><span class="nv"> </span><span class="s">aus</span><span class="nv"> </span><span class="s">solidarischer</span><span class="nv"> </span><span class="s">Landwirtschaft</span><span class="nv"> </span><span class="s">vom</span><span class="nv"> </span><span class="s">Geisshof</span><span class="nv"> </span><span class="s">Gebenstorf.&quot;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nt">h1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Unsere</span><span class="nv"> </span><span class="s">Depots</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">der</span><span class="nv"> </span><span class="s">Region&quot;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="nt">keywords</span><span class="p">:</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Gemüse abholen Baden</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Gemüse abholen Brugg</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Depot Baden</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Depot Brugg</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bio Bauernhof (Abholstationen)</span>
+</code></pre></div>
+<p><strong>Content-Anforderungen:</strong>
+- Liste aller Depots mit Adressen (als TEXT, nicht nur Bild!)
+- Google Maps Einbettung (optional)
+- Öffnungszeiten/Abhol-Infos
+- Fotos der Depots</p>
+<p><strong>SEO-Strategie:</strong>
+- Adressen in strukturiertem Text für Local SEO
+- Jeder Standort als einzelner Abschnitt mit H2 (z.B. "## Depot Baden")
+- Keyword "Bio Bauernhof" im Kontext: "Holt euer Gemüse direkt vom Bio Bauernhof ab"</p>
+<hr />
+<h3 id="wir-wir">Wir (<code>/wir</code>)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/wir</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Über</span><span class="nv"> </span><span class="s">uns</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">Bio</span><span class="nv"> </span><span class="s">Bauernhof</span><span class="nv"> </span><span class="s">Baden</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">biocò</span><span class="nv"> </span><span class="s">Gemüsegenossenschaft&quot;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;biocò</span><span class="nv"> </span><span class="s">Gemüsegenossenschaft:</span><span class="nv"> </span><span class="s">Seit</span><span class="nv"> </span><span class="s">2014</span><span class="nv"> </span><span class="s">bewirtschaften</span><span class="nv"> </span><span class="s">wir</span><span class="nv"> </span><span class="s">einen</span><span class="nv"> </span><span class="s">Bio</span><span class="nv"> </span><span class="s">Bauernhof</span><span class="nv"> </span><span class="s">auf</span><span class="nv"> </span><span class="s">dem</span><span class="nv"> </span><span class="s">Geisshof</span><span class="nv"> </span><span class="s">Gebenstorf.</span><span class="nv"> </span><span class="s">Demeter-zertifiziertes</span><span class="nv"> </span><span class="s">Gemüse</span><span class="nv"> </span><span class="s">für</span><span class="nv"> </span><span class="s">Baden-Brugg.&quot;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nt">h1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Über</span><span class="nv"> </span><span class="s">uns:</span><span class="nv"> </span><span class="s">Die</span><span class="nv"> </span><span class="s">biocò</span><span class="nv"> </span><span class="s">Gemüsegenossenschaft&quot;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nt">keywords</span><span class="p">:</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bio Bauernhof</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Genossenschaft</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Team</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Geisshof</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Demeter</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Solidarische Landwirtschaft</span>
+</code></pre></div>
+<p><strong>Content-Anforderungen:</strong>
+- Geschichte der Genossenschaft (seit 2014)
+- Vorstellung Team/Gärtner
+- Fotos vom Hof
+- <strong>Wichtig:</strong> Link zu <code>/solawi</code> einfügen (z.B. "→ Mehr über solidarische Landwirtschaft erfahren")</p>
+<p><strong>Keyword-Integration:</strong>
+- "Wir bewirtschaften einen Bio Bauernhof in Baden..."
+- "Auf dem Geisshof in Gebenstorf..."
+- Natürliche Erwähnung "solidarische Landwirtschaft" mit Link</p>
+<hr />
+<h3 id="solawi-solawi-neue-seite">Solawi (<code>/solawi</code>) - NEUE SEITE</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/solawi</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nt">in_navigation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">  </span><span class="c1"># Orphaned Page!</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nt">linked_from</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/wir</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Was</span><span class="nv"> </span><span class="s">ist</span><span class="nv"> </span><span class="s">Solidarische</span><span class="nv"> </span><span class="s">Landwirtschaft</span><span class="nv"> </span><span class="s">(SoLaWi)?</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">biocò&quot;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Solidarische</span><span class="nv"> </span><span class="s">Landwirtschaft</span><span class="nv"> </span><span class="s">(Solawi/SoLaWi):</span><span class="nv"> </span><span class="s">Gemeinsam</span><span class="nv"> </span><span class="s">Verantwortung</span><span class="nv"> </span><span class="s">tragen</span><span class="nv"> </span><span class="s">für</span><span class="nv"> </span><span class="s">regionales</span><span class="nv"> </span><span class="s">Bio-Gemüse.</span><span class="nv"> </span><span class="s">Erfahre</span><span class="nv"> </span><span class="s">mehr</span><span class="nv"> </span><span class="s">über</span><span class="nv"> </span><span class="s">unser</span><span class="nv"> </span><span class="s">Konzept</span><span class="nv"> </span><span class="s">auf</span><span class="nv"> </span><span class="s">dem</span><span class="nv"> </span><span class="s">Geisshof.&quot;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="nt">h1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Was</span><span class="nv"> </span><span class="s">ist</span><span class="nv"> </span><span class="s">Solidarische</span><span class="nv"> </span><span class="s">Landwirtschaft?&quot;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nt">keywords</span><span class="p">:</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Solidarische Landwirtschaft</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Solawi</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SoLaWi</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Solawi Konzept</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Wie funktioniert Solawi</span>
+</code></pre></div>
+<p><strong>Content-Anforderungen:</strong>
+- Ausführliche Erklärung (500+ Wörter) = Long Form Content
+- Was ist Solawi? (Definition)
+- Wie funktioniert es? (Prinzipien)
+- Warum Solawi? (Vorteile für Mitglieder &amp; Umwelt)
+- Solawi bei biocò (unser Modell)
+- FAQ zu Solawi</p>
+<p><strong>SEO-Strategie:</strong>
+- Ziel: Informational Intent ("Was ist...?", "Wie funktioniert...?")
+- Verwende alle Varianten: "Solidarische Landwirtschaft", "Solawi", "SoLaWi"
+- Strukturiere mit H2/H3 für Featured Snippets</p>
+<p><strong>Wichtig:</strong>
+- Diese Seite erscheint NICHT im Hauptmenü
+- Wird nur von <code>/wir</code> verlinkt (interner Link)
+- Google kann die Seite trotzdem indexieren (via Sitemap + interner Link)</p>
+<hr />
+<h2 id="technische-implementierung">Technische Implementierung</h2>
+<h3 id="1-url-migrationen-301-redirects">1. URL-Migrationen (301 Redirects)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># In .htaccess oder nginx.conf</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">Redirect</span><span class="w"> </span><span class="mi">301</span><span class="w"> </span><span class="s">/ernte</span><span class="w"> </span><span class="s">/gemuese</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="s">Redirect</span><span class="w"> </span><span class="mi">301</span><span class="w"> </span><span class="s">/depots</span><span class="w"> </span><span class="s">/standorte-depots</span>
+</code></pre></div>
+<p><strong>Wichtig:</strong>
+- Nach Implementierung alle internen Links aktualisieren
+- Externe Links (Social Media, etc.) informieren</p>
+<h3 id="2-robotstxt">2. robots.txt</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>User-agent: *
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Allow: /
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Disallow: /admin/
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Disallow: /processwire/
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>Sitemap: https://bioco.ch/sitemap.xml
+</code></pre></div>
+<p><strong>Referenz:</strong> <a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro?hl=de">Google robots.txt Anleitung</a></p>
+<h3 id="3-sitemapxml">3. sitemap.xml</h3>
+<p>Alle Seiten inkludieren:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nt">&lt;urlset</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="nt">&lt;url&gt;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nt">&lt;loc&gt;</span>https://bioco.ch/<span class="nt">&lt;/loc&gt;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="nt">&lt;changefreq&gt;</span>weekly<span class="nt">&lt;/changefreq&gt;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="nt">&lt;priority&gt;</span>1.0<span class="nt">&lt;/priority&gt;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span><span class="nt">&lt;/url&gt;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">  </span><span class="nt">&lt;url&gt;</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="nt">&lt;loc&gt;</span>https://bioco.ch/gemuese<span class="nt">&lt;/loc&gt;</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="nt">&lt;changefreq&gt;</span>weekly<span class="nt">&lt;/changefreq&gt;</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="nt">&lt;priority&gt;</span>0.8<span class="nt">&lt;/priority&gt;</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">  </span><span class="nt">&lt;/url&gt;</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">  </span><span class="nt">&lt;url&gt;</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="nt">&lt;loc&gt;</span>https://bioco.ch/abos<span class="nt">&lt;/loc&gt;</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="nt">&lt;changefreq&gt;</span>monthly<span class="nt">&lt;/changefreq&gt;</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">    </span><span class="nt">&lt;priority&gt;</span>0.9<span class="nt">&lt;/priority&gt;</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">  </span><span class="nt">&lt;/url&gt;</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">  </span><span class="nt">&lt;url&gt;</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">    </span><span class="nt">&lt;loc&gt;</span>https://bioco.ch/standorte-depots<span class="nt">&lt;/loc&gt;</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">    </span><span class="nt">&lt;changefreq&gt;</span>monthly<span class="nt">&lt;/changefreq&gt;</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">    </span><span class="nt">&lt;priority&gt;</span>0.8<span class="nt">&lt;/priority&gt;</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="w">  </span><span class="nt">&lt;/url&gt;</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="w">  </span><span class="nt">&lt;url&gt;</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="w">    </span><span class="nt">&lt;loc&gt;</span>https://bioco.ch/wir<span class="nt">&lt;/loc&gt;</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="w">    </span><span class="nt">&lt;changefreq&gt;</span>monthly<span class="nt">&lt;/changefreq&gt;</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">    </span><span class="nt">&lt;priority&gt;</span>0.7<span class="nt">&lt;/priority&gt;</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="w">  </span><span class="nt">&lt;/url&gt;</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="w">  </span><span class="nt">&lt;url&gt;</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="w">    </span><span class="nt">&lt;loc&gt;</span>https://bioco.ch/solawi<span class="nt">&lt;/loc&gt;</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="w">    </span><span class="nt">&lt;changefreq&gt;</span>monthly<span class="nt">&lt;/changefreq&gt;</span>
+<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="w">    </span><span class="nt">&lt;priority&gt;</span>0.7<span class="nt">&lt;/priority&gt;</span>
+<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="w">  </span><span class="nt">&lt;/url&gt;</span>
+<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="nt">&lt;/urlset&gt;</span>
+</code></pre></div>
+<p><strong>Referenz:</strong> <a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview?hl=de">Google Sitemap Anleitung</a></p>
+<h3 id="4-schemaorg-strukturierte-daten">4. Schema.org Strukturierte Daten</h3>
+<p>Auf Homepage und Kontaktseite als JSON-LD:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://schema.org&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LocalBusiness&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;biocò Gemüsegenossenschaft&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">  </span><span class="nt">&quot;image&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://bioco.ch/logo.png&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Gemüsegenossenschaft für solidarische Landwirtschaft in Baden-Brugg&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">  </span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PostalAddress&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="nt">&quot;streetAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Geisshof&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="nt">&quot;addressLocality&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Gebenstorf&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="nt">&quot;postalCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5412&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span><span class="nt">&quot;addressCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CH&quot;</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">  </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://bioco.ch&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">  </span><span class="nt">&quot;telephone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+41-XX-XXX-XX-XX&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">  </span><span class="nt">&quot;priceRange&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$$&quot;</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Referenz:</strong> <a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=de">Google Strukturierte Daten</a></p>
+<h3 id="5-bilder-seo">5. Bilder-SEO</h3>
+<p><strong>Dateinamen-Konvention:</strong>
+- ✅ <code>karotten-ernte-geisshof-2024.jpg</code>
+- ❌ <code>IMG_1234.JPG</code></p>
+<p><strong>Alt-Text:</strong>
+- ✅ "Frisch geerntete Karotten vom Geisshof in Gebenstorf"
+- ❌ "Karotten" oder leer</p>
+<hr />
+<h2 id="umsetzungs-checkliste">Umsetzungs-Checkliste</h2>
+<h3 id="phase-1-content-updates">Phase 1: Content Updates</h3>
+<ul>
+<li>[ ] <strong>Homepage:</strong> Keywords "Gemüsegenossenschaft", "Baden-Brugg" natürlich einbauen</li>
+<li>[ ] <strong><code>/gemuese</code>:</strong> Saisonkalender mit aktuellen Gemüsesorten erstellen</li>
+<li>[ ] <strong><code>/abos</code>:</strong> Keywords "Bio Gemüse Kiste", "Bio Gemüse Lieferung", "Biogemüse bestellen" einbauen</li>
+<li>[ ] <strong><code>/standorte-depots</code>:</strong> Alle Depot-Adressen als Text (nicht nur Bild) hinterlegen</li>
+<li>[ ] <strong><code>/wir</code>:</strong> "Bio Bauernhof" natürlich erwähnen + Link zu <code>/solawi</code> einfügen</li>
+<li>[ ] <strong><code>/solawi</code>:</strong> Neue Seite erstellen (500+ Wörter, Long-Form Content)</li>
+<li>[ ] <strong>Alle Bilder:</strong> Sprechende Dateinamen + Alt-Texte hinzufügen</li>
+</ul>
+<h3 id="phase-2-technische-umsetzung">Phase 2: Technische Umsetzung</h3>
+<ul>
+<li>[ ] <strong>301 Redirects:</strong> <code>/ernte</code> → <code>/gemuese</code> und <code>/depots</code> → <code>/standorte-depots</code></li>
+<li>[ ] <strong>Interne Links:</strong> Alle Links auf neue URLs aktualisieren</li>
+<li>[ ] <strong>Navigation:</strong> "Standorte" statt "Depots" im Menü</li>
+<li>[ ] <strong><code>/solawi</code>:</strong> NICHT in Navigation aufnehmen, nur von <code>/wir</code> verlinken</li>
+<li>[ ] <strong>robots.txt:</strong> Erstellen und hochladen</li>
+<li>[ ] <strong>sitemap.xml:</strong> Generieren/aktualisieren (alle 6 Seiten inkl. <code>/solawi</code>)</li>
+<li>[ ] <strong>Schema.org:</strong> JSON-LD auf Homepage implementieren</li>
+<li>[ ] <strong>Meta-Tags:</strong> Alle Titel &amp; Descriptions gemäß Spec setzen</li>
+</ul>
+<h3 id="phase-3-monitoring">Phase 3: Monitoring</h3>
+<ul>
+<li>[ ] <strong>Google Search Console:</strong> Domain verifizieren</li>
+<li>[ ] <strong>Sitemap einreichen:</strong> <code>https://bioco.ch/sitemap.xml</code> in Search Console</li>
+<li>[ ] <strong>URL Inspection:</strong> Alle 6 Seiten auf Crawlbarkeit prüfen</li>
+<li>[ ] <strong>Mobile-Test:</strong> <a href="https://search.google.com/test/mobile-friendly?hl=de">Google Mobile-Friendly Test</a></li>
+<li>[ ] <strong>Matomo Analytics:</strong> Tracking-Code auf allen Seiten</li>
+</ul>
+<hr />
+<h2 id="verifikation">Verifikation</h2>
+<h3 id="checkliste-pro-seite">Checkliste pro Seite</h3>
+<p>Für jede der 6 Seiten prüfen:</p>
+<ul>
+<li>[ ] Meta-Titel gesetzt (50-60 Zeichen)</li>
+<li>[ ] Meta-Beschreibung gesetzt (150-160 Zeichen)</li>
+<li>[ ] H1-Tag vorhanden und einzigartig</li>
+<li>[ ] Keywords natürlich im Text verwendet</li>
+<li>[ ] Bilder haben Alt-Texte</li>
+<li>[ ] Interne Verlinkung korrekt</li>
+<li>[ ] Mobile responsive</li>
+<li>[ ] Ladezeit &lt; 3 Sekunden</li>
+</ul>
+<h3 id="technische-verifikation">Technische Verifikation</h3>
+<ul>
+<li>[ ] Alle URLs erreichbar (kein 404)</li>
+<li>[ ] 301 Redirects funktionieren</li>
+<li>[ ] robots.txt erreichbar: <code>https://bioco.ch/robots.txt</code></li>
+<li>[ ] Sitemap erreichbar: <code>https://bioco.ch/sitemap.xml</code></li>
+<li>[ ] Schema.org validiert: <a href="https://validator.schema.org/">Schema Validator</a></li>
+<li>[ ] Google Search Console zeigt keine Fehler</li>
+</ul>
+<hr />
+<h2 id="referenzen">Referenzen</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Thema</th>
+<th style="text-align: left;">Google Dokumentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">SEO Grundlagen</td>
+<td style="text-align: left;"><a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=de">SEO Starter Guide</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Hilfreiche Inhalte</td>
+<td style="text-align: left;"><a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=de">Creating Helpful Content</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Strukturierte Daten</td>
+<td style="text-align: left;"><a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=de">Structured Data Intro</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Sitemap</td>
+<td style="text-align: left;"><a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview?hl=de">Sitemaps Overview</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">robots.txt</td>
+<td style="text-align: left;"><a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro?hl=de">Robots.txt Intro</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Mobile-First</td>
+<td style="text-align: left;"><a href="https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing?hl=de">Mobile-First Indexing</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="konsistenz-check">Konsistenz-Check</h2>
+<p>Dieses Dokument ist konsistent mit:</p>
+<ul>
+<li><a href="../strategie/">strategie.md</a>: Strategische Grundlage</li>
+<li>Alle URL-Slugs stimmen ueberein</li>
+<li>Alle Meta-Daten sind identisch</li>
+<li>Keyword-Zuordnung ist konsistent</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Bioco
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

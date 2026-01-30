@@ -1,0 +1,1329 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Bioco-Team">
+      
+      
+        <link rel="canonical" href="https://docs.bioco.ch/technisch/setup-processwire/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../setup-mkdocs/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>ProcessWire Setup - Bioco Web-Projekt Doku</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vollstandige-setup-anleitung-processwire-website" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../.." title="Bioco Web-Projekt Doku" class="md-header__button md-logo" aria-label="Bioco Web-Projekt Doku" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bioco Web-Projekt Doku
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ProcessWire Setup
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../redaktion/" class="md-tabs__link">
+          
+  
+  
+  Fuer Redakteure
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../governance/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Governance
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Technisch
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../seo/" class="md-tabs__link">
+          
+  
+  
+  SEO
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Bioco Web-Projekt Doku" class="md-nav__button md-logo" aria-label="Bioco Web-Projekt Doku" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Bioco Web-Projekt Doku
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fuer Redakteure
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fuer Redakteure
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redaktion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uebersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redaktion/anleitung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anleitung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redaktion/strukturhandbuch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strukturhandbuch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technisch
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Technisch
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uebersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ProcessWire Setup
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ProcessWire Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#phase-1-vorbereitung-lokal-und-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Vorbereitung (Lokal und GitHub)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-2-server-vorbereitung-cpanel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Server-Vorbereitung (cPanel)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-3-der-cpanel-ssh-hack-der-spezialschluessel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Der cPanel-SSH-Hack (Der Spezialschluessel)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-4-staging-seite-installieren-stagingbiococh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: Staging-Seite installieren (staging.bioco.ch)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-5-live-seite-installieren-wwwbiococh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 5: Live-Seite installieren (www.bioco.ch)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-6-abschluss-doku-und-matomo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 6: Abschluss (Doku und Matomo)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MkDocs Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Dokumentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SEO
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SEO
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uebersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seo/strategie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strategie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seo/umsetzung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Umsetzung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#phase-1-vorbereitung-lokal-und-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Vorbereitung (Lokal und GitHub)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-2-server-vorbereitung-cpanel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Server-Vorbereitung (cPanel)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-3-der-cpanel-ssh-hack-der-spezialschluessel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Der cPanel-SSH-Hack (Der Spezialschluessel)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-4-staging-seite-installieren-stagingbiococh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: Staging-Seite installieren (staging.bioco.ch)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-5-live-seite-installieren-wwwbiococh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 5: Live-Seite installieren (www.bioco.ch)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-6-abschluss-doku-und-matomo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 6: Abschluss (Doku und Matomo)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="vollstandige-setup-anleitung-processwire-website">Vollständige Setup-Anleitung: ProcessWire Website</h1>
+<p>Dies ist der "Bauplan" für das <code>bioco-web-project</code>. Er dokumentiert den gesamten Prozess vom leeren Server bis zu einer funktionierenden Staging- und Live-Umgebung, die mit Git verbunden ist.</p>
+<p><strong>Das Ziel:</strong> Ein professioneller "Git-First"-Workflow.
+* <strong>Lokal (PC):</strong> Wir schreiben Code auf unserem Computer.
+* <strong>GitHub (Rezeptbuch):</strong> Wir speichern den Code in einem zentralen Lager.
+* <strong>Server (Küche):</strong> Der Server holt sich den Code von GitHub, um die Website anzuzeigen.</p>
+<p><strong>Die Umgebungen:</strong>
+* <code>develop</code> (GitHub-Branch) -&gt; <code>staging.bioco.ch</code> (Testküche)
+* <code>main</code> (GitHub-Branch) -&gt; <code>www.bioco.ch</code> (Live-Restaurant)</p>
+<hr />
+<h2 id="phase-1-vorbereitung-lokal-und-github">Phase 1: Vorbereitung (Lokal und GitHub)</h2>
+<p>Zuerst bereiten wir den Code (das "Rezept") auf unserem PC und in unserem "Rezeptbuch" (GitHub) vor.</p>
+<p>=== "Schritt 1-3: Repo und ProcessWire holen"</p>
+<div class="highlight"><pre><span></span><code>1.  **GitHub-Repo erstellen:**
+    * Erstelle ein neues, **privates** Repository auf GitHub.com.
+    * Name: `bioco-web-project`.
+2.  **Branches erstellen:**
+    * Erstelle im Repo einen `develop`-Branch (basierend auf `main`).
+3.  **ProcessWire-Dateien lokal holen:**
+    * Erstelle einen leeren Ordner `bioco-web-project` auf deinem PC.
+    * Klone das leere GitHub-Repo mit **GitHub Desktop** in diesen Ordner.
+    * Lade die ProcessWire-ZIP-Datei von [processwire.com](https://processwire.com/) herunter.
+    * Entpacke die ZIP. Kopiere **alle** Dateien (`index.php`, `wire/`, `site-blank/` etc.) in deinen lokalen `bioco-web-project`-Ordner.
+    * Benenne den Ordner `site-blank` sofort in `site` um.
+</code></pre></div>
+<p>=== "Schritt 4: .gitignore erstellen"</p>
+<div class="highlight"><pre><span></span><code>Erstelle im `bioco-web-project`-Ordner eine neue Datei namens `.gitignore`. Füge diesen Inhalt ein, um sensible Dateien zu ignorieren:
+
+```text
+# ProcessWire sensible/generierte Dateien
+/site/config.php
+/site/assets/
+/site/templates/cache/
+/site/templates/logs/
+/site/templates/sessions/
+/site/templates/backups/
+
+# OS-Dateien
+.DS_Store
+Thumbs.db
+```
+</code></pre></div>
+<p>=== "Schritt 5: Code zu GitHub pushen"</p>
+<div class="highlight"><pre><span></span><code>1.  Öffne GitHub Desktop. Du siehst alle neuen PW-Dateien.
+2.  Schreibe eine Commit-Nachricht (z.B. &quot;Initial ProcessWire core files&quot;).
+3.  **Commite** die Änderungen.
+4.  **Pushe** die Änderungen (`Push origin`).
+5.  Wechsle in GitHub Desktop zum `develop`-Branch (`Current Branch` -&gt; `develop`) und stelle sicher, dass er auch gepusht wird.
+</code></pre></div>
+<hr />
+<h2 id="phase-2-server-vorbereitung-cpanel">Phase 2: Server-Vorbereitung (cPanel)</h2>
+<p>Jetzt bereiten wir die "Küche" (Novatrend-Server) vor.</p>
+<ol>
+<li>
+<p><strong>Datenbanken &amp; Benutzer erstellen:</strong></p>
+<ul>
+<li>Gehe zu "MySQL®-Datenbanken".</li>
+<li>Erstelle 3 Datenbanken: <code>bioco_live</code>, <code>bioco_staging</code>, <code>bioco_matomo</code>.</li>
+<li>Erstelle 1 Benutzer: <code>bioco_DEIN-DB-BENUTZER</code> (ANONYMISIERT).</li>
+<li>Weise <code>bioco_DEIN-DB-BENUTZER</code> <strong>"ALLE RECHTE"</strong> (ALL PRIVILEGES) für alle 3 Datenbanken zu.</li>
+<li>(Screenshot <code>Bildschirmfoto 2025-10-23 um 08.32.19.png</code> entfernt. Beschreibung: In der cPanel-Übersicht "Aktuelle Datenbanken" sollte nun der Benutzer mit Rechten für alle drei Datenbanken aufgeführt sein.)</li>
+</ul>
+</li>
+<li>
+<p><strong>Staging-Subdomain erstellen:</strong></p>
+<ul>
+<li>Gehe zu "Subdomains".</li>
+<li>Erstelle <code>staging.bioco.ch</code>.</li>
+<li>Notiere den Pfad: <code>public_html/bioco_staging</code>.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="phase-3-der-cpanel-ssh-hack-der-spezialschluessel">Phase 3: Der cPanel-SSH-Hack (Der Spezialschluessel)</h2>
+<p>Das ist der <strong>wichtigste und komplizierteste</strong> Teil. Wir müssen eine sichere Verbindung zwischen Server und GitHub herstellen.</p>
+<div class="admonition warning">
+<p class="admonition-title">Das cPanel-Problem</p>
+<p>Die cPanel-UI ("SSH Access") <em>zwingt</em> uns, ein Passwort für SSH-Schlüssel zu verwenden. Das automatische Git-Tool ("Git Version Control") <em>benötigt</em> aber einen Schlüssel <em>OHNE</em> Passwort. Die Werkzeuge widersprechen sich.
+(Screenshot <code>Bildschirmfoto 2025-10-22 um 21.36.55.jpg</code> entfernt.)</p>
+</div>
+<p><strong>Lösung: Wir erstellen den Schlüssel manuell im Server-Terminal.</strong></p>
+<p>=== "Schritt 1-3: Schlüssel erstellen (Terminal)"</p>
+<div class="highlight"><pre><span></span><code>1.  **Terminal öffnen:** Gehe im cPanel zu &quot;Erweitert&quot; -&gt; **&quot;Terminal&quot;**.
+2.  **Aufräumen:** Lösche alle kaputten Schlüssel-Reste (falls vorhanden).
+    ```bash
+    # (Dieser Befehl löscht id_rsa, id_rsa.pub etc. im .ssh-Ordner Ihres Users)
+    rm /home/DEIN-CPANEL-USER/.ssh/id_rsa*
+    rm /home/DEIN-CPANEL-USER/.ssh/authorized_keys
+    ```
+3.  **Schlüssel OHNE Passwort erstellen:** Führe diesen Befehl aus, um einen neuen Schlüssel zu erstellen und das Passwort (`-N &quot;&quot;`) explizit leer zu lassen. (Pfad ANONYMISIERT)
+    ```bash
+    ssh-keygen -t rsa -b 2048 -f /home/DEIN-CPANEL-USER/.ssh/id_rsa -N &quot;&quot;
+    ```
+</code></pre></div>
+<p>=== "Schritt 4-6: Schlüssel autorisieren (cPanel &amp; GitHub)"</p>
+<div class="highlight"><pre><span></span><code>4.  **Schlüssel im cPanel &quot;autorisieren&quot;:**
+    * Gehe zur UI &quot;Sicherheit&quot; -&gt; &quot;SSH Access&quot;.
+    * Der neue Schlüssel `id_rsa` ist jetzt sichtbar. Klicke bei `id_rsa.pub` auf **&quot;Manage&quot;** -&gt; **&quot;Authorize&quot;**.
+5.  **Schlüssel zu GitHub hinzufügen:**
+    * Gehe zurück ins **Terminal**.
+    * Zeige den öffentlichen Schlüssel an: `cat /home/DEIN-CPANEL-USER/.ssh/id_rsa.pub` (Pfad ANONYMISIERT)
+    * Kopiere die gesamte Ausgabe (beginnt mit `ssh-rsa AAAA...`).
+    * Gehe zu **GitHub.com** -&gt; `bioco-web-project`-Repo -&gt; &quot;Settings&quot; -&gt; &quot;Deploy Keys&quot;.
+    * Klicke &quot;Add deploy key&quot;.
+    * **Title:** `Novatrend Server`
+    * **Key:** Füge den kopierten Schlüssel ein.
+    * **Haken setzen:** **&quot;Allow write access&quot;**.
+    * Klicke &quot;Add key&quot;.
+6.  **Verbindung testen (Terminal):**
+    * Teste die Verbindung mit: (Pfad ANONYMISIERT)
+        `git ls-remote git@github.com:DEIN-GITHUB-KONTO/bioco-web-project.git`
+    * Antworte auf die `(yes/no)`-Frage mit `yes`.
+    * **Erfolg:** Du siehst eine Liste deiner Branches. Die Verbindung steht.
+</code></pre></div>
+<hr />
+<h2 id="phase-4-staging-seite-installieren-stagingbiococh">Phase 4: Staging-Seite installieren (staging.bioco.ch)</h2>
+<p>Jetzt bauen wir die Testküche.</p>
+<p>=== "Schritt 1-2: Code holen &amp; Branch wechseln (cPanel)"</p>
+<div class="highlight"><pre><span></span><code>1.  **Code holen (Klonen):**
+    * Gehe im cPanel zu &quot;Dateien&quot; -&gt; **&quot;Git™ Version Control&quot;**.
+    * Klicke **&quot;Create&quot;**.
+    * **Clone URL:** `git@github.com:DEIN-GITHUB-KONTO/bioco-web-project.git` (ANONYMISIERT)
+    * **Repository Path:** `public_html/bioco_staging`
+    * **Repository Name:** `Bioco Staging`
+    * Klicke &quot;Create&quot;.
+2.  **Branch wechseln:**
+    * Gehe auf **&quot;Manage&quot;** für das &quot;Bioco Staging&quot;-Repo.
+    * Ändere den &quot;Checked-Out Branch&quot; auf **`develop`** und klicke &quot;Update&quot;.
+</code></pre></div>
+<p>=== "Schritt 3: Server-Fehlerbehebung (File Manager)"</p>
+<div class="highlight"><pre><span></span><code>Wir müssen jetzt 4 Dinge im &quot;File Manager&quot; reparieren:
+
+* **403-Fehler (Ordner):** Rechtsklick auf `public_html/bioco_staging` -&gt; &quot;Change Permissions&quot; -&gt; auf **`755`** setzen.
+* **403-Fehler (Datei):** Rechtsklick auf `public_html/bioco_staging/.htaccess` -&gt; &quot;Change Permissions&quot; -&gt; auf **`644`** setzen.
+* **Installer-Fehler:** Rechtsklick auf Ordner `public_html/bioco_staging/site` -&gt; &quot;Change Permissions&quot; -&gt; **Temporär auf `777`** setzen.
+* **PHP 7.4-Fehler:** Rechtsklick auf `public_html/bioco_staging/.htaccess` -&gt; **&quot;Edit&quot;**. Füge den PHP 8.2 Code-Block **ganz oben** ein:
+    ```apacheconfig
+    # BEGIN PHP 8.2 ERZWINGEN
+    &lt;IfModule mime_module&gt;
+      AddHandler application/x-httpd-ea-php82 .php .php8 .phtml
+    &lt;/IfModule&gt;
+    # END PHP 8.2 ERZWINGEN
+    ```
+</code></pre></div>
+<p>=== "Schritt 4-5: Installation &amp; Aufräumen"</p>
+<div class="highlight"><pre><span></span><code>4.  **Installation (Browser):**
+    * Öffne `http://staging.bioco.ch` im Browser.
+    * Der Installer startet. (Screenshot `Bildschirmfoto 2025-10-23 um 08.25.54.jpg` entfernt. Beschreibung: Der ProcessWire-Installer sollte nun alle Prüfungen als &quot;bestanden&quot; (grüne Haken) anzeigen.)
+    * Gib die **Staging-Datenbankdaten** ein:
+        * DB Name: `bioco_staging`
+        * DB User: `bioco_DEIN-DB-BENUTZER` (ANONYMISIERT)
+        * DB Pass: (Dein Datenbank-Passwort)
+    * Folge dem Installer, erstelle deinen Admin-User und **SPEICHERE DAS PASSWORT**.
+5.  **Aufräumen (Sicherheit):**
+    * Gehe zurück in den &quot;File Manager&quot;.
+    * Setze die Berechtigung des `.../bioco_staging/site`-Ordners von `777` zurück auf **`755`**.
+</code></pre></div>
+<hr />
+<h2 id="phase-5-live-seite-installieren-wwwbiococh">Phase 5: Live-Seite installieren (www.bioco.ch)</h2>
+<p>Wiederhole Phase 4 exakt, aber für die Live-Seite.</p>
+<ol>
+<li><strong>Code holen (Klonen):</strong><ul>
+<li><strong>Vorbereitung:</strong> Verschiebe den <code>bioco_staging</code>-Ordner (und <code>matomo</code>) <em>temporär</em> aus <code>public_html</code> heraus (z.B. in einen <code>TEMP</code>-Ordner), damit <code>public_html</code> leer ist.</li>
+<li>Klone das Repo (wie in 4.1) in den Pfad: <code>public_html</code></li>
+<li>Name: <code>Bioco Live</code></li>
+<li>Branch: Bleibt auf <code>main</code> (Standard).</li>
+<li><strong>Aufräumen:</strong> Verschiebe <code>bioco_staging</code> (und <code>matomo</code>) zurück in <code>public_html</code>.</li>
+</ul>
+</li>
+<li><strong>Server-Fehlerbehebung:</strong><ul>
+<li>Führe Schritt 4.3 (Permissions &amp; PHP) exakt so für <code>public_html</code> und <code>public_html/.htaccess</code> und <code>public_html/site</code> durch.</li>
+</ul>
+</li>
+<li><strong>Installation (Browser):</strong><ul>
+<li>Öffne <code>http://www.bioco.ch</code> im Browser.</li>
+<li>Gib die <strong>Live-Datenbankdaten</strong> ein:<ul>
+<li>DB Name: <code>bioco_live</code></li>
+<li>DB User: <code>bioco_DEIN-DB-BENUTZER</code> (ANONYMISIERT)</li>
+<li>DB Pass: (Dein Datenbank-Passwort)</li>
+</ul>
+</li>
+<li>Schliesse die Installation ab.</li>
+</ul>
+</li>
+<li><strong>Aufräumen (Sicherheit):</strong><ul>
+<li>Setze die Berechtigung des <code>public_html/site</code>-Ordners zurück auf <strong><code>755</code></strong>.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="phase-6-abschluss-doku-und-matomo">Phase 6: Abschluss (Doku und Matomo)</h2>
+<ol>
+<li><strong>Matomo:</strong><ul>
+<li>Installiere Matomo im Ordner <code>public_html/matomo</code>.</li>
+<li>Verbinde es beim Installer mit der <code>bioco_matomo</code>-Datenbank.</li>
+</ul>
+</li>
+<li><strong>Doku:</strong><ul>
+<li>Die Doku (<code>docs.bioco.ch</code>) ist ein <strong>separates Projekt</strong> (<code>bioco-doku</code>).</li>
+<li>Es wird nicht per cPanel, sondern automatisch per <strong>GitHub Actions</strong> auf <strong>GitHub Pages</strong> veröffentlicht.</li>
+<li>Im cPanel ("Zone Editor") wird nur ein <code>CNAME</code>-Eintrag (<code>docs</code> -&gt; <code>DEIN-GITHUB-KONTO.github.io</code>) benötigt.</li>
+</ul>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Bioco
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

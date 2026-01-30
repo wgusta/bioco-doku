@@ -1,0 +1,3401 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Bioco-Team">
+      
+      
+        <link rel="canonical" href="https://docs.bioco.ch/technisch/api/">
+      
+      
+        <link rel="prev" href="../setup-mkdocs/">
+      
+      
+        <link rel="next" href="../../seo/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>API Dokumentation - Bioco Web-Projekt Doku</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#technische-api-dokumentation" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../.." title="Bioco Web-Projekt Doku" class="md-header__button md-logo" aria-label="Bioco Web-Projekt Doku" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bioco Web-Projekt Doku
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Dokumentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../redaktion/" class="md-tabs__link">
+          
+  
+  
+  Fuer Redakteure
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../governance/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Governance
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Technisch
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../seo/" class="md-tabs__link">
+          
+  
+  
+  SEO
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Bioco Web-Projekt Doku" class="md-nav__button md-logo" aria-label="Bioco Web-Projekt Doku" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Bioco Web-Projekt Doku
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fuer Redakteure
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fuer Redakteure
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redaktion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uebersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redaktion/anleitung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anleitung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redaktion/strukturhandbuch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strukturhandbuch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technisch
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Technisch
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uebersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-processwire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ProcessWire Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MkDocs Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Dokumentation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Dokumentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-architektur-ubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Architektur-Übersicht
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Architektur-Übersicht">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#headless-cms-konzept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headless CMS Konzept
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        URL Routing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cors-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CORS Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-endpunkte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. API-Endpunkte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. API-Endpunkte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-pages-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Pages API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Pages API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-erfolg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response (Erfolg)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fehler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response (Fehler)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feld-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feld-Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quellcode-logik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quellcode-Logik
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-navigation-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Navigation API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Navigation API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quellcode-logik_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quellcode-Logik
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-forms-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Forms API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Forms API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unterstutzte-formulartypen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unterstützte Formulartypen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-bodies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Bodies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-erfolg_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response (Erfolg)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fehler_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response (Fehler)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quellcode-logik_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quellcode-Logik
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-doi-confirm-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 DOI Confirm API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 DOI Confirm API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-erfolg_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response (Erfolg)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fehler_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response (Fehler)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-processwire-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ProcessWire Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. ProcessWire Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-formprocessor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 FormProcessor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 FormProcessor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offentliche-methoden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Öffentliche Methoden
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verarbeitungsablauf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verarbeitungsablauf
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nach-doi-bestatigung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nach DOI-Bestätigung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-mail-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E-Mail Templates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-doimanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 DOIManager
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 DOIManager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datenbank-tabelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datenbank-Tabelle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offentliche-methoden_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Öffentliche Methoden
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-generierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Token-Generierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-nextjs-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Next.js Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Next.js Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-api-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 API Client
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-api-routes-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 API Routes (Proxy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-umgebungsvariablen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Umgebungsvariablen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-datenfluss-diagramme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Datenfluss-Diagramme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Datenfluss-Diagramme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-formular-einreichung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Formular-Einreichung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-doi-bestatigung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 DOI-Bestätigung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Sicherheit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Sicherheit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input-sanitization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input Sanitization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-mail-validierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E-Mail-Validierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Token-Sicherheit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CORS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-wartung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Wartung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Wartung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abgelaufene-tokens-aufraumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abgelaufene Tokens aufräumen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SEO
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SEO
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uebersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seo/strategie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strategie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seo/umsetzung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Umsetzung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-architektur-ubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Architektur-Übersicht
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Architektur-Übersicht">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#headless-cms-konzept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headless CMS Konzept
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        URL Routing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cors-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CORS Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-endpunkte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. API-Endpunkte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. API-Endpunkte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-pages-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Pages API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Pages API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-erfolg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response (Erfolg)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fehler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response (Fehler)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feld-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feld-Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quellcode-logik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quellcode-Logik
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-navigation-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Navigation API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Navigation API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quellcode-logik_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quellcode-Logik
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-forms-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Forms API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Forms API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unterstutzte-formulartypen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unterstützte Formulartypen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-bodies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Bodies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-erfolg_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response (Erfolg)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fehler_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response (Fehler)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quellcode-logik_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quellcode-Logik
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-doi-confirm-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 DOI Confirm API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 DOI Confirm API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-erfolg_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response (Erfolg)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fehler_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response (Fehler)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-processwire-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ProcessWire Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. ProcessWire Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-formprocessor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 FormProcessor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 FormProcessor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offentliche-methoden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Öffentliche Methoden
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verarbeitungsablauf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verarbeitungsablauf
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nach-doi-bestatigung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nach DOI-Bestätigung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-mail-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E-Mail Templates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-doimanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 DOIManager
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 DOIManager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datenbank-tabelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datenbank-Tabelle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offentliche-methoden_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Öffentliche Methoden
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-generierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Token-Generierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-nextjs-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Next.js Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Next.js Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-api-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 API Client
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-api-routes-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 API Routes (Proxy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-umgebungsvariablen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Umgebungsvariablen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-datenfluss-diagramme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Datenfluss-Diagramme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Datenfluss-Diagramme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-formular-einreichung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Formular-Einreichung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-doi-bestatigung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 DOI-Bestätigung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Sicherheit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Sicherheit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input-sanitization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input Sanitization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-mail-validierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E-Mail-Validierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Token-Sicherheit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CORS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-wartung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Wartung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Wartung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abgelaufene-tokens-aufraumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abgelaufene Tokens aufräumen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="technische-api-dokumentation">Technische API-Dokumentation</h1>
+<p>Diese Dokumentation beschreibt die REST API der bioco.ch Webseite im Detail. Sie richtet sich an Entwickler, die das System erweitern oder warten.</p>
+<hr />
+<h2 id="1-architektur-ubersicht">1. Architektur-Übersicht</h2>
+<h3 id="headless-cms-konzept">Headless CMS Konzept</h3>
+<p>Die bioco.ch Webseite verwendet ein Headless CMS Setup:</p>
+<ul>
+<li><strong>Backend</strong>: ProcessWire (PHP) stellt Inhalte via REST API bereit</li>
+<li><strong>Frontend</strong>: Next.js (React/TypeScript) konsumiert die API und rendert die Webseite</li>
+<li><strong>Kommunikation</strong>: JSON über HTTP/HTTPS</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌─────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│                         FRONTEND                                │
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│  ┌─────────────────┐    ┌─────────────────┐                    │
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│  │  Next.js Pages  │    │  Next.js API    │                    │
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│  │  (SSR/SSG)      │    │  Routes         │                    │
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│  └────────┬────────┘    └────────┬────────┘                    │
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│           │                      │                              │
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│           ▼                      ▼                              │
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│  ┌─────────────────────────────────────────┐                   │
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│  │     lib/processwire.ts (API Client)     │                   │
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│  └─────────────────────────────────────────┘                   │
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>└─────────────────────────┬───────────────────────────────────────┘
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>                          │ HTTP Request
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>                          ▼
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>┌─────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>│                         BACKEND                                 │
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>│  ┌─────────────────────────────────────────┐                   │
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>│  │     site/api/.htaccess (URL Routing)    │                   │
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>│  └─────────────────────────────────────────┘                   │
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>│           │                                                     │
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>│           ▼                                                     │
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>│  ┌──────────┬──────────┬──────────┬──────────┐                 │
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>│  │ pages.php│navigation│ forms.php│  doi.php │                 │
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>│  │          │   .php   │          │          │                 │
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>│  └──────────┴──────────┴────┬─────┴──────────┘                 │
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>│                             │                                   │
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>│                             ▼                                   │
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>│  ┌─────────────────────────────────────────┐                   │
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>│  │     ProcessWire Modules                 │                   │
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>│  │  ┌─────────────┐  ┌─────────────┐      │                   │
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>│  │  │FormProcessor│  │ DOIManager  │      │                   │
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>│  │  └─────────────┘  └─────────────┘      │                   │
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>│  └─────────────────────────────────────────┘                   │
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>└─────────────────────────────────────────────────────────────────┘
+</code></pre></div>
+<h3 id="url-routing">URL Routing</h3>
+<p>Die API-Endpunkte werden via Apache <code>.htaccess</code> auf die entsprechenden PHP-Dateien geroutet.</p>
+<p><strong>Datei</strong>: <code>site/api/.htaccess</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">RewriteEngine</span><span class="w"> </span><span class="k">On</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">RewriteBase</span><span class="w"> </span><span class="sx">/api/</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c"># Seiteninhalte</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">RewriteCond</span><span class="w"> </span>%{REQUEST_URI}<span class="w"> </span>^/api/pages
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nb">RewriteRule</span><span class="w"> </span>^pages$<span class="w"> </span>pages.php<span class="w"> </span>[L]
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c"># Navigation</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nb">RewriteCond</span><span class="w"> </span>%{REQUEST_URI}<span class="w"> </span>^/api/navigation
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="nb">RewriteRule</span><span class="w"> </span>^navigation$<span class="w"> </span>navigation.php<span class="w"> </span>[L]
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c"># Formulare (contact, subscribe, visit, waiting-list)</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nb">RewriteCond</span><span class="w"> </span>%{REQUEST_URI}<span class="w"> </span>^/api/forms/(contact|subscribe|visit|waiting-list)
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="nb">RewriteRule</span><span class="w"> </span>^forms/(.*)$<span class="w"> </span>forms.php?form_type=$1<span class="w"> </span>[L]
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c"># Double Opt-In Bestätigung</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="nb">RewriteCond</span><span class="w"> </span>%{REQUEST_URI}<span class="w"> </span>^/api/doi/confirm
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="nb">RewriteRule</span><span class="w"> </span>^doi/confirm$<span class="w"> </span>doi.php?action=confirm<span class="w"> </span>[L]
+</code></pre></div>
+<h3 id="cors-headers">CORS Headers</h3>
+<p>Alle API-Endpunkte setzen folgende CORS-Header:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">header(&#39;Content-Type: application/json&#39;);</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="x">header(&#39;Access-Control-Allow-Origin: *&#39;);</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="x">header(&#39;Access-Control-Allow-Methods: GET&#39;);  // oder POST je nach Endpunkt</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="x">header(&#39;Access-Control-Allow-Headers: Content-Type&#39;);</span>
+</code></pre></div>
+<hr />
+<h2 id="2-api-endpunkte">2. API-Endpunkte</h2>
+<h3 id="21-pages-api">2.1 Pages API</h3>
+<p><strong>Endpunkt</strong>: <code>GET /api/pages</code></p>
+<p><strong>Datei</strong>: <code>site/api/pages.php</code></p>
+<p><strong>Beschreibung</strong>: Liefert Seitendaten als JSON für das Frontend.</p>
+<h4 id="request">Request</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Typ</th>
+<th>Pflicht</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>path</code></td>
+<td>string</td>
+<td>Nein</td>
+<td>Pfad zur Seite (default: <code>/</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiel-Requests</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>GET /api/pages?path=/
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>GET /api/pages?path=/ernte
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>GET /api/pages?path=/wir
+</code></pre></div></p>
+<h4 id="response-erfolg">Response (Erfolg)</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Willkommen bei biocò&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;p&gt;Inhalt der Seite...&lt;/p&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="nt">&quot;hero_image&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/site/assets/files/1/hero.jpg&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Gemüsefeld auf dem Geisshof&quot;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">  </span><span class="nt">&quot;hero_subtitle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Frisches Demeter-Gemüse&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="nt">&quot;sidebar_content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;p&gt;Sidebar-Inhalt...&lt;/p&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">  </span><span class="nt">&quot;gallery_images&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/site/assets/files/1/bild1.jpg&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Beschreibung 1&quot;</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/site/assets/files/1/bild2.jpg&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Beschreibung 2&quot;</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">  </span><span class="nt">&quot;footer_content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;p&gt;Footer-Inhalt...&lt;/p&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">  </span><span class="nt">&quot;css_variant&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="response-fehler">Response (Fehler)</h4>
+<p><strong>HTTP 404</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Page not found&quot;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">}</span>
+</code></pre></div></p>
+<h4 id="feld-mapping">Feld-Mapping</h4>
+<table>
+<thead>
+<tr>
+<th>JSON-Feld</th>
+<th>ProcessWire-Feld</th>
+<th>Typ</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td><code>$page-&gt;id</code></td>
+<td>int</td>
+<td>Eindeutige Seiten-ID</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td><code>$page-&gt;title</code></td>
+<td>string</td>
+<td>Seitentitel</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td><code>$page-&gt;url</code></td>
+<td>string</td>
+<td>URL-Pfad</td>
+</tr>
+<tr>
+<td><code>body</code></td>
+<td><code>$page-&gt;body</code></td>
+<td>string</td>
+<td>Hauptinhalt (HTML)</td>
+</tr>
+<tr>
+<td><code>hero_image</code></td>
+<td><code>$page-&gt;hero_image</code></td>
+<td>object</td>
+<td>Kopfbild mit URL und Beschreibung</td>
+</tr>
+<tr>
+<td><code>hero_subtitle</code></td>
+<td><code>$page-&gt;hero_subtitle</code></td>
+<td>string</td>
+<td>Untertitel</td>
+</tr>
+<tr>
+<td><code>sidebar_content</code></td>
+<td><code>$page-&gt;sidebar_content</code></td>
+<td>string</td>
+<td>Seitenleisten-Inhalt</td>
+</tr>
+<tr>
+<td><code>gallery_images</code></td>
+<td><code>$page-&gt;gallery_images</code></td>
+<td>array</td>
+<td>Bildergalerie</td>
+</tr>
+<tr>
+<td><code>footer_content</code></td>
+<td><code>$page-&gt;footer_content</code></td>
+<td>string</td>
+<td>Fusszeilen-Inhalt</td>
+</tr>
+<tr>
+<td><code>css_variant</code></td>
+<td><code>$page-&gt;css_variant</code></td>
+<td>string</td>
+<td>CSS-Variante</td>
+</tr>
+</tbody>
+</table>
+<h4 id="quellcode-logik">Quellcode-Logik</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="x">// Pfad aus Query-Parameter holen</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="x">$path = $input-&gt;get(&#39;path&#39;, &#39;/&#39;);</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="x">// Seite laden</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="x">if($path === &#39;/&#39;) {</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="x">    $page = $pages-&gt;get(&#39;/&#39;);</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="x">} else {</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="x">    $page = $pages-&gt;get($path);</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="x">}</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="x">// 404 wenn Seite nicht existiert</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="x">if(!$page-&gt;id) {</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="x">    http_response_code(404);</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="x">    echo json_encode([&#39;error&#39; =&gt; &#39;Page not found&#39;]);</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="x">    exit;</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="x">}</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="x">// Pflichtfelder</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="x">$pageData = [</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="x">    &#39;id&#39; =&gt; $page-&gt;id,</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="x">    &#39;title&#39; =&gt; $page-&gt;title,</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="x">    &#39;url&#39; =&gt; $page-&gt;url,</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="x">    &#39;body&#39; =&gt; $page-&gt;body ? $page-&gt;body : &#39;&#39;,</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="x">];</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="x">// Optionale Felder nur wenn vorhanden</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="x">if($page-&gt;hero_image) {</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="x">    $pageData[&#39;hero_image&#39;] = [</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="x">        &#39;url&#39; =&gt; $page-&gt;hero_image-&gt;url,</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="x">        &#39;description&#39; =&gt; $page-&gt;hero_image-&gt;description,</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="x">    ];</span>
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="x">}</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="x">// ... weitere optionale Felder</span>
+</code></pre></div>
+<hr />
+<h3 id="22-navigation-api">2.2 Navigation API</h3>
+<p><strong>Endpunkt</strong>: <code>GET /api/navigation</code></p>
+<p><strong>Datei</strong>: <code>site/api/navigation.php</code></p>
+<p><strong>Beschreibung</strong>: Liefert die Navigationsstruktur als Array.</p>
+<h4 id="request_1">Request</h4>
+<p>Keine Parameter erforderlich.</p>
+<h4 id="response">Response</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">[</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ernte&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/ernte/&quot;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Abos&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/abos/&quot;</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Wir&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/wir/&quot;</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="p">]</span>
+</code></pre></div>
+<h4 id="quellcode-logik_1">Quellcode-Logik</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="x">$pages = wire(&#39;pages&#39;);</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="x">$home = $pages-&gt;get(&#39;/&#39;);</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="x">$navigation = [];</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="x">// Alle direkten Kinder der Startseite</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="x">if($home-&gt;children-&gt;count()) {</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="x">    foreach($home-&gt;children as $child) {</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="x">        $navigation[] = [</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="x">            &#39;id&#39; =&gt; $child-&gt;id,</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="x">            &#39;title&#39; =&gt; $child-&gt;title,</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="x">            &#39;url&#39; =&gt; $child-&gt;url,</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="x">        ];</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="x">    }</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="x">}</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="x">echo json_encode($navigation);</span>
+</code></pre></div>
+<hr />
+<h3 id="23-forms-api">2.3 Forms API</h3>
+<p><strong>Endpunkt</strong>: <code>POST /api/forms/{type}</code></p>
+<p><strong>Datei</strong>: <code>site/api/forms.php</code></p>
+<p><strong>Beschreibung</strong>: Verarbeitet Formular-Einreichungen und initiiert Double Opt-In.</p>
+<h4 id="unterstutzte-formulartypen">Unterstützte Formulartypen</h4>
+<table>
+<thead>
+<tr>
+<th>Typ</th>
+<th>URL</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>contact</code></td>
+<td><code>/api/forms/contact</code></td>
+<td>Kontaktformular</td>
+</tr>
+<tr>
+<td><code>subscribe</code></td>
+<td><code>/api/forms/subscribe</code></td>
+<td>Newsletter-Anmeldung</td>
+</tr>
+<tr>
+<td><code>visit</code></td>
+<td><code>/api/forms/visit</code></td>
+<td>Besuchstag-Anmeldung</td>
+</tr>
+<tr>
+<td><code>waiting-list</code></td>
+<td><code>/api/forms/waiting-list</code></td>
+<td>Warteliste</td>
+</tr>
+</tbody>
+</table>
+<h4 id="request-bodies">Request Bodies</h4>
+<p><strong>Kontaktformular</strong> (<code>contact</code>):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Max Mustermann&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;max@example.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="nt">&quot;phone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+41 79 123 45 67&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">  </span><span class="nt">&quot;subject&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Anfrage zu Mitgliedschaft&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ich interessiere mich für...&quot;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="p">}</span>
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Typ</th>
+<th>Pflicht</th>
+<th>Validierung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>Ja</td>
+<td>Text, sanitized</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>string</td>
+<td>Ja</td>
+<td>Gültige E-Mail</td>
+</tr>
+<tr>
+<td><code>phone</code></td>
+<td>string</td>
+<td>Nein</td>
+<td>Text, sanitized</td>
+</tr>
+<tr>
+<td><code>subject</code></td>
+<td>string</td>
+<td>Ja</td>
+<td>Text, sanitized</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>string</td>
+<td>Ja</td>
+<td>Textarea, sanitized</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Newsletter</strong> (<code>subscribe</code>):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;max@example.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Max Mustermann&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="nt">&quot;privacy_accept&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">}</span>
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Typ</th>
+<th>Pflicht</th>
+<th>Validierung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>email</code></td>
+<td>string</td>
+<td>Ja</td>
+<td>Gültige E-Mail</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>Nein</td>
+<td>Text, sanitized</td>
+</tr>
+<tr>
+<td><code>privacy_accept</code></td>
+<td>boolean</td>
+<td>Ja</td>
+<td>Muss <code>true</code> sein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Besuchstag</strong> (<code>visit</code>):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Max Mustermann&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;max@example.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span><span class="nt">&quot;phone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+41 79 123 45 67&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">  </span><span class="nt">&quot;visit_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-03-15&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">  </span><span class="nt">&quot;participants&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">  </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Wir kommen mit Kindern&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">  </span><span class="nt">&quot;privacy_accept&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="p">}</span>
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Typ</th>
+<th>Pflicht</th>
+<th>Validierung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>Ja</td>
+<td>Text, sanitized</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>string</td>
+<td>Ja</td>
+<td>Gültige E-Mail</td>
+</tr>
+<tr>
+<td><code>phone</code></td>
+<td>string</td>
+<td>Ja</td>
+<td>Text, sanitized</td>
+</tr>
+<tr>
+<td><code>visit_date</code></td>
+<td>string</td>
+<td>Ja</td>
+<td>Datum (Y-m-d)</td>
+</tr>
+<tr>
+<td><code>participants</code></td>
+<td>int</td>
+<td>Ja</td>
+<td>&gt;= 1</td>
+</tr>
+<tr>
+<td><code>notes</code></td>
+<td>string</td>
+<td>Nein</td>
+<td>Textarea, sanitized</td>
+</tr>
+<tr>
+<td><code>privacy_accept</code></td>
+<td>boolean</td>
+<td>Ja</td>
+<td>Muss <code>true</code> sein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Warteliste</strong> (<code>waiting-list</code>):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Max Mustermann&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;max@example.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="nt">&quot;phone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+41 79 123 45 67&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">  </span><span class="nt">&quot;interest&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ganzes Abo&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">  </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ab Herbst 2026&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">  </span><span class="nt">&quot;privacy_accept&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="p">}</span>
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Typ</th>
+<th>Pflicht</th>
+<th>Validierung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>Ja</td>
+<td>Text, sanitized</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>string</td>
+<td>Ja</td>
+<td>Gültige E-Mail</td>
+</tr>
+<tr>
+<td><code>phone</code></td>
+<td>string</td>
+<td>Ja</td>
+<td>Text, sanitized</td>
+</tr>
+<tr>
+<td><code>interest</code></td>
+<td>string</td>
+<td>Ja</td>
+<td>Text, sanitized</td>
+</tr>
+<tr>
+<td><code>notes</code></td>
+<td>string</td>
+<td>Nein</td>
+<td>Textarea, sanitized</td>
+</tr>
+<tr>
+<td><code>privacy_accept</code></td>
+<td>boolean</td>
+<td>Ja</td>
+<td>Muss <code>true</code> sein</td>
+</tr>
+</tbody>
+</table>
+<h4 id="response-erfolg_1">Response (Erfolg)</h4>
+<p><strong>HTTP 200</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">}</span>
+</code></pre></div></p>
+<h4 id="response-fehler_1">Response (Fehler)</h4>
+<p><strong>HTTP 400</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bitte füllen Sie alle Pflichtfelder aus.&quot;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">}</span>
+</code></pre></div></p>
+<p>Mögliche Fehlermeldungen:
+- <code>"Invalid form type"</code> (ungültiger Formulartyp)
+- <code>"Bitte füllen Sie alle Pflichtfelder aus."</code>
+- <code>"Bitte geben Sie eine gültige E-Mail-Adresse ein."</code>
+- <code>"Bitte akzeptieren Sie die Datenschutzbestimmungen."</code>
+- <code>"Fehler beim Versenden der E-Mail."</code></p>
+<h4 id="quellcode-logik_2">Quellcode-Logik</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="x">// Formulartyp aus URL-Segment oder Query-Parameter</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="x">$formType = $input-&gt;urlSegment1 ?: $input-&gt;get(&#39;form_type&#39;);</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="x">// Validierung des Typs</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="x">if(!in_array($formType, [&#39;contact&#39;, &#39;subscribe&#39;, &#39;visit&#39;, &#39;waiting-list&#39;])) {</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="x">    http_response_code(400);</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="x">    echo json_encode([&#39;success&#39; =&gt; false, &#39;error&#39; =&gt; &#39;Invalid form type&#39;]);</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="x">    exit;</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="x">}</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="x">// FormProcessor-Modul laden</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="x">$formProcessor = $modules-&gt;get(&#39;FormProcessor&#39;);</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="x">// JSON-Body parsen</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="x">$postData = json_decode(file_get_contents(&#39;php://input&#39;), true);</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="x">// Je nach Typ verarbeiten</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="x">switch($formType) {</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="x">    case &#39;contact&#39;:</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="x">        $result = $formProcessor-&gt;processContactForm((object)$postData);</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="x">        break;</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a><span class="x">    case &#39;subscribe&#39;:</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a><span class="x">        $result = $formProcessor-&gt;processSubscribeForm((object)$postData);</span>
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a><span class="x">        break;</span>
+<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a><span class="x">    // ... weitere Typen</span>
+<a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a><span class="x">}</span>
+</code></pre></div>
+<hr />
+<h3 id="24-doi-confirm-api">2.4 DOI Confirm API</h3>
+<p><strong>Endpunkt</strong>: <code>GET /api/doi/confirm</code></p>
+<p><strong>Datei</strong>: <code>site/api/doi.php</code></p>
+<p><strong>Beschreibung</strong>: Bestätigt Double Opt-In Token.</p>
+<h4 id="request_2">Request</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Typ</th>
+<th>Pflicht</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>token</code></td>
+<td>string</td>
+<td>Ja</td>
+<td>64-Zeichen Hex-Token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiel</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>GET /api/doi/confirm?token=abc123def456...
+</code></pre></div></p>
+<h4 id="response-erfolg_2">Response (Erfolg)</h4>
+<p><strong>HTTP 200</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">{</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">  </span><span class="nt">&quot;form_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;contact&quot;</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="p">}</span>
+</code></pre></div></p>
+<h4 id="response-fehler_2">Response (Fehler)</h4>
+<p><strong>HTTP 400</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="p">{</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ungültiger oder abgelaufener Bestätigungslink.&quot;</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="p">}</span>
+</code></pre></div></p>
+<p>Mögliche Fehlermeldungen:
+- <code>"Kein Token angegeben."</code>
+- <code>"Ungültiger oder abgelaufener Bestätigungslink."</code>
+- <code>"Invalid action"</code></p>
+<hr />
+<h2 id="3-processwire-module">3. ProcessWire Module</h2>
+<h3 id="31-formprocessor">3.1 FormProcessor</h3>
+<p><strong>Datei</strong>: <code>site/modules/FormProcessor/FormProcessor.module.php</code></p>
+<p><strong>Beschreibung</strong>: Verarbeitet alle Formular-Einreichungen und integriert mit DOIManager.</p>
+<h4 id="offentliche-methoden">Öffentliche Methoden</h4>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Parameter</th>
+<th>Rückgabe</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>processContactForm($post)</code></td>
+<td>object</td>
+<td>array</td>
+<td>Kontaktformular verarbeiten</td>
+</tr>
+<tr>
+<td><code>processSubscribeForm($post)</code></td>
+<td>object</td>
+<td>array</td>
+<td>Newsletter-Anmeldung</td>
+</tr>
+<tr>
+<td><code>processVisitDayForm($post)</code></td>
+<td>object</td>
+<td>array</td>
+<td>Besuchstag-Anmeldung</td>
+</tr>
+<tr>
+<td><code>processWaitingListForm($post)</code></td>
+<td>object</td>
+<td>array</td>
+<td>Warteliste-Anmeldung</td>
+</tr>
+<tr>
+<td><code>finalizeSubmission($token)</code></td>
+<td>string</td>
+<td>array</td>
+<td>DOI-Bestätigung abschliessen</td>
+</tr>
+</tbody>
+</table>
+<h4 id="verarbeitungsablauf">Verarbeitungsablauf</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>1. Eingabe-Sanitization
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>   └─► ProcessWire Sanitizer ($this-&gt;sanitizer-&gt;text(), -&gt;email(), etc.)
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>2. Validierung
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>   └─► Pflichtfelder prüfen
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>   └─► E-Mail-Format prüfen
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>   └─► Datenschutz-Akzeptanz prüfen
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>3. Form-Daten vorbereiten
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>   └─► Array mit allen Feldern + Timestamp erstellen
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>4. DOI initiieren
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>   └─► DOIManager-&gt;initiateDOI() aufrufen
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>   └─► Bestätigungs-E-Mail wird gesendet
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>5. Tracking (optional)
+<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>   └─► MatomoTracker-&gt;trackEvent() wenn installiert
+<a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>
+<a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>6. Rückgabe
+<a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>   └─► [&#39;success&#39; =&gt; true, &#39;doi_token&#39; =&gt; &#39;...&#39;] oder
+<a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a>   └─► [&#39;success&#39; =&gt; false, &#39;error&#39; =&gt; &#39;...&#39;]
+</code></pre></div>
+<h4 id="nach-doi-bestatigung">Nach DOI-Bestätigung</h4>
+<p>Wenn <code>finalizeSubmission($token)</code> aufgerufen wird:</p>
+<table>
+<thead>
+<tr>
+<th>Formulartyp</th>
+<th>Aktion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>contact</code></td>
+<td>Admin-Benachrichtigung per E-Mail</td>
+</tr>
+<tr>
+<td><code>subscribe</code></td>
+<td>Bestätigungs-E-Mail an Abonnent</td>
+</tr>
+<tr>
+<td><code>visit</code></td>
+<td>Admin-Benachrichtigung per E-Mail</td>
+</tr>
+<tr>
+<td><code>waiting_list</code></td>
+<td>Admin-Benachrichtigung per E-Mail</td>
+</tr>
+</tbody>
+</table>
+<h4 id="e-mail-templates">E-Mail Templates</h4>
+<p>Templates werden aus <code>site/templates/emails/</code> geladen:
+- <code>doi-confirmation.php</code> (Bestätigungs-E-Mail)
+- <code>form-notification.php</code> (Admin-Benachrichtigung)
+- <code>newsletter-confirmed.php</code> (Newsletter-Bestätigung)</p>
+<hr />
+<h3 id="32-doimanager">3.2 DOIManager</h3>
+<p><strong>Datei</strong>: <code>site/modules/DOIManager/DOIManager.module.php</code></p>
+<p><strong>Beschreibung</strong>: Verwaltet Double Opt-In Prozess mit Token-Generierung und Datenbankpersistenz.</p>
+<h4 id="datenbank-tabelle">Datenbank-Tabelle</h4>
+<p><strong>Tabelle</strong>: <code>doi_tokens</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="o">`</span><span class="n">doi_tokens</span><span class="o">`</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="o">`</span><span class="n">token</span><span class="o">`</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">    </span><span class="o">`</span><span class="n">email</span><span class="o">`</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">    </span><span class="o">`</span><span class="n">form_type</span><span class="o">`</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">    </span><span class="o">`</span><span class="n">form_data</span><span class="o">`</span><span class="w"> </span><span class="nb">text</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">    </span><span class="o">`</span><span class="n">created</span><span class="o">`</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">    </span><span class="o">`</span><span class="n">expires</span><span class="o">`</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">    </span><span class="o">`</span><span class="n">confirmed</span><span class="o">`</span><span class="w"> </span><span class="n">tinyint</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">    </span><span class="o">`</span><span class="n">confirmed_at</span><span class="o">`</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">),</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="w">    </span><span class="k">UNIQUE</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="o">`</span><span class="n">token</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">token</span><span class="o">`</span><span class="p">),</span>
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="w">    </span><span class="k">KEY</span><span class="w"> </span><span class="o">`</span><span class="n">email</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">email</span><span class="o">`</span><span class="p">),</span>
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="w">    </span><span class="k">KEY</span><span class="w"> </span><span class="o">`</span><span class="n">expires</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">expires</span><span class="o">`</span><span class="p">)</span>
+<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Spalte</th>
+<th>Typ</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>int</td>
+<td>Auto-Increment ID</td>
+</tr>
+<tr>
+<td><code>token</code></td>
+<td>varchar(64)</td>
+<td>Eindeutiger Hex-Token</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>varchar(255)</td>
+<td>E-Mail-Adresse</td>
+</tr>
+<tr>
+<td><code>form_type</code></td>
+<td>varchar(50)</td>
+<td>Formulartyp</td>
+</tr>
+<tr>
+<td><code>form_data</code></td>
+<td>text</td>
+<td>JSON-kodierte Formulardaten</td>
+</tr>
+<tr>
+<td><code>created</code></td>
+<td>int</td>
+<td>Unix-Timestamp Erstellung</td>
+</tr>
+<tr>
+<td><code>expires</code></td>
+<td>int</td>
+<td>Unix-Timestamp Ablauf</td>
+</tr>
+<tr>
+<td><code>confirmed</code></td>
+<td>tinyint</td>
+<td>0 = unbestätigt, 1 = bestätigt</td>
+</tr>
+<tr>
+<td><code>confirmed_at</code></td>
+<td>int</td>
+<td>Unix-Timestamp Bestätigung</td>
+</tr>
+</tbody>
+</table>
+<h4 id="offentliche-methoden_1">Öffentliche Methoden</h4>
+<p><strong><code>initiateDOI($email, $formType, $formData)</code></strong></p>
+<p>Startet DOI-Prozess:
+1. Generiert 64-Zeichen Hex-Token (<code>bin2hex(random_bytes(32))</code>)
+2. Setzt Ablaufzeit auf 24 Stunden
+3. Speichert in Datenbank
+4. Sendet Bestätigungs-E-Mail</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="x">$result = $doiManager-&gt;initiateDOI(</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="x">    &#39;max@example.com&#39;,</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="x">    &#39;contact&#39;,</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="x">    [&#39;name&#39; =&gt; &#39;Max&#39;, &#39;message&#39; =&gt; &#39;...&#39;]</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="x">);</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="x">// =&gt; [&#39;success&#39; =&gt; true, &#39;token&#39; =&gt; &#39;abc123...&#39;]</span>
+</code></pre></div>
+<p><strong><code>confirmDOI($token)</code></strong></p>
+<p>Bestätigt Token:
+1. Prüft ob Token existiert
+2. Prüft ob nicht abgelaufen (<code>expires &gt; time()</code>)
+3. Prüft ob noch nicht bestätigt (<code>confirmed = 0</code>)
+4. Markiert als bestätigt
+5. Gibt Formulardaten zurück</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="x">$data = $doiManager-&gt;confirmDOI(&#39;abc123...&#39;);</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="x">// =&gt; [</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="x">//     &#39;email&#39; =&gt; &#39;max@example.com&#39;,</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="x">//     &#39;form_type&#39; =&gt; &#39;contact&#39;,</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="x">//     &#39;form_data&#39; =&gt; [&#39;name&#39; =&gt; &#39;Max&#39;, ...]</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="x">// ]</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="x">// oder false wenn ungültig</span>
+</code></pre></div>
+<p><strong><code>cleanupExpiredTokens()</code></strong></p>
+<p>Löscht abgelaufene, unbestätigte Tokens. Sollte per Cron aufgerufen werden.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="x">$deleted = $doiManager-&gt;cleanupExpiredTokens();</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="x">// =&gt; Anzahl gelöschter Einträge</span>
+</code></pre></div>
+<h4 id="token-generierung">Token-Generierung</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="x">private function generateToken() {</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="x">    do {</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="x">        // 32 Bytes = 64 Hex-Zeichen</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="x">        $token = bin2hex(random_bytes(32));</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="x">        // Eindeutigkeit prüfen</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="x">        $exists = /* DB-Abfrage */;</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="x">    } while($exists);</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="x">    return $token;</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a><span class="x">}</span>
+</code></pre></div>
+<hr />
+<h2 id="4-nextjs-integration">4. Next.js Integration</h2>
+<h3 id="41-api-client">4.1 API Client</h3>
+<p><strong>Datei</strong>: <code>frontend/lib/processwire.ts</code></p>
+<p>TypeScript-Client für ProcessWire API:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">API_URL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NEXT_PUBLIC_PROCESSWIRE_API_URL</span><span class="w"> </span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">             </span><span class="o">||</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PROCESSWIRE_API_URL</span><span class="w"> </span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">             </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;http://localhost/api&#39;</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">PageData</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w">  </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="w">  </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="w">  </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a><span class="w">  </span><span class="nx">body?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a><span class="w">  </span><span class="nx">logo_image</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a><span class="w">  </span><span class="nx">hero_image</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a><span class="w">  </span><span class="nx">hero_subtitle?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+<a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a><span class="w">  </span><span class="nx">sidebar_content?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+<a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a><span class="w">  </span><span class="nx">gallery_images?</span><span class="o">:</span><span class="w"> </span><span class="kt">Array</span><span class="o">&lt;</span><span class="p">{</span><span class="w"> </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">}</span><span class="o">&gt;</span>
+<a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a><span class="w">  </span><span class="nx">footer_content?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+<a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a><span class="w">  </span><span class="nx">css_variant?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+<a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a><span class="w">  </span><span class="nx">children?</span><span class="o">:</span><span class="w"> </span><span class="kt">PageData</span><span class="p">[]</span>
+<a id="__codelineno-25-18" name="__codelineno-25-18" href="#__codelineno-25-18"></a><span class="p">}</span>
+<a id="__codelineno-25-19" name="__codelineno-25-19" href="#__codelineno-25-19"></a>
+<a id="__codelineno-25-20" name="__codelineno-25-20" href="#__codelineno-25-20"></a><span class="k">export</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">getPageData</span><span class="p">(</span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">PageData</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-21" name="__codelineno-25-21" href="#__codelineno-25-21"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">API_URL</span><span class="si">}</span><span class="sb">/pages</span><span class="si">${</span><span class="nx">path</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-22" name="__codelineno-25-22" href="#__codelineno-25-22"></a><span class="w">    </span><span class="nx">next</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">revalidate</span><span class="o">:</span><span class="w"> </span><span class="kt">60</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="c1">// Cache 60 Sekunden</span>
+<a id="__codelineno-25-23" name="__codelineno-25-23" href="#__codelineno-25-23"></a><span class="w">  </span><span class="p">})</span>
+<a id="__codelineno-25-24" name="__codelineno-25-24" href="#__codelineno-25-24"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span>
+<a id="__codelineno-25-25" name="__codelineno-25-25" href="#__codelineno-25-25"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span>
+<a id="__codelineno-25-26" name="__codelineno-25-26" href="#__codelineno-25-26"></a><span class="p">}</span>
+<a id="__codelineno-25-27" name="__codelineno-25-27" href="#__codelineno-25-27"></a>
+<a id="__codelineno-25-28" name="__codelineno-25-28" href="#__codelineno-25-28"></a><span class="k">export</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">getNavigation</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">PageData</span><span class="p">[]</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-29" name="__codelineno-25-29" href="#__codelineno-25-29"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">API_URL</span><span class="si">}</span><span class="sb">/navigation`</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-30" name="__codelineno-25-30" href="#__codelineno-25-30"></a><span class="w">    </span><span class="nx">next</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">revalidate</span><span class="o">:</span><span class="w"> </span><span class="kt">300</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="c1">// Cache 5 Minuten</span>
+<a id="__codelineno-25-31" name="__codelineno-25-31" href="#__codelineno-25-31"></a><span class="w">  </span><span class="p">})</span>
+<a id="__codelineno-25-32" name="__codelineno-25-32" href="#__codelineno-25-32"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="p">[]</span>
+<a id="__codelineno-25-33" name="__codelineno-25-33" href="#__codelineno-25-33"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span>
+<a id="__codelineno-25-34" name="__codelineno-25-34" href="#__codelineno-25-34"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="42-api-routes-proxy">4.2 API Routes (Proxy)</h3>
+<p><strong>Verzeichnis</strong>: <code>frontend/app/api/forms/</code></p>
+<p>Next.js API Routes dienen als Proxy zu ProcessWire:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>frontend/app/api/
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>├── forms/
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>│   ├── contact/route.ts
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>│   ├── subscribe/route.ts
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>│   ├── visit/route.ts
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>│   └── waiting-list/route.ts
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>└── doi/
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>    └── confirm/route.ts
+</code></pre></div>
+<p><strong>Beispiel</strong>: <code>contact/route.ts</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">NextRequest</span><span class="p">,</span><span class="w"> </span><span class="nx">NextResponse</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;next/server&#39;</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">PROCESSWIRE_API</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PROCESSWIRE_API_URL</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;http://localhost/api&#39;</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="k">export</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">POST</span><span class="p">(</span><span class="nx">request</span><span class="o">:</span><span class="w"> </span><span class="kt">NextRequest</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">request</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="w">    </span><span class="c1">// Frontend-Validierung</span>
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">body</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="nx">body</span><span class="p">.</span><span class="nx">email</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="nx">body</span><span class="p">.</span><span class="nx">subject</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="nx">body</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">NextResponse</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span>
+<a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kt">false</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Bitte füllen Sie alle Pflichtfelder aus.&#39;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="kt">400</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-27-14" name="__codelineno-27-14" href="#__codelineno-27-14"></a><span class="w">      </span><span class="p">)</span>
+<a id="__codelineno-27-15" name="__codelineno-27-15" href="#__codelineno-27-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-27-16" name="__codelineno-27-16" href="#__codelineno-27-16"></a>
+<a id="__codelineno-27-17" name="__codelineno-27-17" href="#__codelineno-27-17"></a><span class="w">    </span><span class="c1">// Weiterleitung an ProcessWire</span>
+<a id="__codelineno-27-18" name="__codelineno-27-18" href="#__codelineno-27-18"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">PROCESSWIRE_API</span><span class="si">}</span><span class="sb">/forms/contact`</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-19" name="__codelineno-27-19" href="#__codelineno-27-19"></a><span class="w">      </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+<a id="__codelineno-27-20" name="__codelineno-27-20" href="#__codelineno-27-20"></a><span class="w">      </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-27-21" name="__codelineno-27-21" href="#__codelineno-27-21"></a><span class="w">      </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="kt">JSON.stringify</span><span class="p">(</span><span class="nx">body</span><span class="p">),</span>
+<a id="__codelineno-27-22" name="__codelineno-27-22" href="#__codelineno-27-22"></a><span class="w">    </span><span class="p">})</span>
+<a id="__codelineno-27-23" name="__codelineno-27-23" href="#__codelineno-27-23"></a>
+<a id="__codelineno-27-24" name="__codelineno-27-24" href="#__codelineno-27-24"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span>
+<a id="__codelineno-27-25" name="__codelineno-27-25" href="#__codelineno-27-25"></a>
+<a id="__codelineno-27-26" name="__codelineno-27-26" href="#__codelineno-27-26"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-27" name="__codelineno-27-27" href="#__codelineno-27-27"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">NextResponse</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-27-28" name="__codelineno-27-28" href="#__codelineno-27-28"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-29" name="__codelineno-27-29" href="#__codelineno-27-29"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">NextResponse</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span>
+<a id="__codelineno-27-30" name="__codelineno-27-30" href="#__codelineno-27-30"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kt">false</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="kt">data.error</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;Es ist ein Fehler aufgetreten.&#39;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-27-31" name="__codelineno-27-31" href="#__codelineno-27-31"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="kt">400</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-27-32" name="__codelineno-27-32" href="#__codelineno-27-32"></a><span class="w">      </span><span class="p">)</span>
+<a id="__codelineno-27-33" name="__codelineno-27-33" href="#__codelineno-27-33"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-27-34" name="__codelineno-27-34" href="#__codelineno-27-34"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-35" name="__codelineno-27-35" href="#__codelineno-27-35"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">NextResponse</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span>
+<a id="__codelineno-27-36" name="__codelineno-27-36" href="#__codelineno-27-36"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kt">false</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Es ist ein Fehler aufgetreten.&#39;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-27-37" name="__codelineno-27-37" href="#__codelineno-27-37"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="kt">500</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-27-38" name="__codelineno-27-38" href="#__codelineno-27-38"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-27-39" name="__codelineno-27-39" href="#__codelineno-27-39"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-27-40" name="__codelineno-27-40" href="#__codelineno-27-40"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="43-umgebungsvariablen">4.3 Umgebungsvariablen</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PROCESSWIRE_API_URL</code></td>
+<td>Backend API URL (serverseitig)</td>
+<td><code>https://www.bioco.ch/api</code></td>
+</tr>
+<tr>
+<td><code>NEXT_PUBLIC_PROCESSWIRE_API_URL</code></td>
+<td>Backend API URL (clientseitig)</td>
+<td><code>https://www.bioco.ch/api</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Konfiguration</strong> in <code>next.config.js</code>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nx">env</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">  </span><span class="nx">PROCESSWIRE_API_URL</span><span class="o">:</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PROCESSWIRE_API_URL</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;https://staging.bioco.ch/api&#39;</span><span class="p">,</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="p">}</span>
+</code></pre></div></p>
+<hr />
+<h2 id="5-datenfluss-diagramme">5. Datenfluss-Diagramme</h2>
+<h3 id="51-formular-einreichung">5.1 Formular-Einreichung</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>┌──────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>│ 1. BENUTZER FÜLLT FORMULAR AUS                                   │
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>└──────────────────────────────────────────────────────────────────┘
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>                              │
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>                              ▼
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>┌──────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>│ 2. NEXT.JS FRONTEND                                              │
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>│    ContactForm.tsx → fetch(&#39;/api/forms/contact&#39;, { body })       │
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>└──────────────────────────────────────────────────────────────────┘
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>                              │
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>                              ▼
+<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a>┌──────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a>│ 3. NEXT.JS API ROUTE                                             │
+<a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a>│    app/api/forms/contact/route.ts                                │
+<a id="__codelineno-29-15" name="__codelineno-29-15" href="#__codelineno-29-15"></a>│    - Frontend-Validierung                                        │
+<a id="__codelineno-29-16" name="__codelineno-29-16" href="#__codelineno-29-16"></a>│    - Weiterleitung an ProcessWire                                │
+<a id="__codelineno-29-17" name="__codelineno-29-17" href="#__codelineno-29-17"></a>└──────────────────────────────────────────────────────────────────┘
+<a id="__codelineno-29-18" name="__codelineno-29-18" href="#__codelineno-29-18"></a>                              │
+<a id="__codelineno-29-19" name="__codelineno-29-19" href="#__codelineno-29-19"></a>                              ▼
+<a id="__codelineno-29-20" name="__codelineno-29-20" href="#__codelineno-29-20"></a>┌──────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-29-21" name="__codelineno-29-21" href="#__codelineno-29-21"></a>│ 4. PROCESSWIRE API                                               │
+<a id="__codelineno-29-22" name="__codelineno-29-22" href="#__codelineno-29-22"></a>│    site/api/forms.php                                            │
+<a id="__codelineno-29-23" name="__codelineno-29-23" href="#__codelineno-29-23"></a>│    - Routing nach Formulartyp                                    │
+<a id="__codelineno-29-24" name="__codelineno-29-24" href="#__codelineno-29-24"></a>│    - FormProcessor-Modul aufrufen                                │
+<a id="__codelineno-29-25" name="__codelineno-29-25" href="#__codelineno-29-25"></a>└──────────────────────────────────────────────────────────────────┘
+<a id="__codelineno-29-26" name="__codelineno-29-26" href="#__codelineno-29-26"></a>                              │
+<a id="__codelineno-29-27" name="__codelineno-29-27" href="#__codelineno-29-27"></a>                              ▼
+<a id="__codelineno-29-28" name="__codelineno-29-28" href="#__codelineno-29-28"></a>┌──────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-29-29" name="__codelineno-29-29" href="#__codelineno-29-29"></a>│ 5. FORMPROCESSOR MODULE                                          │
+<a id="__codelineno-29-30" name="__codelineno-29-30" href="#__codelineno-29-30"></a>│    - Input Sanitization                                          │
+<a id="__codelineno-29-31" name="__codelineno-29-31" href="#__codelineno-29-31"></a>│    - Validierung                                                 │
+<a id="__codelineno-29-32" name="__codelineno-29-32" href="#__codelineno-29-32"></a>│    - DOIManager.initiateDOI() aufrufen                          │
+<a id="__codelineno-29-33" name="__codelineno-29-33" href="#__codelineno-29-33"></a>└──────────────────────────────────────────────────────────────────┘
+<a id="__codelineno-29-34" name="__codelineno-29-34" href="#__codelineno-29-34"></a>                              │
+<a id="__codelineno-29-35" name="__codelineno-29-35" href="#__codelineno-29-35"></a>                              ▼
+<a id="__codelineno-29-36" name="__codelineno-29-36" href="#__codelineno-29-36"></a>┌──────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-29-37" name="__codelineno-29-37" href="#__codelineno-29-37"></a>│ 6. DOIMANAGER MODULE                                             │
+<a id="__codelineno-29-38" name="__codelineno-29-38" href="#__codelineno-29-38"></a>│    - Token generieren (64 Hex-Zeichen)                          │
+<a id="__codelineno-29-39" name="__codelineno-29-39" href="#__codelineno-29-39"></a>│    - In Datenbank speichern (doi_tokens)                        │
+<a id="__codelineno-29-40" name="__codelineno-29-40" href="#__codelineno-29-40"></a>│    - Bestätigungs-E-Mail senden                                 │
+<a id="__codelineno-29-41" name="__codelineno-29-41" href="#__codelineno-29-41"></a>└──────────────────────────────────────────────────────────────────┘
+<a id="__codelineno-29-42" name="__codelineno-29-42" href="#__codelineno-29-42"></a>                              │
+<a id="__codelineno-29-43" name="__codelineno-29-43" href="#__codelineno-29-43"></a>                              ▼
+<a id="__codelineno-29-44" name="__codelineno-29-44" href="#__codelineno-29-44"></a>┌──────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-29-45" name="__codelineno-29-45" href="#__codelineno-29-45"></a>│ 7. RESPONSE                                                      │
+<a id="__codelineno-29-46" name="__codelineno-29-46" href="#__codelineno-29-46"></a>│    { &quot;success&quot;: true }                                           │
+<a id="__codelineno-29-47" name="__codelineno-29-47" href="#__codelineno-29-47"></a>└──────────────────────────────────────────────────────────────────┘
+</code></pre></div>
+<h3 id="52-doi-bestatigung">5.2 DOI-Bestätigung</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>┌──────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>│ 1. BENUTZER KLICKT LINK IN E-MAIL                                │
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>│    https://bioco.ch/doi-confirm?token=abc123...                  │
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>└──────────────────────────────────────────────────────────────────┘
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>                              │
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>                              ▼
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>┌──────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>│ 2. NEXT.JS SEITE                                                 │
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>│    app/doi-confirm/page.tsx                                      │
+<a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a>│    - Token aus URL lesen                                         │
+<a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a>│    - API aufrufen                                                │
+<a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a>└──────────────────────────────────────────────────────────────────┘
+<a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a>                              │
+<a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a>                              ▼
+<a id="__codelineno-30-15" name="__codelineno-30-15" href="#__codelineno-30-15"></a>┌──────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-30-16" name="__codelineno-30-16" href="#__codelineno-30-16"></a>│ 3. NEXT.JS API ROUTE                                             │
+<a id="__codelineno-30-17" name="__codelineno-30-17" href="#__codelineno-30-17"></a>│    app/api/doi/confirm/route.ts                                  │
+<a id="__codelineno-30-18" name="__codelineno-30-18" href="#__codelineno-30-18"></a>│    - Weiterleitung an ProcessWire                                │
+<a id="__codelineno-30-19" name="__codelineno-30-19" href="#__codelineno-30-19"></a>└──────────────────────────────────────────────────────────────────┘
+<a id="__codelineno-30-20" name="__codelineno-30-20" href="#__codelineno-30-20"></a>                              │
+<a id="__codelineno-30-21" name="__codelineno-30-21" href="#__codelineno-30-21"></a>                              ▼
+<a id="__codelineno-30-22" name="__codelineno-30-22" href="#__codelineno-30-22"></a>┌──────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-30-23" name="__codelineno-30-23" href="#__codelineno-30-23"></a>│ 4. PROCESSWIRE API                                               │
+<a id="__codelineno-30-24" name="__codelineno-30-24" href="#__codelineno-30-24"></a>│    site/api/doi.php                                              │
+<a id="__codelineno-30-25" name="__codelineno-30-25" href="#__codelineno-30-25"></a>│    - Token validieren                                            │
+<a id="__codelineno-30-26" name="__codelineno-30-26" href="#__codelineno-30-26"></a>│    - FormProcessor.finalizeSubmission() aufrufen                 │
+<a id="__codelineno-30-27" name="__codelineno-30-27" href="#__codelineno-30-27"></a>└──────────────────────────────────────────────────────────────────┘
+<a id="__codelineno-30-28" name="__codelineno-30-28" href="#__codelineno-30-28"></a>                              │
+<a id="__codelineno-30-29" name="__codelineno-30-29" href="#__codelineno-30-29"></a>                              ▼
+<a id="__codelineno-30-30" name="__codelineno-30-30" href="#__codelineno-30-30"></a>┌──────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-30-31" name="__codelineno-30-31" href="#__codelineno-30-31"></a>│ 5. DOIMANAGER.confirmDOI()                                       │
+<a id="__codelineno-30-32" name="__codelineno-30-32" href="#__codelineno-30-32"></a>│    - Datenbank: Token suchen                                     │
+<a id="__codelineno-30-33" name="__codelineno-30-33" href="#__codelineno-30-33"></a>│    - Prüfen: nicht abgelaufen, nicht bestätigt                  │
+<a id="__codelineno-30-34" name="__codelineno-30-34" href="#__codelineno-30-34"></a>│    - Markieren: confirmed = 1, confirmed_at = now                │
+<a id="__codelineno-30-35" name="__codelineno-30-35" href="#__codelineno-30-35"></a>│    - Formulardaten zurückgeben                                   │
+<a id="__codelineno-30-36" name="__codelineno-30-36" href="#__codelineno-30-36"></a>└──────────────────────────────────────────────────────────────────┘
+<a id="__codelineno-30-37" name="__codelineno-30-37" href="#__codelineno-30-37"></a>                              │
+<a id="__codelineno-30-38" name="__codelineno-30-38" href="#__codelineno-30-38"></a>                              ▼
+<a id="__codelineno-30-39" name="__codelineno-30-39" href="#__codelineno-30-39"></a>┌──────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-30-40" name="__codelineno-30-40" href="#__codelineno-30-40"></a>│ 6. FORMPROCESSOR.finalizeSubmission()                            │
+<a id="__codelineno-30-41" name="__codelineno-30-41" href="#__codelineno-30-41"></a>│    Je nach Formulartyp:                                          │
+<a id="__codelineno-30-42" name="__codelineno-30-42" href="#__codelineno-30-42"></a>│    - contact: Admin-E-Mail senden                                │
+<a id="__codelineno-30-43" name="__codelineno-30-43" href="#__codelineno-30-43"></a>│    - subscribe: Bestätigungs-E-Mail an User                     │
+<a id="__codelineno-30-44" name="__codelineno-30-44" href="#__codelineno-30-44"></a>│    - visit/waiting_list: Admin-E-Mail senden                    │
+<a id="__codelineno-30-45" name="__codelineno-30-45" href="#__codelineno-30-45"></a>│    - Matomo-Tracking                                             │
+<a id="__codelineno-30-46" name="__codelineno-30-46" href="#__codelineno-30-46"></a>└──────────────────────────────────────────────────────────────────┘
+<a id="__codelineno-30-47" name="__codelineno-30-47" href="#__codelineno-30-47"></a>                              │
+<a id="__codelineno-30-48" name="__codelineno-30-48" href="#__codelineno-30-48"></a>                              ▼
+<a id="__codelineno-30-49" name="__codelineno-30-49" href="#__codelineno-30-49"></a>┌──────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-30-50" name="__codelineno-30-50" href="#__codelineno-30-50"></a>│ 7. RESPONSE                                                      │
+<a id="__codelineno-30-51" name="__codelineno-30-51" href="#__codelineno-30-51"></a>│    { &quot;success&quot;: true, &quot;form_type&quot;: &quot;contact&quot; }                   │
+<a id="__codelineno-30-52" name="__codelineno-30-52" href="#__codelineno-30-52"></a>└──────────────────────────────────────────────────────────────────┘
+</code></pre></div>
+<hr />
+<h2 id="6-sicherheit">6. Sicherheit</h2>
+<h3 id="input-sanitization">Input Sanitization</h3>
+<p>ProcessWire Sanitizer wird für alle Eingaben verwendet:</p>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Verwendung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$sanitizer-&gt;text()</code></td>
+<td>Einzeilige Texte (name, subject)</td>
+</tr>
+<tr>
+<td><code>$sanitizer-&gt;email()</code></td>
+<td>E-Mail-Adressen</td>
+</tr>
+<tr>
+<td><code>$sanitizer-&gt;textarea()</code></td>
+<td>Mehrzeilige Texte (message, notes)</td>
+</tr>
+<tr>
+<td><code>$sanitizer-&gt;date()</code></td>
+<td>Datumswerte</td>
+</tr>
+</tbody>
+</table>
+<h3 id="e-mail-validierung">E-Mail-Validierung</h3>
+<p>Doppelte Validierung:
+1. <code>$sanitizer-&gt;email()</code> (ProcessWire)
+2. <code>filter_var($email, FILTER_VALIDATE_EMAIL)</code> (PHP)</p>
+<h3 id="token-sicherheit">Token-Sicherheit</h3>
+<ul>
+<li>64 Hex-Zeichen (256 Bit Entropie)</li>
+<li>Kryptografisch sichere Generierung (<code>random_bytes()</code>)</li>
+<li>Eindeutigkeitsprüfung in Datenbank</li>
+<li>Automatischer Ablauf nach 24 Stunden</li>
+</ul>
+<h3 id="cors">CORS</h3>
+<p>Aktuell: <code>Access-Control-Allow-Origin: *</code></p>
+<p><strong>Empfehlung für Produktion</strong>: Einschränken auf erlaubte Domains:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="x">$allowed = [&#39;https://bioco.ch&#39;, &#39;https://www.bioco.ch&#39;];</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="x">$origin = $_SERVER[&#39;HTTP_ORIGIN&#39;] ?? &#39;&#39;;</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="x">if(in_array($origin, $allowed)) {</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="x">    header(&quot;Access-Control-Allow-Origin: $origin&quot;);</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="x">}</span>
+</code></pre></div></p>
+<hr />
+<h2 id="7-wartung">7. Wartung</h2>
+<h3 id="abgelaufene-tokens-aufraumen">Abgelaufene Tokens aufräumen</h3>
+<p>Der DOIManager bietet <code>cleanupExpiredTokens()</code>. Empfehlung: täglich per Cron ausführen.</p>
+<p><strong>ProcessWire LazyCron</strong> (in <code>site/ready.php</code>):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="x">$wire-&gt;addHookAfter(&#39;LazyCron::everyDay&#39;, function($event) {</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="x">    $doiManager = $event-&gt;wire-&gt;modules-&gt;get(&#39;DOIManager&#39;);</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="x">    $deleted = $doiManager-&gt;cleanupExpiredTokens();</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="x">    $event-&gt;wire-&gt;log-&gt;save(&#39;doi&#39;, &quot;Deleted $deleted expired tokens&quot;);</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="x">});</span>
+</code></pre></div></p>
+<h3 id="logging">Logging</h3>
+<p>Fehler werden via ProcessWire <code>$this-&gt;error()</code> geloggt. Logs finden sich in:
+- <code>site/assets/logs/errors.txt</code></p>
+<hr />
+<p><em>Zuletzt aktualisiert: Januar 2026</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Bioco
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
