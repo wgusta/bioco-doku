@@ -1,13 +1,13 @@
-name: Deploy MkDocs to GitHub Pages
+name: deploy-gh-pages-fallback
 
 on:
-  push:
-    branches:
-      - main  # oder 'master', je nachdem wie dein Haupt-Branch heisst
+  workflow_dispatch:
 
 jobs:
   deploy:
+    name: Manual deploy to GitHub Pages (fallback)
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
@@ -17,8 +17,7 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Deploy
         run: mkdocs gh-deploy --force --clean

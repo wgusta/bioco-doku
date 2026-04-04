@@ -1,0 +1,8 @@
+# Docs and docs config
+/docs/** @wgusta
+/mkdocs.yml @wgusta
+/requirements.txt @wgusta
+
+# Workflow and governance changes
+/.github/workflows/** @wgusta
+/CODEOWNERS @wgusta

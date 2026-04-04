@@ -1,0 +1,64 @@
+# Archived: handbook lives in ProcessWire (bioco-web-project). Do not deploy docs.bioco.ch from this repo.
+name: docs-deploy-novatrend
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Git ref to deploy (commit sha / tag / branch). Leave empty for default.'
+        required: false
+        type: string
+
+jobs:
+  deploy:
+    name: Deploy to Novatrend
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.ref || github.ref }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build docs (strict)
+        run: mkdocs build --strict
+
+      - name: Configure SSH
+        env:
+          NOVA_SSH_KEY: ${{ secrets.NOVA_SSH_KEY }}
+          NOVA_SSH_HOST: ${{ secrets.NOVA_SSH_HOST }}
+          NOVA_SSH_PORT: ${{ secrets.NOVA_SSH_PORT }}
+        run: |
+          test -n "$NOVA_SSH_KEY"
+          test -n "$NOVA_SSH_HOST"
+          test -n "$NOVA_SSH_PORT"
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$NOVA_SSH_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p "$NOVA_SSH_PORT" "$NOVA_SSH_HOST" >> ~/.ssh/known_hosts
+
+      - name: Deploy with rsync
+        env:
+          NOVA_SSH_HOST: ${{ secrets.NOVA_SSH_HOST }}
+          NOVA_SSH_PORT: ${{ secrets.NOVA_SSH_PORT }}
+          NOVA_SSH_USER: ${{ secrets.NOVA_SSH_USER }}
+          NOVA_TARGET_DIR: ${{ secrets.NOVA_TARGET_DIR }}
+        run: |
+          test -n "$NOVA_SSH_USER"
+          test -n "$NOVA_TARGET_DIR"
+          ssh -p "$NOVA_SSH_PORT" "$NOVA_SSH_USER@$NOVA_SSH_HOST" "mkdir -p '$NOVA_TARGET_DIR'"
+          rsync -az --delete -e "ssh -p $NOVA_SSH_PORT" site/ "$NOVA_SSH_USER@$NOVA_SSH_HOST:$NOVA_TARGET_DIR/"
+
+      - name: Smoke test
+        run: |
+          curl -fsS https://docs.bioco.ch/ > /dev/null
+          curl -fsS https://docs.bioco.ch/technisch/ > /dev/null
