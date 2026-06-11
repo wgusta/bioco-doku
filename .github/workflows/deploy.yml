@@ -3,6 +3,9 @@ name: deploy-gh-pages-fallback
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     name: Manual deploy to GitHub Pages (fallback)
