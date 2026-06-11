@@ -1,44 +1,105 @@
 # Anleitung für Redakteure: Inhalte auf bioco.ch bearbeiten
 
-Willkommen! Diese Anleitung hilft Ihnen, Inhalte auf der Webseite `bioco.ch` selbstständig zu ändern. Sie benötigen dafür keine Programmierkenntnisse.
+Diese Anleitung zeigt, wie Sie Inhalte auf `bioco.ch` selbstständig ändern. Sie brauchen keine Programmierkenntnisse.
 
-Die Webseite wird mit einem System namens **ProcessWire** verwaltet. ProcessWire ist wie das "Büro" hinter der Webseite, in dem alle Texte und Bilder sortiert sind.
+Sie arbeiten mit zwei Werkzeugen:
 
-## 1. Wie melde ich mich an?
+* **Visual Editor**: das empfohlene Werkzeug. Sie bearbeiten die Seite direkt in einer Live-Vorschau und sehen sofort, wie das Ergebnis aussieht.
+* **ProcessWire Admin**: das klassische Backend (`https://cms.bioco.ch/processwire/`). Hier liegen alle Felder im Detail. Der Visual Editor verlinkt für Spezialfälle direkt dorthin.
 
-Um Inhalte zu bearbeiten, müssen Sie sich im "Büro" (dem Admin-Bereich) anmelden.
+---
 
-1.  Öffnen Sie in Ihrem Browser die Anmelde-Seite: `https://cms.bioco.ch/processwire/`
-2.  Geben Sie Ihren Benutzernamen und Ihr Passwort ein.
-3.  Klicken Sie auf "Anmelden".
+## 1. Anmelden
 
-## 2. Wie finde ich eine Seite?
+1. Öffnen Sie `https://cms.bioco.ch/processwire/`.
+2. Geben Sie Benutzernamen und Passwort ein, klicken Sie auf **Anmelden**.
+3. Klicken Sie oben in der Navigationsleiste auf **Visual Editor**. Der Editor öffnet sich in einem neuen Tab.
 
-Nach dem Login sehen Sie auf der linken Seite einen "Seitenbaum". Dieser Baum ist das Inhaltsverzeichnis Ihrer Webseite und spiegelt die Navigation wider, die wir in unseren Chats definiert haben.
+---
 
-* **Start**
-* **Angebot**
-* **Mitmachen**
-* **Über uns**
-* **Kontakt**
+## 2. Der Visual Editor im Überblick
 
-Wenn Sie den Text auf der "Über uns"-Seite ändern möchten:
-1.  Klicken Sie im Seitenbaum auf "Über uns".
-2.  Die Seite lädt neu und zeigt Ihnen nun in der Mitte alle Text- und Bildfelder, die zu dieser Seite gehören.
+Der Visual Editor zeigt links eine Seitenleiste und rechts die echte Website als Vorschau.
 
-## 3. Wie bearbeite ich einen Text?
+* **Oben (Werkzeugleiste)**: Moduswahl **Edit** / **Browse**, Schaltflächen **Neu laden**, **Vorlagen**, **PW Admin**, **Zurück** sowie eine Statusanzeige.
+* **Links (Seitenleiste)**: aktuelle Seite, Seitenliste zum Springen, Liste der Abschnitte der Seite, Feld-Editor mit der Feldzuordnung.
+* **Rechts (Vorschau)**: die Website. Im Modus **Edit** klicken Sie Inhalte direkt an, im Modus **Browse** verhält sich die Vorschau wie die normale Website.
 
-1.  Nachdem Sie eine Seite ausgewählt haben (z.B. "Über uns"), sehen Sie Felder wie "Überschrift" oder "Textinhalt".
-2.  Klicken Sie in das Feld, das Sie bearbeiten möchten.
-3.  Schreiben oder ändern Sie den Text.
-4.  Klicken Sie **ganz oben oder ganz unten auf die blaue Schaltfläche "Speichern"**.
+Sie wechseln die Seite, indem Sie in der Vorschau ganz normal navigieren oder links eine Seite aus der Liste wählen.
 
-Der Inhalt ist sofort live auf der Webseite sichtbar.
+---
 
-## 4. Was sind "Blöcke" oder "Module"?
+## 3. Text und Felder bearbeiten
 
-Um die Seite flexibel zu halten, verwenden wir oft "Inhaltsblöcke" (in ProcessWire oft "Repeater" oder "PageTable" genannt). Sie können sich das wie Lego-Bausteine vorstellen.
+1. Stellen Sie sicher, dass der Modus **Edit** aktiv ist.
+2. Klicken Sie in der Vorschau auf den Text oder Abschnitt, den Sie ändern möchten. Der Abschnitt wird hervorgehoben.
+3. Bearbeiten Sie Titel, Eyebrow oder Fliesstext direkt. Fliesstext öffnet einen kleinen Rich-Text-Editor (fett, Listen, Links).
+4. Ihre Änderungen bleiben zunächst als **lokaler Entwurf** im Browser. Erst **Publizieren** macht sie öffentlich.
 
-In unseren Vorgesprächen haben wir diese Blöcke definiert (z.B. "Hero-Sektion", "Text mit Bild", "Kontaktmodul").
+---
 
-Wenn Sie eine Seite bearbeiten, sehen Sie möglicherweise eine Schaltfläche "Neuen Block hinzufügen". Dort können Sie auswählen, welche Art von Inhalt Sie einfügen möchten (z.B. ein reines Text-Modul oder ein Bilder-Modul).
+## 4. Wer besitzt welches Feld: Visual Editor oder ProcessWire
+
+Für jeden Abschnitt zeigt die Seitenleiste zwei Gruppen:
+
+* **Visual Editor** (grün): Felder, die Sie direkt in der Vorschau bearbeiten, zum Beispiel Titel, Eyebrow, Text, Layout und Thema, Hintergrundfarbe, Buttons sowie Bilder aus der Mediathek.
+* **ProcessWire** (orange): Felder, die in komplexeren Fällen besser im Backend bearbeitet werden, zum Beispiel die eigentliche Bilddatei oder die vollständige Feldansicht. Jede Zeile hat einen Knopf **→ In PW öffnen**, der genau dieses Feld im ProcessWire-Editor öffnet.
+
+So sehen Sie immer, was Sie im Visual Editor erledigen und was ins Backend gehört.
+
+---
+
+## 5. Abschnitte (Blöcke) verwalten
+
+Eine Seite besteht aus **Abschnitten**, die wie Bausteine übereinanderliegen.
+
+* **Hinzufügen**: Knopf **Abschnitt hinzufügen** in der Seitenleiste.
+* **Kopieren / Löschen**: die kleinen Symbole an jedem Abschnitt in der Liste.
+* **Sortieren**: Abschnitt in der Liste mit der Maus an die neue Position ziehen.
+
+Manche Abschnitte sind **Komponenten** mit besonderem Aussehen, zum Beispiel die Preis-Tabelle auf der Abo-Seite oder die Event-Liste. Deren Optionen erscheinen als zusätzliche Felder im Abschnitt-Overlay. Das Strukturhandbuch listet alle Komponenten auf.
+
+---
+
+## 6. Bilder
+
+Bilder verwalten Sie über die **Mediathek**. Beim Klick auf ein Bild im Visual Editor öffnet sich ein Overlay, in dem Sie ein Bild aus der Mediathek wählen, den Alt-Text setzen und Helligkeit, Kontrast oder Sättigung anpassen. Neue Bilddateien laden Sie in der Mediathek hoch und wählen sie dann aus; der direkte Upload in einzelne Seitenfelder ist bewusst deaktiviert.
+
+---
+
+## 7. Events und Beiträge (Sammlung Aktuelles)
+
+Events sind keine Abschnitte, sondern eigene Seiten unter **Aktuelles**. Navigieren Sie in der Vorschau zu **Aktuelles**. Die Seitenleiste zeigt dann statt der Abschnitte ein **Sammlungs-Panel**:
+
+* Eine Liste aller Events mit Datum und Status (bevorstehend / vergangen). Jeder Eintrag hat **→ In PW öffnen**, um alle Event-Felder im Backend zu bearbeiten.
+* Oben **Neuen Event erstellen**: Datum wählen, Knopf drücken. Der Event wird angelegt und direkt in ProcessWire geöffnet, wo Sie Titel, Ort, Beschreibung und Anmeldung ergänzen.
+
+---
+
+## 8. Publizieren und Live-Schaltung
+
+1. Wenn Ihre Änderungen fertig sind, klicken Sie auf **Publizieren**.
+2. Die Statusanzeige zeigt das Ergebnis:
+   * **Publiziert & live**: gespeichert und auf der Website aktualisiert.
+   * **Publiziert, aber Build nicht aktualisiert** (rot): gespeichert, aber die Website hat die Aktualisierung nicht bestätigt. Laden Sie nach kurzer Zeit neu; bleibt es rot, melden Sie sich beim Technik-Team.
+3. Mit **Entwurf verwerfen** verwerfen Sie ungespeicherte Änderungen und kehren zum publizierten Stand zurück.
+
+!!! note "Warum nicht sofort sichtbar?"
+    Die Website ist aus Geschwindigkeitsgründen zwischengespeichert. Beim Publizieren stösst das CMS gezielt eine Aktualisierung der betroffenen Seiten an (On-Demand-Revalidation). In der Regel erscheint die Änderung innerhalb weniger Sekunden.
+
+---
+
+## 9. Wann doch direkt in ProcessWire?
+
+Nutzen Sie das ProcessWire Admin (oder den Knopf **→ In PW öffnen**), wenn Sie:
+
+* eine neue **Bilddatei** hochladen oder ersetzen,
+* alle Felder eines Events bearbeiten,
+* Formular-Einsendungen ansehen oder exportieren,
+* Seiten anlegen oder löschen, die es im Visual Editor noch nicht gibt.
+
+Für die alltägliche Textpflege bleibt der Visual Editor der schnellste Weg.
+
+---
+
+*Zuletzt aktualisiert: Juni 2026*

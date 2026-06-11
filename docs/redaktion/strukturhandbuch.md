@@ -1,281 +1,132 @@
-# Strukturhandbuch bioco.ch für Administratoren
+# Strukturhandbuch bioco.ch
 
-Dieses Handbuch erklärt die Struktur der bioco.ch Webseite und dient als Nachschlagewerk für Redakteure und Administratoren.
+Dieses Handbuch erklärt die Struktur der Website und dient als Nachschlagewerk für Redakteure und Administratoren.
 
 ---
 
-## 1. Architektur der Webseite
+## 1. Architektur
 
-Die bioco.ch Webseite besteht aus zwei getrennten Systemen:
+Die Website besteht aus zwei Systemen auf demselben Server (Novatrend cPanel):
 
-### ProcessWire (das Redaktionssystem)
+* **ProcessWire** (PHP): das Redaktionssystem (Headless CMS). Hier liegen alle Inhalte. Zugang: `https://cms.bioco.ch/processwire/`.
+* **Next.js 14** (React/TypeScript): das Frontend, das die Website für Besucher darstellt.
 
-ProcessWire ist das Content Management System (CMS), in dem Inhalte verwaltet werden. Es funktioniert wie ein "Büro" oder "Lager", in dem alle Texte, Bilder und Einstellungen gespeichert sind.
-
-- **Zugang**: `https://cms.bioco.ch/processwire/`
-- **Funktion**: Inhalte erstellen, bearbeiten, löschen
-- **Sprache**: PHP
-
-### Next.js (das Schaufenster)
-
-Next.js ist das Frontend, das die Webseite für Besucher darstellt. Es holt sich Daten vom ProcessWire und zeigt sie schön formatiert an.
-
-- **Technologie**: React, TypeScript
-- **Hosting**: Vercel oder Server
-- **Funktion**: Darstellung für Besucher
-
-### Verbindung: REST API
-
-Die beiden Systeme kommunizieren über eine REST API. ProcessWire stellt Daten als JSON bereit, Next.js ruft diese ab und zeigt sie an.
+Next.js holt die Inhalte über eine **einheitliche REST-API** aus ProcessWire (`/api/content/*`) und rendert die Seiten statisch vor (SSG/ISR). Beim Publizieren stösst das CMS eine gezielte Aktualisierung der betroffenen Seiten an (**On-Demand-Revalidation**), sodass Änderungen ohne neues Deployment live gehen.
 
 ```
-┌─────────────────┐     API Request      ┌─────────────────┐
-│                 │ ─────────────────▶   │                 │
-│   Next.js       │                      │   ProcessWire   │
-│   (Frontend)    │ ◀─────────────────   │   (Backend)     │
-│                 │     JSON Response    │                 │
-└─────────────────┘                      └─────────────────┘
+Redakteur ──▶ Visual Editor ──▶ ProcessWire (Inhalte)
+                                      │  Revalidation
+                                      ▼
+                               Next.js (Website)  ──▶ Besucher
 ```
 
 ---
 
-## 2. Aktueller Entwicklungsstand
+## 2. Aktueller Stand
 
-### Was funktioniert
+Die Inhalte werden **dynamisch aus ProcessWire** geladen. Die Referenzseite ist `/abos`: sie besteht vollständig aus CMS-Abschnitten (inklusive der Preis-Tabelle als Komponente) und wird im Visual Editor gepflegt.
 
-| Funktion | Status | Beschreibung |
-|----------|--------|--------------|
-| Kontaktformular | Aktiv | Wird durch ProcessWire verarbeitet |
-| Newsletter-Anmeldung | Aktiv | Mit Double Opt-In |
-| Warteliste-Formular | Aktiv | Mit Double Opt-In |
-| Besuchstag-Anmeldung | Aktiv | Mit Double Opt-In |
-| Matomo Analytics | Aktiv | Cookieless Tracking |
+| Bereich | Stand |
+|---------|-------|
+| Seiteninhalte (Abschnitte) | CMS-gesteuert über `content_sections`, im Visual Editor bearbeitbar |
+| Navigation | aus ProcessWire (`/api/content/navigation`) |
+| Events / Aktuelles | eigene Seiten unter `/aktuelles/` (Template `event`), Sammlungs-Editor im Visual Editor |
+| Formulare | in ProcessWire verarbeitet (mit Double-Opt-In und Captcha) |
+| Revalidation | aktiv; Publizieren aktualisiert die Live-Seite automatisch |
+| Matomo Analytics | aktiv (cookieless) |
 
-### Was noch Entwicklung braucht
-
-| Funktion | Status | Beschreibung |
-|----------|--------|--------------|
-| Seiteninhalt | Hardcodiert | Texte sind direkt im Code, nicht aus ProcessWire |
-| Navigation | Hardcodiert | Menüpunkte sind im Code festgelegt |
-| Bilder | Hardcodiert | Bildpfade sind im Code festgelegt |
-| Aktuelles/Events | Hardcodiert | Daten in `AktuellesData.tsx` statt aus CMS |
-
-**Wichtig**: Änderungen in ProcessWire werden derzeit **nicht** automatisch auf der Webseite sichtbar. Die Infrastruktur existiert, muss aber noch verbunden werden.
+!!! note "Hinweis"
+    Einige ältere Seiten können noch fest im Code stehen und werden schrittweise auf CMS-Abschnitte umgestellt. `/abos` dient dabei als Vorlage.
 
 ---
 
-## 3. Feldwörterbuch: ProcessWire → Next.js
+## 3. Inhaltsmodell: Abschnitte (`content_sections`)
 
-Diese Tabelle zeigt, welche ProcessWire-Felder welchen Next.js-Komponenten entsprechen.
+Eine CMS-gesteuerte Seite hält ihre Inhalte in einem Wiederholungsfeld `content_sections`. Jeder Eintrag ist ein **Abschnitt** mit diesen Feldern:
 
-### Basis-Felder
+| Feld | Bedeutung |
+|------|-----------|
+| `section_title` | Überschrift des Abschnitts |
+| `section_eyebrow` | kleine Zeile über der Überschrift |
+| `section_text` | Fliesstext (Rich Text / CKEditor) |
+| `section_image`, `image_alt` | Bild aus der Mediathek und Alt-Text |
+| `button_text` / `button_href` / `button_variant` | erster Button |
+| `button2_text` / `button2_href` / `button2_variant` | zweiter Button |
+| `section_image_brightness/contrast/saturate` | Bildanpassungen |
+| `section_component` | Schlüssel einer Komponente (siehe Abschnitt 4) |
+| `section_config` | JSON-Konfiguration der Komponente |
 
-| ProcessWire Feld | Typ | Next.js Komponente | Beschreibung |
-|------------------|-----|-------------------|--------------|
-| `title` | Text | `Hero.tsx` → `<h1>` | Seitentitel, erscheint als Hauptüberschrift |
-| `body` | Textarea/HTML | Seiteninhalt | Haupttext der Seite |
-| `hero_image` | Bild | `Hero.tsx` → Hintergrundbild | Grosses Kopfbild der Seite |
-| `hero_subtitle` | Text | `Hero.tsx` → `<p>` | Untertitel unter der Hauptüberschrift |
-
-### Medien-Felder
-
-| ProcessWire Feld | Typ | Next.js Komponente | Beschreibung |
-|------------------|-----|-------------------|--------------|
-| `logo_image` | Bild | `Header.tsx` → Logo | Webseiten-Logo im Kopfbereich |
-| `gallery_images` | Bilder (mehrere) | `Gallery.tsx` | Bildergalerie mit mehreren Bildern |
-
-### Layout-Felder
-
-| ProcessWire Feld | Typ | Next.js Komponente | Beschreibung |
-|------------------|-----|-------------------|--------------|
-| `sidebar_content` | Textarea | Seitenleiste | Zusätzlicher Inhalt neben dem Haupttext |
-| `footer_content` | Textarea | `Footer.tsx` | Inhalt im Fussbereich |
-| `css_variant` | Text | Stylesheet-Auswahl | Wählt eine Design-Variante |
-
-### Bild-Eigenschaften
-
-Jedes Bild in ProcessWire hat zusätzliche Eigenschaften:
-
-| Eigenschaft | Beschreibung |
-|-------------|--------------|
-| `url` | Pfad zum Bild |
-| `description` | Bildbeschreibung (für Alt-Text und Barrierefreiheit) |
+Das Layout (Bild links/rechts, Banner, Galerie, nur Text) ergibt sich aus den gefüllten Feldern bzw. der gewählten Komponente. Überschriften können auch direkt im Rich Text stehen.
 
 ---
 
-## 4. Komponentenübersicht
+## 4. Komponenten (Registry)
 
-### Layout-Komponenten
+Setzt ein Abschnitt das Feld `section_component`, rendert das Frontend eine registrierte Komponente. Die Zuordnung steht in `site/templates/component-registry.json`.
 
-| Komponente | Datei | Funktion |
-|------------|-------|----------|
-| Header | `Header.tsx` | Kopfbereich mit Logo und Navigation |
-| Footer | `Footer.tsx` | Fussbereich mit Links und Kontaktdaten |
-| Navigation | `Navigation.tsx` | Hauptmenü |
-| MobileMenu | `MobileMenu.tsx` | Menü für Mobilgeräte |
-| Hero | `Hero.tsx` | Grosses Kopfbild mit Titel |
+| Schlüssel | Funktion |
+|-----------|----------|
+| `pricing_table` | Abo-Preistabelle mit drei Stufen (Halb, Standard, Doppel); Werte über `section_config` |
+| `page_intro` | Einleitungsblock mit konfigurierbarer Breite/Ausrichtung |
+| `media_text`, `cards_grid`, `gallery_strip`, `text_columns` | Layout-Bausteine |
+| `timeline_header`, `timeline_item`, `cta_band` | Zeitleiste und Aktionsband |
+| `events_feed` | Liste der nächsten Events |
+| `pricing_calculator` | interaktiver Preisrechner |
+| `saisonkalender` | Erntekalender |
+| `gallery` | Bildergalerie |
+| `depot_map`, `geisshof_map` | Karten |
+| `contact_form`, `membership_form`, `subscribe_form`, `visit_day_form`, `waiting_list_form` | Formulare |
 
-### Inhalts-Komponenten
-
-| Komponente | Datei | Funktion |
-|------------|-------|----------|
-| CTA | `CTA.tsx` | Call-to-Action Button |
-| CardHeader | `CardHeader.tsx` | Überschrift für Karten |
-| Gallery | `Gallery.tsx` | Bildergalerie |
-| InfoTooltip | `InfoTooltip.tsx` | Info-Hinweise |
-
-### Spezial-Komponenten
-
-| Komponente | Datei | Funktion |
-|------------|-------|----------|
-| PricingCalculator | `PricingCalculator.tsx` | Preisrechner für Abos |
-| Saisonkalender | `Saisonkalender.tsx` | Kalender für Erntezeiten |
-| BasketVisualization | `BasketVisualization.tsx` | Visualisierung des Gemüsekorbs |
-| DepotMap | `DepotMap.tsx` | Karte der Abholstationen |
-| GeisshofMap | `GeisshofMap.tsx` | Karte zum Geisshof |
-| AktuellesItem | `AktuellesItem.tsx` | Einzelner Aktuelles-Eintrag |
-| EventsBanner | `EventsBanner.tsx` | Banner für Events |
-
-### Formular-Komponenten
-
-| Komponente | Datei | Funktion |
-|------------|-------|----------|
-| ContactForm | `forms/ContactForm.tsx` | Kontaktformular |
-| SubscribeForm | `forms/SubscribeForm.tsx` | Newsletter-Anmeldung |
-| WaitingListForm | `forms/WaitingListForm.tsx` | Warteliste |
-| VisitDayForm | `forms/VisitDayForm.tsx` | Besuchstag-Anmeldung |
-| MembershipForm | `forms/MembershipForm.tsx` | Mitgliedschaftsformular |
+Komponenten mit Optionen (zum Beispiel `pricing_table`) zeigen ihre Felder im Visual Editor als zusätzliche Eingaben (Text-, Zahl- oder Auswahlfelder), gespeichert in `section_config`.
 
 ---
 
-## 5. Seitenübersicht
+## 5. Events und Aktuelles
 
-### Hauptseiten
+Events sind eigene Seiten mit dem Template `event` unter `/aktuelles/`. Wichtige Felder: `event_start`, `event_end`, `event_status` (bevorstehend/vergangen), `event_location`, `event_summary`, `body`, `event_card_image`, `event_media`, `event_signup_enabled`, `event_signup_notes`.
 
-| URL | Seite | Beschreibung | Besondere Komponenten |
-|-----|-------|--------------|----------------------|
-| `/` | Startseite | Willkommen, Übersicht | Hero, AktuellesItem, EventsBanner |
-| `/ernte` | Ernte | Was wächst gerade | Saisonkalender, BasketVisualization |
-| `/abos` | Abos | Abo-Modelle und Preise | PricingCalculator |
-| `/wir` | Wir | Über biocò und den Geisshof | GeisshofMap |
-| `/anpacken` | Anpacken | Mitarbeit auf dem Feld | — |
-| `/mitmachen` | Mitmachen | Mitglied werden | MembershipForm |
-| `/aktuelles` | Aktuelles | News und Events | AktuellesTabs, AktuellesItem |
-
-### Informationsseiten
-
-| URL | Seite | Beschreibung | Besondere Komponenten |
-|-----|-------|--------------|----------------------|
-| `/depots` | Depots | Abholstationen | DepotMap |
-| `/kontakt` | Kontakt | Kontaktinformationen | ContactForm |
-| `/warteliste` | Warteliste | Warteliste-Anmeldung | WaitingListForm |
-| `/tag-der-offenen-tuer` | Tag der offenen Tür | Event-Anmeldung | VisitDayForm |
-| `/newsletter` | Newsletter | Newsletter-Anmeldung | SubscribeForm |
-
-### Rechtliche Seiten
-
-| URL | Seite | Beschreibung |
-|-----|-------|--------------|
-| `/impressum` | Impressum | Rechtliche Angaben |
-| `/datenschutz` | Datenschutz | Datenschutzerklärung |
-| `/statuten` | Statuten | Genossenschaftsstatuten |
-
-### Spezialseiten
-
-| URL | Seite | Beschreibung |
-|-----|-------|--------------|
-| `/anmeldung` | Anmeldung | Mitgliedschaftsanmeldung |
-| `/anmeldung/danke` | Danke | Bestätigungsseite nach Anmeldung |
-| `/doi-confirm` | DOI Bestätigung | Double Opt-In Bestätigung |
-| `/kundenportal` | Kundenportal | Mitgliederbereich (extern) |
-| `/intranet` | Intranet | Interner Bereich (extern) |
+Im Visual Editor werden Events über das **Sammlungs-Panel** verwaltet (öffnet sich auf der Seite Aktuelles): Liste aller Einträge, je Eintrag **→ In PW öffnen**, und **Neuen Event erstellen** über einen Datumswähler. Das separate Blog-Template `news_item` existiert, wird aktuell aber nicht verwendet.
 
 ---
 
-## 6. Was Admins jetzt tun können
+## 6. Seitenübersicht (Auswahl)
 
-### Formulare verwalten
+| URL | Seite |
+|-----|-------|
+| `/` | Startseite |
+| `/abos` | Abos und Preise (CMS-gesteuert, Referenz) |
+| `/gemuese` | Gemüse und Ernte |
+| `/solawi` | Solidarische Landwirtschaft |
+| `/mitmachen`, `/bioco-werden` | Mitglied werden |
+| `/aktuelles` | News und Events |
+| `/standorte-depots` | Abholstationen |
+| `/wir` | Über biocò |
+| `/kontakt` | Kontakt |
+| `/warteliste`, `/newsletter`, `/tag-der-offenen-tuer` | Anmeldungen |
+| `/impressum`, `/datenschutz`, `/statuten` | Rechtliches |
 
-Alle Formular-Einreichungen werden in ProcessWire gespeichert:
-
-1. Einloggen unter `https://cms.bioco.ch/processwire/`
-2. Im Seitenbaum die Formular-Einreichungen finden
-3. Einträge ansehen, exportieren oder löschen
-
-### ProcessWire-Inhalte pflegen
-
-Auch wenn die Inhalte noch nicht dynamisch angezeigt werden, können sie bereits vorbereitet werden:
-
-1. Seiten im Seitenbaum anlegen
-2. Felder ausfüllen (title, body, hero_image, etc.)
-3. Bilder hochladen
-
-**Hinweis**: Diese Inhalte werden erst sichtbar, wenn die Entwicklung abgeschlossen ist.
+Weitere CMS-Seiten ausserhalb dieser Liste werden über eine Catch-all-Route automatisch aus ProcessWire gerendert.
 
 ---
 
-## 7. Entwicklungsbedarf
+## 7. Caching und Revalidation
 
-Folgende Arbeiten sind nötig, um ProcessWire-Inhalte dynamisch anzuzeigen:
-
-### Priorität 1: Grundfunktionen
-
-| Aufgabe | Beschreibung | Betroffene Dateien |
-|---------|--------------|-------------------|
-| Page-Daten laden | `getPageData()` in Seiten verwenden | Alle `page.tsx` Dateien |
-| Navigation dynamisch | `getNavigation()` verwenden | `Navigation.tsx` |
-| Hero dynamisch | Daten aus API statt Props | `Hero.tsx`, alle Seiten |
-
-### Priorität 2: Erweiterungen
-
-| Aufgabe | Beschreibung |
-|---------|--------------|
-| Aktuelles aus CMS | News und Events aus ProcessWire laden |
-| Bildergalerie | Galerie-Bilder aus ProcessWire |
-| Inhaltsblöcke | Repeater/PageTable für flexible Inhalte |
-
-### Priorität 3: Optimierungen
-
-| Aufgabe | Beschreibung |
-|---------|--------------|
-| Caching optimieren | Revalidation-Zeiten anpassen |
-| Preview-Modus | Vorschau unveröffentlichter Inhalte |
-| Fehlerbehandlung | Fallbacks bei API-Fehlern |
+Next.js speichert Seiten zwischen (ISR). Beim Speichern in ProcessWire stösst ein Hook (`site/ready.php`) eine Revalidation der betroffenen Pfade an; das Publizieren im Visual Editor löst sie zusätzlich direkt aus und meldet zurück, ob die Website die Aktualisierung bestätigt hat. Details: siehe [API-Dokumentation](../technisch/api.md).
 
 ---
 
-## 8. Technische Dokumentation
-
-Für Entwickler und technisch Interessierte gibt es eine separate, detaillierte Dokumentation:
-
-**[API-Dokumentation](../technisch/api.md)** enthaelt:
-
-- Architektur-Übersicht und Datenfluss
-- Alle API-Endpunkte im Detail
-- ProcessWire Module (FormProcessor, DOIManager)
-- Next.js Integration
-- Sicherheit und Wartung
-
----
-
-## 9. Glossar
+## 8. Glossar
 
 | Begriff | Erklärung |
 |---------|-----------|
-| **API** | Application Programming Interface, Schnittstelle zwischen Systemen |
-| **CMS** | Content Management System, System zur Inhaltsverwaltung |
-| **DOI** | Double Opt-In, zweistufige Bestätigung bei Anmeldungen |
-| **Frontend** | Der sichtbare Teil der Webseite |
-| **Backend** | Der unsichtbare Teil (Datenbank, Verwaltung) |
-| **Hardcodiert** | Im Programmcode fest eingebaut, nicht änderbar ohne Entwickler |
+| **Abschnitt / Block** | Baustein einer Seite (`content_sections`) |
+| **Komponente** | Abschnitt mit besonderem Aussehen und eigenen Optionen |
+| **Visual Editor** | Live-Vorschau-Editor unter `/visual-editor/` |
 | **Headless CMS** | CMS ohne eigene Darstellung, liefert nur Daten |
-| **JSON** | JavaScript Object Notation, Datenformat für API |
-| **Next.js** | React-Framework für Webseiten |
-| **ProcessWire** | Open-Source CMS (PHP) |
-| **REST API** | Standardisierte Schnittstelle für Web-Dienste |
-| **Revalidation** | Automatische Aktualisierung von gecachten Daten |
-| **Template** | Vorlage für Seitentypen in ProcessWire |
+| **ISR / Revalidation** | gezielte Aktualisierung zwischengespeicherter Seiten |
+| **Template** | Vorlage für einen Seitentyp in ProcessWire |
+| **DOI** | Double-Opt-In, zweistufige Bestätigung bei Anmeldungen |
 
 ---
 
-*Zuletzt aktualisiert: Januar 2026*
+*Zuletzt aktualisiert: Juni 2026*
