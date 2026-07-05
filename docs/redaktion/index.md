@@ -1,6 +1,8 @@
 # Dokumentation fuer Redakteure
 
-Willkommen im Bereich fuer Redakteure und das bioco-Team. Hier finden Sie alle Anleitungen zur Inhaltspflege.
+Willkommen im Bereich fuer Redakteure und das bioco-Team. Hier findest du alle Anleitungen zur Inhaltspflege.
+
+Seit Juli 2026 ist **jede Seite von bioco.ch im CMS bearbeitbar** — Texte, Bilder, Abschnitte und Events pflegst du selbst, am einfachsten im Visual Editor.
 
 ---
 
@@ -8,16 +10,18 @@ Willkommen im Bereich fuer Redakteure und das bioco-Team. Hier finden Sie alle A
 
 | Dokument | Beschreibung |
 |----------|--------------|
-| [Anleitung](anleitung.md) | Grundlagen: Anmelden, Seiten finden, Texte bearbeiten |
+| [Anleitung](anleitung.md) | Grundlagen: Anmelden, Seiten finden, Texte bearbeiten, Publizieren |
 | [Strukturhandbuch](strukturhandbuch.md) | Felder, Komponenten, Seitenuebersicht |
 
 ---
 
 ## CMS-Zugang
 
-**URL**: [https://cms.bioco.ch/processwire/](https://cms.bioco.ch/processwire/)
+**Visual Editor**: [https://cms.bioco.ch/visual-editor/](https://cms.bioco.ch/visual-editor/)
 
-Fuer Zugangsdaten wenden Sie sich an den technischen Administrator.
+**ProcessWire Admin**: [https://cms.bioco.ch/processwire/](https://cms.bioco.ch/processwire/)
+
+Fuer Zugangsdaten wende dich an den technischen Administrator.
 
 ---
 
@@ -25,11 +29,11 @@ Fuer Zugangsdaten wenden Sie sich an den technischen Administrator.
 
 ### Inhalte bearbeiten
 
-Wenn Sie Texte, Bilder oder Events auf der Webseite aendern moechten:
+Wenn du Texte, Bilder oder Events auf der Webseite aendern moechtest:
 
-1. Lesen Sie die [Anleitung](anleitung.md) fuer die Grundlagen
-2. Nutzen Sie das [Strukturhandbuch](strukturhandbuch.md) als Nachschlagewerk
+1. Lies die [Anleitung](anleitung.md) fuer die Grundlagen
+2. Nutze das [Strukturhandbuch](strukturhandbuch.md) als Nachschlagewerk
 
 ### Aenderungen beantragen
 
-Fuer groessere Aenderungen oder neue Funktionen, lesen Sie die [Governance-Seite](../governance.md).
+Fuer neue Funktionen oder Design-Anpassungen (also alles, was nicht Inhalt ist), lies die [Governance-Seite](../governance.md).

@@ -24,19 +24,16 @@ Redakteur ──▶ Visual Editor ──▶ ProcessWire (Inhalte)
 
 ## 2. Aktueller Stand
 
-Die Inhalte werden **dynamisch aus ProcessWire** geladen. Die Referenzseite ist `/abos`: sie besteht vollständig aus CMS-Abschnitten (inklusive der Preis-Tabelle als Komponente) und wird im Visual Editor gepflegt.
+**Alle Seiten sind CMS-gesteuert.** Seit Juli 2026 gibt es keine Seiten mehr, deren Texte fest im Code stehen — jede Seite besteht aus CMS-Abschnitten (`content_sections`) und wird im Visual Editor gepflegt. Einzige Ausnahme ist `/doi-confirm`, die technische Bestätigungsseite für Newsletter-Anmeldungen: sie zeigt nur Funktionszustände, keinen redaktionellen Inhalt.
 
 | Bereich | Stand |
 |---------|-------|
 | Seiteninhalte (Abschnitte) | CMS-gesteuert über `content_sections`, im Visual Editor bearbeitbar |
 | Navigation | aus ProcessWire (`/api/content/navigation`) |
 | Events / Aktuelles | eigene Seiten unter `/aktuelles/` (Template `event`), Sammlungs-Editor im Visual Editor |
-| Formulare | in ProcessWire verarbeitet (mit Double-Opt-In und Captcha) |
+| Formulare | in ProcessWire verarbeitet (mit Double-Opt-In und Captcha); Formulartexte pflegt das Technik-Team |
 | Revalidation | aktiv; Publizieren aktualisiert die Live-Seite automatisch |
 | Matomo Analytics | aktiv (cookieless) |
-
-!!! note "Hinweis"
-    Einige ältere Seiten können noch fest im Code stehen und werden schrittweise auf CMS-Abschnitte umgestellt. `/abos` dient dabei als Vorlage.
 
 ---
 
@@ -70,14 +67,21 @@ Setzt ein Abschnitt das Feld `section_component`, rendert das Frontend eine regi
 | `page_intro` | Einleitungsblock mit konfigurierbarer Breite/Ausrichtung |
 | `media_text`, `cards_grid`, `gallery_strip`, `text_columns` | Layout-Bausteine |
 | `timeline_header`, `timeline_item`, `cta_band` | Zeitleiste und Aktionsband |
-| `events_feed` | Liste der nächsten Events |
+| `accordion_item` | aufklappbarer Akkordeon-Eintrag (Titel = Zeile, Text = Inhalt) |
+| `steps` | bis zu vier nummerierte Schritte mit Kreis-Nummer |
+| `link_tiles` | Kachel-Raster mit Symbol, Titel, Text und Link (z. B. Kundenportal) |
+| `events_feed` | Liste der nächsten Events; Darstellung **Standard** oder **Banner** (kompakt), Anzahl einstellbar |
+| `group_cards` | Karten der Arbeitsgruppen auf Mitmachen (Karteninhalte kommen live aus dem CMS) |
+| `schnuppertage` | Schnuppertage-Block |
 | `pricing_calculator` | interaktiver Preisrechner |
 | `saisonkalender` | Erntekalender |
 | `gallery` | Bildergalerie |
 | `depot_map`, `geisshof_map` | Karten |
 | `contact_form`, `membership_form`, `subscribe_form`, `visit_day_form`, `waiting_list_form` | Formulare |
 
-Komponenten mit Optionen (zum Beispiel `pricing_table`) zeigen ihre Felder im Visual Editor als zusätzliche Eingaben (Text-, Zahl- oder Auswahlfelder), gespeichert in `section_config`.
+Komponenten mit Optionen (zum Beispiel `pricing_table`, `steps`, `link_tiles`, `events_feed`) zeigen ihre Felder im Visual Editor als zusätzliche Eingaben (Text-, Zahl- oder Auswahlfelder), gespeichert in `section_config`.
+
+Der wiederkehrende Block «Möchtest du uns kennenlernen?» ist auf jeder Seite ein eigener Abschnitt (`section_id: kennenlernen-cta`) und kann pro Seite angepasst werden.
 
 ---
 
@@ -91,10 +95,12 @@ Im Visual Editor werden Events über das **Sammlungs-Panel** verwaltet (öffnet 
 
 ## 6. Seitenübersicht (Auswahl)
 
+Alle Seiten sind CMS-gesteuert und im Visual Editor bearbeitbar.
+
 | URL | Seite |
 |-----|-------|
 | `/` | Startseite |
-| `/abos` | Abos und Preise (CMS-gesteuert, Referenz) |
+| `/abos` | Abos und Preise |
 | `/gemuese` | Gemüse und Ernte |
 | `/solawi` | Solidarische Landwirtschaft |
 | `/mitmachen`, `/bioco-werden` | Mitglied werden |
@@ -102,10 +108,11 @@ Im Visual Editor werden Events über das **Sammlungs-Panel** verwaltet (öffnet 
 | `/standorte-depots` | Abholstationen |
 | `/wir` | Über biocò |
 | `/kontakt` | Kontakt |
-| `/warteliste`, `/newsletter`, `/tag-der-offenen-tuer` | Anmeldungen |
+| `/anmeldung`, `/warteliste`, `/newsletter`, `/tag-der-offenen-tuer` | Anmeldungen |
+| `/kundenportal` | Kundenportal (Portal-Kacheln) |
 | `/impressum`, `/datenschutz`, `/statuten` | Rechtliches |
 
-Weitere CMS-Seiten ausserhalb dieser Liste werden über eine Catch-all-Route automatisch aus ProcessWire gerendert.
+Weitere CMS-Seiten ausserhalb dieser Liste werden über eine Catch-all-Route automatisch aus ProcessWire gerendert. `/doi-confirm` ist die einzige Seite ohne bearbeitbaren Inhalt (technische Bestätigungsseite).
 
 ---
 
@@ -129,4 +136,4 @@ Next.js speichert Seiten zwischen (ISR). Beim Speichern in ProcessWire stösst e
 
 ---
 
-*Zuletzt aktualisiert: Juni 2026*
+*Zuletzt aktualisiert: Juli 2026*

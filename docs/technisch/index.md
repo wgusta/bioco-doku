@@ -11,6 +11,7 @@ Dieser Bereich richtet sich an Entwickler und technische Administratoren.
 | [ProcessWire Setup](setup-processwire.md) | Server-Installation, Git-Workflow, Deployment |
 | [MkDocs Setup](setup-mkdocs.md) | Dokumentations-Website einrichten |
 | [API Dokumentation](api.md) | REST API Endpunkte, Module, Datenfluss |
+| [CMS-Editierbarkeit & Visual Editor](cms-editierbarkeit.md) | No-Fallback-Architektur, Content-Freeze-Migration, VE-Neubau, Deploy |
 
 ---
 

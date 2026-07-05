@@ -37,6 +37,7 @@ Basis: `https://cms.bioco.ch/api`
 | `/api/content/navigation` | Navigationsbaum |
 | `/api/content/events` | Events (upcoming + past) |
 | `/api/content/aktuelles` | News/Aktuelles-Beiträge |
+| `/api/content/groups` | Arbeitsgruppen-Karten (Komponente `group_cards` auf Mitmachen) |
 | `/api/content/instagram` | Instagram-Feed |
 | `/api/content/settings` | Typografie- und Design-Tokens |
 | `/api/content/page-path?id=` | Pfad-Lookup für Vorschau |
@@ -112,6 +113,8 @@ Vertrag: `start.sh: REVALIDATE_SECRET` muss `site/config.php: nextRevalidateSecr
 
 Welche `section_component`-Schlüssel das Frontend rendert, steht in `site/templates/component-registry.json` (gelesen von `frontend/lib/componentRegistry.ts`). Ein Eintrag definiert Schlüssel, Label, Ziel-Komponente, CMS-Felder, `defaultConfig` und ein `configSchema` (Feldtypen `select`, `range`, `text`, `number`) für den Visual-Editor-Konfigurator. Beispiel: `pricing_table` (Abo-Preistabelle, drei Stufen).
 
+Seit Juli 2026 neu bzw. erweitert: `accordion_item`, `steps`, `link_tiles`, `group_cards` sowie `events_feed` mit `configSchema` (`variant`: `standard`/`banner`, `limit`). Details und wie neue Komponenten dazukommen: [CMS-Editierbarkeit & Visual Editor](cms-editierbarkeit.md).
+
 ---
 
 ## 7. Sicherheit und Wartung
@@ -122,4 +125,4 @@ Welche `section_component`-Schlüssel das Frontend rendert, steht in `site/templ
 
 ---
 
-*Zuletzt aktualisiert: Juni 2026*
+*Zuletzt aktualisiert: Juli 2026*

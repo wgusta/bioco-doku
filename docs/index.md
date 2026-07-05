@@ -27,6 +27,7 @@ Wenn Sie die Webseite technisch aufsetzen, serverseitige Aenderungen vornehmen o
 | [ProcessWire Setup](technisch/setup-processwire.md) | Server-Installation, Git-Workflow |
 | [MkDocs Setup](technisch/setup-mkdocs.md) | Dokumentations-Website einrichten |
 | [API Dokumentation](technisch/api.md) | REST API Endpunkte, Module, Datenfluss |
+| [CMS-Editierbarkeit & Visual Editor](technisch/cms-editierbarkeit.md) | No-Fallback-Architektur, Migration, VE-Neubau |
 
 ---
 

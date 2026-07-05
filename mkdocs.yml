@@ -42,6 +42,7 @@ nav:
     - ProcessWire Setup: technisch/setup-processwire.md
     - MkDocs Setup: technisch/setup-mkdocs.md
     - API Dokumentation: technisch/api.md
+    - CMS-Editierbarkeit & Visual Editor: technisch/cms-editierbarkeit.md
   - SEO:
     - Uebersicht: seo/index.md
     - Strategie: seo/strategie.md
