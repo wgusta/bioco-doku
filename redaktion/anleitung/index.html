@@ -1,0 +1,1331 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Bioco-Team">
+      
+      
+        <link rel="canonical" href="https://docs.bioco.ch/redaktion/anleitung/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../strukturhandbuch/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Anleitung - Bioco Web-Projekt Doku</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#anleitung-inhalte-auf-biococh-bearbeiten" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../.." title="Bioco Web-Projekt Doku" class="md-header__button md-logo" aria-label="Bioco Web-Projekt Doku" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bioco Web-Projekt Doku
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Anleitung
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Fuer Redakteure
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../governance/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Governance
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../technisch/" class="md-tabs__link">
+          
+  
+  
+  Technisch
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../seo/" class="md-tabs__link">
+          
+  
+  
+  SEO
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Bioco Web-Projekt Doku" class="md-nav__button md-logo" aria-label="Bioco Web-Projekt Doku" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Bioco Web-Projekt Doku
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fuer Redakteure
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fuer Redakteure
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uebersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anleitung
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anleitung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-anmelden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Anmelden
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-der-visual-editor-im-uberblick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Der Visual Editor im Überblick
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-eine-seite-finden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Eine Seite finden
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-text-und-felder-bearbeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Text und Felder bearbeiten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-wer-besitzt-welches-feld-visual-editor-oder-processwire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Wer besitzt welches Feld: Visual Editor oder ProcessWire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-abschnitte-blocke-verwalten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Abschnitte (Blöcke) verwalten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-bilder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Bilder
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-events-und-beitrage-sammlung-aktuelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Events und Beiträge (Sammlung Aktuelles)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-publizieren-und-live-schaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Publizieren und Live-Schaltung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-wann-doch-direkt-in-processwire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Wann doch direkt in ProcessWire?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strukturhandbuch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strukturhandbuch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technisch
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Technisch
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technisch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uebersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technisch/setup-processwire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ProcessWire Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technisch/setup-mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MkDocs Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technisch/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Dokumentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technisch/cms-editierbarkeit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CMS-Editierbarkeit & Visual Editor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SEO
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SEO
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uebersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seo/strategie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strategie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seo/umsetzung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Umsetzung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-anmelden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Anmelden
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-der-visual-editor-im-uberblick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Der Visual Editor im Überblick
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-eine-seite-finden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Eine Seite finden
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-text-und-felder-bearbeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Text und Felder bearbeiten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-wer-besitzt-welches-feld-visual-editor-oder-processwire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Wer besitzt welches Feld: Visual Editor oder ProcessWire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-abschnitte-blocke-verwalten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Abschnitte (Blöcke) verwalten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-bilder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Bilder
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-events-und-beitrage-sammlung-aktuelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Events und Beiträge (Sammlung Aktuelles)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-publizieren-und-live-schaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Publizieren und Live-Schaltung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-wann-doch-direkt-in-processwire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Wann doch direkt in ProcessWire?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="anleitung-inhalte-auf-biococh-bearbeiten">Anleitung: Inhalte auf bioco.ch bearbeiten</h1>
+<p>Diese Anleitung zeigt, wie du Inhalte auf <code>bioco.ch</code> selbstständig änderst. Du brauchst keine Programmierkenntnisse.</p>
+<p><strong>Jede Seite der Website ist im CMS bearbeitbar.</strong> Es gibt keine Texte mehr, die fest im Code stehen. Einzige Ausnahme: <code>/doi-confirm</code>, die technische Bestätigungsseite für Newsletter-Anmeldungen — sie hat keinen redaktionellen Inhalt.</p>
+<p>Du arbeitest mit zwei Werkzeugen:</p>
+<ul>
+<li><strong>Visual Editor</strong> (<a href="https://cms.bioco.ch/visual-editor/">cms.bioco.ch/visual-editor/</a>): das empfohlene Werkzeug. Du bearbeitest die Seite direkt in einer Live-Vorschau und siehst sofort, wie das Ergebnis aussieht.</li>
+<li><strong>ProcessWire Admin</strong> (<a href="https://cms.bioco.ch/processwire/">cms.bioco.ch/processwire/</a>): das klassische Backend. Hier liegen alle Felder im Detail. Der Visual Editor verlinkt für Spezialfälle direkt dorthin.</li>
+</ul>
+<hr />
+<h2 id="1-anmelden">1. Anmelden</h2>
+<ol>
+<li>Öffne <code>https://cms.bioco.ch/processwire/</code>.</li>
+<li>Gib Benutzernamen und Passwort ein, klicke auf <strong>Anmelden</strong>.</li>
+<li>Klicke oben in der Navigationsleiste auf <strong>Visual Editor</strong>. Der Editor öffnet sich in einem neuen Tab.</li>
+</ol>
+<hr />
+<h2 id="2-der-visual-editor-im-uberblick">2. Der Visual Editor im Überblick</h2>
+<p>Der Visual Editor wurde im Sommer 2026 neu gebaut. Das Konzept ist gleich geblieben — auf die Seite klicken, direkt oder in der Seitenleiste bearbeiten, publizieren — aber er reagiert schneller und geht sorgfältiger mit deinen Entwürfen um.</p>
+<ul>
+<li><strong>Oben (Werkzeugleiste)</strong>: Moduswahl <strong>Edit</strong> / <strong>Browse</strong>, Schaltflächen <strong>Neu laden</strong>, <strong>Vorlagen</strong>, <strong>PW Admin</strong>, <strong>Zurück</strong> sowie eine Statusanzeige.</li>
+<li><strong>Links (Seitenleiste)</strong>: aktuelle Seite, Liste der Abschnitte, Feld-Editor mit der Feldzuordnung, unten <strong>Entwurf verwerfen</strong> und <strong>Publizieren</strong>.</li>
+<li><strong>Rechts (Vorschau)</strong>: die echte Website. Im Modus <strong>Edit</strong> klickst du Inhalte direkt an, im Modus <strong>Browse</strong> verhält sich die Vorschau wie die normale Website.</li>
+</ul>
+<hr />
+<h2 id="3-eine-seite-finden">3. Eine Seite finden</h2>
+<p>Du wechselst die Seite, indem du <strong>in der Vorschau ganz normal navigierst</strong> — über das Menü, Links oder Buttons, genau wie auf der echten Website. Eine separate Seitenauswahl gibt es bewusst nicht: was du in der Vorschau siehst, bearbeitest du auch.</p>
+<p>Die Seitenleiste zeigt immer an, auf welcher Seite du gerade bist und ob sie bearbeitbar ist.</p>
+<hr />
+<h2 id="4-text-und-felder-bearbeiten">4. Text und Felder bearbeiten</h2>
+<ol>
+<li>Stelle sicher, dass der Modus <strong>Edit</strong> aktiv ist.</li>
+<li>Klicke in der Vorschau auf den Text oder Abschnitt, den du ändern möchtest. Der Abschnitt wird hervorgehoben.</li>
+<li>Bearbeite Titel, Eyebrow oder Fliesstext direkt. Fliesstext öffnet einen kleinen Rich-Text-Editor (fett, Listen, Links).</li>
+<li>Deine Änderungen bleiben zunächst als <strong>lokaler Entwurf</strong> im Browser. Erst <strong>Publizieren</strong> macht sie öffentlich.</li>
+</ol>
+<p>Mit <code>Ctrl+Z</code> (Mac: <code>Cmd+Z</code>) machst du eine Änderung rückgängig, mit <code>Shift</code> dazu stellst du sie wieder her.</p>
+<hr />
+<h2 id="5-wer-besitzt-welches-feld-visual-editor-oder-processwire">5. Wer besitzt welches Feld: Visual Editor oder ProcessWire</h2>
+<p>Für jeden Abschnitt zeigt die Seitenleiste zwei Gruppen:</p>
+<ul>
+<li><strong>Visual Editor</strong> (grün): Felder, die du direkt in der Vorschau bearbeitest — Titel, Eyebrow, Text, Layout und Farbschema, Buttons sowie Bilder aus der Mediathek.</li>
+<li><strong>ProcessWire</strong> (orange): Felder, die besser im Backend bearbeitet werden, zum Beispiel die eigentliche Bilddatei oder die vollständige Feldansicht. Jede Zeile hat einen Knopf <strong>→ In PW öffnen</strong>, der genau dieses Feld im ProcessWire-Editor öffnet — dort werden alle anderen Felder ausgeblendet, damit du dich nicht verirrst.</li>
+</ul>
+<p><strong>→ In PW öffnen</strong> funktioniert nur ohne offenen Entwurf. Publiziere zuerst oder verwirf den Entwurf.</p>
+<hr />
+<h2 id="6-abschnitte-blocke-verwalten">6. Abschnitte (Blöcke) verwalten</h2>
+<p>Eine Seite besteht aus <strong>Abschnitten</strong>, die wie Bausteine übereinanderliegen. Jeder Abschnitt hat Titel, Text, Bild, Layout, Farbschema und bis zu zwei Buttons — alles deutsch beschriftet, alles im Visual Editor änderbar.</p>
+<ul>
+<li><strong>Hinzufügen</strong>: Knopf <strong>Abschnitt hinzufügen</strong> in der Seitenleiste, oder <strong>Vorlagen</strong> in der Werkzeugleiste für vorgefertigte Bausteine.</li>
+<li><strong>Kopieren / Löschen</strong>: die kleinen Symbole an jedem Abschnitt in der Liste.</li>
+<li><strong>Sortieren</strong>: Abschnitt in der Liste mit der Maus an die neue Position ziehen.</li>
+</ul>
+<p>Manche Abschnitte sind <strong>Komponenten</strong>: interaktive Bausteine wie Formulare, Karten, der Saisonkalender, Akkordeon-Einträge, nummerierte Schritte, Portal-Kacheln oder die Event-Liste. Du platzierst und konfigurierst sie im Visual Editor (die Optionen erscheinen als zusätzliche Felder). Was in den Bausteinen selbst steht — etwa die Formulartexte — pflegt das Technik-Team. Das <a href="../strukturhandbuch/">Strukturhandbuch</a> listet alle Komponenten auf.</p>
+<hr />
+<h2 id="7-bilder">7. Bilder</h2>
+<p>Bilder verwaltest du über die <strong>Mediathek</strong>. Beim Klick auf ein Bild im Visual Editor öffnet sich ein Overlay, in dem du ein Bild aus der Mediathek wählst, den Alt-Text setzt und Helligkeit, Kontrast oder Sättigung anpasst. Neue Bilddateien lädst du in der Mediathek hoch und wählst sie dann aus; der direkte Upload in einzelne Seitenfelder ist bewusst deaktiviert.</p>
+<hr />
+<h2 id="8-events-und-beitrage-sammlung-aktuelles">8. Events und Beiträge (Sammlung Aktuelles)</h2>
+<p>Events sind keine Abschnitte, sondern eigene Seiten unter <strong>Aktuelles</strong>. Navigiere in der Vorschau zu <strong>Aktuelles</strong>. Die Seitenleiste zeigt dann statt der Abschnitte ein <strong>Sammlungs-Panel</strong>:</p>
+<ul>
+<li>Eine Liste aller Events mit Datum und Status (bevorstehend / vergangen). Jeder Eintrag hat <strong>→ In PW öffnen</strong>, um alle Event-Felder im Backend zu bearbeiten.</li>
+<li>Oben <strong>Neuen Event erstellen</strong>: Datum wählen, Knopf drücken. Der Event wird angelegt und direkt in ProcessWire geöffnet, wo du Titel, Ort, Beschreibung und Anmeldung ergänzt.</li>
+</ul>
+<p>Einleitungstext und Abschluss-Abschnitt der Aktuelles-Seite selbst bearbeitest du ganz normal als Abschnitte.</p>
+<hr />
+<h2 id="9-publizieren-und-live-schaltung">9. Publizieren und Live-Schaltung</h2>
+<ol>
+<li>Wenn deine Änderungen fertig sind, klicke auf <strong>Publizieren</strong>.</li>
+<li>Die Statusanzeige zeigt das Ergebnis:</li>
+<li><strong>Publiziert &amp; live</strong>: gespeichert und auf der Website aktualisiert.</li>
+<li><strong>Publiziert, aber Build nicht aktualisiert</strong> (rot): gespeichert, aber die Website hat die Aktualisierung nicht bestätigt. Lade nach kurzer Zeit neu; bleibt es rot, melde dich beim Technik-Team.</li>
+<li>Mit <strong>Entwurf verwerfen</strong> verwirfst du ungespeicherte Änderungen und kehrst zum publizierten Stand zurück.</li>
+</ol>
+<p>Hat jemand anderes die Seite inzwischen geändert, meldet der Editor den Konflikt und fragt pro Feld, ob deine Version oder die vom Server gelten soll.</p>
+<div class="admonition note">
+<p class="admonition-title">Warum nicht sofort sichtbar?</p>
+<p>Die Website ist aus Geschwindigkeitsgründen zwischengespeichert. Beim Publizieren stösst das CMS gezielt eine Aktualisierung der betroffenen Seiten an. In der Regel erscheint die Änderung innerhalb weniger Sekunden.</p>
+</div>
+<hr />
+<h2 id="10-wann-doch-direkt-in-processwire">10. Wann doch direkt in ProcessWire?</h2>
+<p>Nutze das ProcessWire Admin (oder den Knopf <strong>→ In PW öffnen</strong>), wenn du:</p>
+<ul>
+<li>eine neue <strong>Bilddatei</strong> hochladen oder ersetzen willst,</li>
+<li>alle Felder eines Events bearbeiten willst,</li>
+<li>Formular-Einsendungen ansehen oder exportieren willst,</li>
+<li>Seiten anlegen oder löschen willst.</li>
+</ul>
+<p>Für die alltägliche Textpflege bleibt der Visual Editor der schnellste Weg.</p>
+<hr />
+<p><em>Zuletzt aktualisiert: Juli 2026</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Bioco
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

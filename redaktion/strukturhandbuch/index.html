@@ -1,0 +1,1485 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Bioco-Team">
+      
+      
+        <link rel="canonical" href="https://docs.bioco.ch/redaktion/strukturhandbuch/">
+      
+      
+        <link rel="prev" href="../anleitung/">
+      
+      
+        <link rel="next" href="../../governance/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Strukturhandbuch - Bioco Web-Projekt Doku</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#strukturhandbuch-biococh" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../.." title="Bioco Web-Projekt Doku" class="md-header__button md-logo" aria-label="Bioco Web-Projekt Doku" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bioco Web-Projekt Doku
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Strukturhandbuch
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Fuer Redakteure
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../governance/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Governance
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../technisch/" class="md-tabs__link">
+          
+  
+  
+  Technisch
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../seo/" class="md-tabs__link">
+          
+  
+  
+  SEO
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Bioco Web-Projekt Doku" class="md-nav__button md-logo" aria-label="Bioco Web-Projekt Doku" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Bioco Web-Projekt Doku
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fuer Redakteure
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fuer Redakteure
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uebersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../anleitung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anleitung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strukturhandbuch
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strukturhandbuch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Architektur
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-aktueller-stand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Aktueller Stand
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-inhaltsmodell-abschnitte-content_sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Inhaltsmodell: Abschnitte (content_sections)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-komponenten-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Komponenten (Registry)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-events-und-aktuelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Events und Aktuelles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-seitenubersicht-auswahl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Seitenübersicht (Auswahl)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-caching-und-revalidation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Caching und Revalidation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-glossar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Glossar
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technisch
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Technisch
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technisch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uebersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technisch/setup-processwire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ProcessWire Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technisch/setup-mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MkDocs Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technisch/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Dokumentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technisch/cms-editierbarkeit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CMS-Editierbarkeit & Visual Editor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SEO
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SEO
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uebersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seo/strategie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strategie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seo/umsetzung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Umsetzung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-architektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Architektur
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-aktueller-stand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Aktueller Stand
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-inhaltsmodell-abschnitte-content_sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Inhaltsmodell: Abschnitte (content_sections)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-komponenten-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Komponenten (Registry)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-events-und-aktuelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Events und Aktuelles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-seitenubersicht-auswahl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Seitenübersicht (Auswahl)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-caching-und-revalidation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Caching und Revalidation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-glossar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Glossar
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="strukturhandbuch-biococh">Strukturhandbuch bioco.ch</h1>
+<p>Dieses Handbuch erklärt die Struktur der Website und dient als Nachschlagewerk für Redakteure und Administratoren.</p>
+<hr />
+<h2 id="1-architektur">1. Architektur</h2>
+<p>Die Website besteht aus zwei Systemen auf demselben Server (Novatrend cPanel):</p>
+<ul>
+<li><strong>ProcessWire</strong> (PHP): das Redaktionssystem (Headless CMS). Hier liegen alle Inhalte. Zugang: <code>https://cms.bioco.ch/processwire/</code>.</li>
+<li><strong>Next.js 14</strong> (React/TypeScript): das Frontend, das die Website für Besucher darstellt.</li>
+</ul>
+<p>Next.js holt die Inhalte über eine <strong>einheitliche REST-API</strong> aus ProcessWire (<code>/api/content/*</code>) und rendert die Seiten statisch vor (SSG/ISR). Beim Publizieren stösst das CMS eine gezielte Aktualisierung der betroffenen Seiten an (<strong>On-Demand-Revalidation</strong>), sodass Änderungen ohne neues Deployment live gehen.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Redakteur ──▶ Visual Editor ──▶ ProcessWire (Inhalte)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                                      │  Revalidation
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                                      ▼
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                               Next.js (Website)  ──▶ Besucher
+</code></pre></div>
+<hr />
+<h2 id="2-aktueller-stand">2. Aktueller Stand</h2>
+<p><strong>Alle Seiten sind CMS-gesteuert.</strong> Seit Juli 2026 gibt es keine Seiten mehr, deren Texte fest im Code stehen — jede Seite besteht aus CMS-Abschnitten (<code>content_sections</code>) und wird im Visual Editor gepflegt. Einzige Ausnahme ist <code>/doi-confirm</code>, die technische Bestätigungsseite für Newsletter-Anmeldungen: sie zeigt nur Funktionszustände, keinen redaktionellen Inhalt.</p>
+<table>
+<thead>
+<tr>
+<th>Bereich</th>
+<th>Stand</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seiteninhalte (Abschnitte)</td>
+<td>CMS-gesteuert über <code>content_sections</code>, im Visual Editor bearbeitbar</td>
+</tr>
+<tr>
+<td>Navigation</td>
+<td>aus ProcessWire (<code>/api/content/navigation</code>)</td>
+</tr>
+<tr>
+<td>Events / Aktuelles</td>
+<td>eigene Seiten unter <code>/aktuelles/</code> (Template <code>event</code>), Sammlungs-Editor im Visual Editor</td>
+</tr>
+<tr>
+<td>Formulare</td>
+<td>in ProcessWire verarbeitet (mit Double-Opt-In und Captcha); Formulartexte pflegt das Technik-Team</td>
+</tr>
+<tr>
+<td>Revalidation</td>
+<td>aktiv; Publizieren aktualisiert die Live-Seite automatisch</td>
+</tr>
+<tr>
+<td>Matomo Analytics</td>
+<td>aktiv (cookieless)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-inhaltsmodell-abschnitte-content_sections">3. Inhaltsmodell: Abschnitte (<code>content_sections</code>)</h2>
+<p>Eine CMS-gesteuerte Seite hält ihre Inhalte in einem Wiederholungsfeld <code>content_sections</code>. Jeder Eintrag ist ein <strong>Abschnitt</strong> mit diesen Feldern:</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>section_title</code></td>
+<td>Überschrift des Abschnitts</td>
+</tr>
+<tr>
+<td><code>section_eyebrow</code></td>
+<td>kleine Zeile über der Überschrift</td>
+</tr>
+<tr>
+<td><code>section_text</code></td>
+<td>Fliesstext (Rich Text / CKEditor)</td>
+</tr>
+<tr>
+<td><code>section_image</code>, <code>image_alt</code></td>
+<td>Bild aus der Mediathek und Alt-Text</td>
+</tr>
+<tr>
+<td><code>button_text</code> / <code>button_href</code> / <code>button_variant</code></td>
+<td>erster Button</td>
+</tr>
+<tr>
+<td><code>button2_text</code> / <code>button2_href</code> / <code>button2_variant</code></td>
+<td>zweiter Button</td>
+</tr>
+<tr>
+<td><code>section_image_brightness/contrast/saturate</code></td>
+<td>Bildanpassungen</td>
+</tr>
+<tr>
+<td><code>section_component</code></td>
+<td>Schlüssel einer Komponente (siehe Abschnitt 4)</td>
+</tr>
+<tr>
+<td><code>section_config</code></td>
+<td>JSON-Konfiguration der Komponente</td>
+</tr>
+</tbody>
+</table>
+<p>Das Layout (Bild links/rechts, Banner, Galerie, nur Text) ergibt sich aus den gefüllten Feldern bzw. der gewählten Komponente. Überschriften können auch direkt im Rich Text stehen.</p>
+<hr />
+<h2 id="4-komponenten-registry">4. Komponenten (Registry)</h2>
+<p>Setzt ein Abschnitt das Feld <code>section_component</code>, rendert das Frontend eine registrierte Komponente. Die Zuordnung steht in <code>site/templates/component-registry.json</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Schlüssel</th>
+<th>Funktion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pricing_table</code></td>
+<td>Abo-Preistabelle mit drei Stufen (Halb, Standard, Doppel); Werte über <code>section_config</code></td>
+</tr>
+<tr>
+<td><code>page_intro</code></td>
+<td>Einleitungsblock mit konfigurierbarer Breite/Ausrichtung</td>
+</tr>
+<tr>
+<td><code>media_text</code>, <code>cards_grid</code>, <code>gallery_strip</code>, <code>text_columns</code></td>
+<td>Layout-Bausteine</td>
+</tr>
+<tr>
+<td><code>timeline_header</code>, <code>timeline_item</code>, <code>cta_band</code></td>
+<td>Zeitleiste und Aktionsband</td>
+</tr>
+<tr>
+<td><code>accordion_item</code></td>
+<td>aufklappbarer Akkordeon-Eintrag (Titel = Zeile, Text = Inhalt)</td>
+</tr>
+<tr>
+<td><code>steps</code></td>
+<td>bis zu vier nummerierte Schritte mit Kreis-Nummer</td>
+</tr>
+<tr>
+<td><code>link_tiles</code></td>
+<td>Kachel-Raster mit Symbol, Titel, Text und Link (z. B. Kundenportal)</td>
+</tr>
+<tr>
+<td><code>events_feed</code></td>
+<td>Liste der nächsten Events; Darstellung <strong>Standard</strong> oder <strong>Banner</strong> (kompakt), Anzahl einstellbar</td>
+</tr>
+<tr>
+<td><code>group_cards</code></td>
+<td>Karten der Arbeitsgruppen auf Mitmachen (Karteninhalte kommen live aus dem CMS)</td>
+</tr>
+<tr>
+<td><code>schnuppertage</code></td>
+<td>Schnuppertage-Block</td>
+</tr>
+<tr>
+<td><code>pricing_calculator</code></td>
+<td>interaktiver Preisrechner</td>
+</tr>
+<tr>
+<td><code>saisonkalender</code></td>
+<td>Erntekalender</td>
+</tr>
+<tr>
+<td><code>gallery</code></td>
+<td>Bildergalerie</td>
+</tr>
+<tr>
+<td><code>depot_map</code>, <code>geisshof_map</code></td>
+<td>Karten</td>
+</tr>
+<tr>
+<td><code>contact_form</code>, <code>membership_form</code>, <code>subscribe_form</code>, <code>visit_day_form</code>, <code>waiting_list_form</code></td>
+<td>Formulare</td>
+</tr>
+</tbody>
+</table>
+<p>Komponenten mit Optionen (zum Beispiel <code>pricing_table</code>, <code>steps</code>, <code>link_tiles</code>, <code>events_feed</code>) zeigen ihre Felder im Visual Editor als zusätzliche Eingaben (Text-, Zahl- oder Auswahlfelder), gespeichert in <code>section_config</code>.</p>
+<p>Der wiederkehrende Block «Möchtest du uns kennenlernen?» ist auf jeder Seite ein eigener Abschnitt (<code>section_id: kennenlernen-cta</code>) und kann pro Seite angepasst werden.</p>
+<hr />
+<h2 id="5-events-und-aktuelles">5. Events und Aktuelles</h2>
+<p>Events sind eigene Seiten mit dem Template <code>event</code> unter <code>/aktuelles/</code>. Wichtige Felder: <code>event_start</code>, <code>event_end</code>, <code>event_status</code> (bevorstehend/vergangen), <code>event_location</code>, <code>event_summary</code>, <code>body</code>, <code>event_card_image</code>, <code>event_media</code>, <code>event_signup_enabled</code>, <code>event_signup_notes</code>.</p>
+<p>Im Visual Editor werden Events über das <strong>Sammlungs-Panel</strong> verwaltet (öffnet sich auf der Seite Aktuelles): Liste aller Einträge, je Eintrag <strong>→ In PW öffnen</strong>, und <strong>Neuen Event erstellen</strong> über einen Datumswähler. Das separate Blog-Template <code>news_item</code> existiert, wird aktuell aber nicht verwendet.</p>
+<hr />
+<h2 id="6-seitenubersicht-auswahl">6. Seitenübersicht (Auswahl)</h2>
+<p>Alle Seiten sind CMS-gesteuert und im Visual Editor bearbeitbar.</p>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Seite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/</code></td>
+<td>Startseite</td>
+</tr>
+<tr>
+<td><code>/abos</code></td>
+<td>Abos und Preise</td>
+</tr>
+<tr>
+<td><code>/gemuese</code></td>
+<td>Gemüse und Ernte</td>
+</tr>
+<tr>
+<td><code>/solawi</code></td>
+<td>Solidarische Landwirtschaft</td>
+</tr>
+<tr>
+<td><code>/mitmachen</code>, <code>/bioco-werden</code></td>
+<td>Mitglied werden</td>
+</tr>
+<tr>
+<td><code>/aktuelles</code></td>
+<td>News und Events</td>
+</tr>
+<tr>
+<td><code>/standorte-depots</code></td>
+<td>Abholstationen</td>
+</tr>
+<tr>
+<td><code>/wir</code></td>
+<td>Über biocò</td>
+</tr>
+<tr>
+<td><code>/kontakt</code></td>
+<td>Kontakt</td>
+</tr>
+<tr>
+<td><code>/anmeldung</code>, <code>/warteliste</code>, <code>/newsletter</code>, <code>/tag-der-offenen-tuer</code></td>
+<td>Anmeldungen</td>
+</tr>
+<tr>
+<td><code>/kundenportal</code></td>
+<td>Kundenportal (Portal-Kacheln)</td>
+</tr>
+<tr>
+<td><code>/impressum</code>, <code>/datenschutz</code>, <code>/statuten</code></td>
+<td>Rechtliches</td>
+</tr>
+</tbody>
+</table>
+<p>Weitere CMS-Seiten ausserhalb dieser Liste werden über eine Catch-all-Route automatisch aus ProcessWire gerendert. <code>/doi-confirm</code> ist die einzige Seite ohne bearbeitbaren Inhalt (technische Bestätigungsseite).</p>
+<hr />
+<h2 id="7-caching-und-revalidation">7. Caching und Revalidation</h2>
+<p>Next.js speichert Seiten zwischen (ISR). Beim Speichern in ProcessWire stösst ein Hook (<code>site/ready.php</code>) eine Revalidation der betroffenen Pfade an; das Publizieren im Visual Editor löst sie zusätzlich direkt aus und meldet zurück, ob die Website die Aktualisierung bestätigt hat. Details: siehe <a href="../../technisch/api/">API-Dokumentation</a>.</p>
+<hr />
+<h2 id="8-glossar">8. Glossar</h2>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Erklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Abschnitt / Block</strong></td>
+<td>Baustein einer Seite (<code>content_sections</code>)</td>
+</tr>
+<tr>
+<td><strong>Komponente</strong></td>
+<td>Abschnitt mit besonderem Aussehen und eigenen Optionen</td>
+</tr>
+<tr>
+<td><strong>Visual Editor</strong></td>
+<td>Live-Vorschau-Editor unter <code>/visual-editor/</code></td>
+</tr>
+<tr>
+<td><strong>Headless CMS</strong></td>
+<td>CMS ohne eigene Darstellung, liefert nur Daten</td>
+</tr>
+<tr>
+<td><strong>ISR / Revalidation</strong></td>
+<td>gezielte Aktualisierung zwischengespeicherter Seiten</td>
+</tr>
+<tr>
+<td><strong>Template</strong></td>
+<td>Vorlage für einen Seitentyp in ProcessWire</td>
+</tr>
+<tr>
+<td><strong>DOI</strong></td>
+<td>Double-Opt-In, zweistufige Bestätigung bei Anmeldungen</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Zuletzt aktualisiert: Juli 2026</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Bioco
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
